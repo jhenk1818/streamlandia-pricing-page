@@ -1,11 +1,172 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { CreditCard, PlayCircle, Tv, CheckCircle2 } from "lucide-react";
+import { useState } from "react";
 
 const Index = () => {
+  const [isAnnual, setIsAnnual] = useState(false);
+
+  const plans = [
+    {
+      name: "Basic",
+      price: isAnnual ? 99 : 9.99,
+      features: [
+        "HD streaming",
+        "Watch on 1 device",
+        "Cancel anytime",
+        "First month free",
+      ],
+      color: "bg-white",
+      hover: "hover:border-primary",
+    },
+    {
+      name: "Premium",
+      price: isAnnual ? 199 : 19.99,
+      features: [
+        "4K Ultra HD",
+        "Watch on 4 devices",
+        "Cancel anytime",
+        "First month free",
+        "Offline downloads",
+        "No ads",
+      ],
+      color: "bg-primary",
+      textColor: "text-white",
+      hover: "hover:bg-primary/90",
+      popular: true,
+    },
+    {
+      name: "Family",
+      price: isAnnual ? 299 : 29.99,
+      features: [
+        "4K Ultra HD",
+        "Watch on 6 devices",
+        "Cancel anytime",
+        "First month free",
+        "Offline downloads",
+        "No ads",
+        "Family sharing",
+      ],
+      color: "bg-white",
+      hover: "hover:border-primary",
+    },
+  ];
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-gradient-to-b from-accent to-white">
+      {/* Hero Section */}
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center animate-fade-up">
+          <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-primary/10 text-primary">
+            Stream Smarter
+          </span>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
+            Unlimited Entertainment
+            <br /> at Your Fingertips
+          </h1>
+          <p className="text-muted text-lg md:text-xl max-w-2xl mx-auto mb-8">
+            Stream your favorite shows, movies, and exclusive content. Start watching today with our risk-free trial.
+          </p>
+          <button className="bg-primary text-white px-8 py-4 rounded-lg font-medium transition-all hover:bg-primary/90 hover:scale-105">
+            Start Free Trial
+          </button>
+        </div>
+
+        {/* Features */}
+        <div className="grid md:grid-cols-3 gap-8 mt-20 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+          <div className="p-6 text-center">
+            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+              <PlayCircle className="w-6 h-6 text-primary" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Watch Anywhere</h3>
+            <p className="text-muted">Stream on your phone, tablet, laptop, and TV without paying more.</p>
+          </div>
+          <div className="p-6 text-center">
+            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+              <Tv className="w-6 h-6 text-primary" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">4K Quality</h3>
+            <p className="text-muted">Enjoy crystal clear quality with 4K Ultra HD streaming.</p>
+          </div>
+          <div className="p-6 text-center">
+            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+              <CreditCard className="w-6 h-6 text-primary" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Cancel Anytime</h3>
+            <p className="text-muted">No long-term contracts. No commitments. Cancel anytime.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Pricing Section */}
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-12 animate-fade-up" style={{ animationDelay: "0.4s" }}>
+          <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-primary/10 text-primary">
+            Simple Pricing
+          </span>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">Choose Your Plan</h2>
+          <p className="text-muted text-lg max-w-2xl mx-auto mb-8">
+            Select the perfect plan for your entertainment needs
+          </p>
+          
+          {/* Billing Toggle */}
+          <div className="flex items-center justify-center gap-4 mb-12">
+            <span className={`text-sm ${!isAnnual ? 'text-primary font-medium' : 'text-muted'}`}>Monthly</span>
+            <button
+              onClick={() => setIsAnnual(!isAnnual)}
+              className={`relative w-16 h-8 rounded-full transition-colors ${
+                isAnnual ? 'bg-primary' : 'bg-muted'
+              }`}
+            >
+              <div
+                className={`absolute w-6 h-6 bg-white rounded-full top-1 transition-transform ${
+                  isAnnual ? 'right-1' : 'left-1'
+                }`}
+              />
+            </button>
+            <span className={`text-sm ${isAnnual ? 'text-primary font-medium' : 'text-muted'}`}>Annual</span>
+          </div>
+        </div>
+
+        {/* Pricing Cards */}
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {plans.map((plan, index) => (
+            <div
+              key={plan.name}
+              className={`rounded-2xl p-8 border transition-all duration-300 animate-fade-up ${
+                plan.color
+              } ${plan.hover} ${plan.textColor || 'text-gray-900'}`}
+              style={{ animationDelay: `${0.6 + index * 0.1}s` }}
+            >
+              {plan.popular && (
+                <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-white/20 text-white">
+                  Most Popular
+                </span>
+              )}
+              <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+              <div className="mb-6">
+                <span className="text-4xl font-bold">${plan.price}</span>
+                <span className="text-sm opacity-80">/{isAnnual ? 'year' : 'month'}</span>
+              </div>
+              <ul className="space-y-4 mb-8">
+                {plan.features.map((feature) => (
+                  <li key={feature} className="flex items-center gap-2">
+                    <CheckCircle2 className={`w-5 h-5 ${plan.textColor || 'text-primary'}`} />
+                    <span className="text-sm">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <button
+                className={`w-full py-3 rounded-lg transition-transform hover:scale-105 ${
+                  plan.popular
+                    ? 'bg-white text-primary'
+                    : 'bg-primary text-white'
+                }`}
+              >
+                Get Started
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
