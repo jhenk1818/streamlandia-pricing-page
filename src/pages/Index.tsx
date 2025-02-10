@@ -89,7 +89,7 @@ const Index = () => {
       </div>
 
       {/* Why Choose Us Section */}
-      <div className="bg-gradient-to-b from-black to-black/90 py-32">
+      <div className="bg-gradient-to-b from-black to-black/90 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-primary/10 text-primary backdrop-blur-sm">
@@ -103,7 +103,7 @@ const Index = () => {
       </div>
 
       {/* Features Section */}
-      <div className="bg-gradient-to-b from-black/90 to-white -mt-20 py-32">
+      <div className="bg-gradient-to-b from-black/90 to-white py-20">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 animate-fade-up">
             <div className="p-8 text-center glass rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-white/5">
