@@ -84,8 +84,8 @@ const Index = () => {
         </div>
       </div>
 
-      <div className="bg-black py-20">
-        <div className="container mx-auto px-4">
+      <div className="bg-black">
+        <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-24">
             <span className="inline-block px-4 py-1 mb-6 text-sm font-medium rounded-full bg-primary/10 text-primary backdrop-blur-sm">
               Why Choose Us
@@ -94,11 +94,7 @@ const Index = () => {
               Stream Like Never Before
             </h2>
           </div>
-        </div>
-      </div>
 
-      <div className="bg-black py-20">
-        <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 animate-fade-up">
             <div className="p-8 text-center glass rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-white/5">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
