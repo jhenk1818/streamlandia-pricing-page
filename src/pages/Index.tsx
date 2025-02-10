@@ -1,4 +1,3 @@
-
 import { CreditCard, PlayCircle, Tv, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 
@@ -89,37 +88,37 @@ const Index = () => {
       </div>
 
       {/* Features Section */}
-      <div className="bg-white py-24">
+      <div className="bg-gradient-to-b from-black/90 to-white py-32">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-primary/10 text-primary">
+            <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-primary/10 text-primary backdrop-blur-sm">
               Why Choose Us
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            <h2 className="text-3xl md:text-4xl font-bold text-white">
               Stream Like Never Before
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8 animate-fade-up">
-            <div className="p-8 text-center bg-white rounded-xl border border-gray-100 shadow-lg hover:shadow-xl transition-all">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
+            <div className="p-8 text-center glass rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-white/5">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
                 <PlayCircle className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">Watch Anywhere</h3>
-              <p className="text-muted">Stream on your phone, tablet, laptop, and TV without paying more.</p>
+              <h3 className="text-xl font-semibold mb-4 text-white">Watch Anywhere</h3>
+              <p className="text-white/80">Stream on your phone, tablet, laptop, and TV without paying more.</p>
             </div>
-            <div className="p-8 text-center bg-white rounded-xl border border-gray-100 shadow-lg hover:shadow-xl transition-all">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
+            <div className="p-8 text-center glass rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-white/5">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
                 <Tv className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">4K Quality</h3>
-              <p className="text-muted">Enjoy crystal clear quality with 4K Ultra HD streaming.</p>
+              <h3 className="text-xl font-semibold mb-4 text-white">4K Quality</h3>
+              <p className="text-white/80">Enjoy crystal clear quality with 4K Ultra HD streaming.</p>
             </div>
-            <div className="p-8 text-center bg-white rounded-xl border border-gray-100 shadow-lg hover:shadow-xl transition-all">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
+            <div className="p-8 text-center glass rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-white/5">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
                 <CreditCard className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">Cancel Anytime</h3>
-              <p className="text-muted">No long-term contracts. No commitments. Cancel anytime.</p>
+              <h3 className="text-xl font-semibold mb-4 text-white">Cancel Anytime</h3>
+              <p className="text-white/80">No long-term contracts. No commitments. Cancel anytime.</p>
             </div>
           </div>
         </div>
