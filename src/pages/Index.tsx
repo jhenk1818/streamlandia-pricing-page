@@ -1,3 +1,4 @@
+
 import { CreditCard, PlayCircle, Tv, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 
@@ -72,11 +73,11 @@ const Index = () => {
             </span>
             
             <div className="flex justify-center items-center mb-8">
-              <div className="w-16 h-16">
+              <div className="w-32 h-32">
                 <img 
                   src="/lovable-uploads/c677c336-9244-464b-9bd2-56be914a50cc.png" 
                   alt="Star Rating" 
-                  className="w-full h-full"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </div>
