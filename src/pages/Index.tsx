@@ -1,4 +1,5 @@
-import { CreditCard, PlayCircle, Tv, CheckCircle2 } from "lucide-react";
+
+import { CreditCard, PlayCircle, Tv, CheckCircle2, Star } from "lucide-react";
 import { useState } from "react";
 
 const Index = () => {
@@ -77,9 +78,26 @@ const Index = () => {
             <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-8">
               Stream your favorite shows, movies, and exclusive content. Start watching today with our risk-free trial.
             </p>
-            <button className="bg-primary text-white px-8 py-4 rounded-lg font-medium transition-all hover:bg-primary/90 hover:scale-105">
+            <button className="bg-primary text-white px-8 py-4 rounded-lg font-medium transition-all hover:bg-primary/90 hover:scale-105 mb-8">
               Start Free Trial
             </button>
+
+            {/* Trustpilot Section */}
+            <div className="flex items-center justify-center gap-2 mb-8">
+              <div className="flex -space-x-1">
+                {[...Array(5)].map((_, i) => (
+                  <div key={i} className="w-8 h-8 bg-[#00b67a] rounded flex items-center justify-center">
+                    <Star className="w-6 h-6 text-white" fill="white" />
+                  </div>
+                ))}
+              </div>
+              <span className="text-white font-medium">10,000+ Happy Users</span>
+            </div>
+
+            {/* Platform Logos */}
+            <div className="flex justify-center items-center gap-8 mt-4">
+              <img src="/lovable-uploads/6581727c-e3dd-4779-bb48-d8bb3895ee1f.png" alt="Platform Support" className="max-h-8" />
+            </div>
           </div>
         </div>
       </div>
