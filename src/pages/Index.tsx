@@ -87,8 +87,15 @@ const Index = () => {
             <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-8">
               Stream your favorite shows, movies, and exclusive content. Start watching today with our risk-free trial.
             </p>
-            <button className="bg-gradient-to-br from-black/40 via-[#403E43]/40 to-[#1EAEDB]/20 text-white px-12 py-4 rounded-full font-medium transition-all hover:bg-primary/90 hover:scale-105 mb-8 border-2 border-white backdrop-blur-md shadow-lg w-64">
-              Discover Plans
+            <button 
+              className="relative overflow-hidden text-white px-12 py-4 rounded-full font-medium transition-all hover:scale-105 mb-8 border-2 border-white backdrop-blur-md shadow-lg w-64 before:absolute before:inset-0 before:bg-gradient-to-r before:from-black before:via-[#1EAEDB] before:to-black before:animate-[gradient_3s_ease_infinite] before:bg-[length:200%_200%]"
+              style={{
+                '--tw-gradient-from': '#000000',
+                '--tw-gradient-via': '#1EAEDB',
+                '--tw-gradient-to': '#000000',
+              }}
+            >
+              <span className="relative z-10">Discover Plans</span>
             </button>
 
             <div className="flex justify-center items-center gap-4">
