@@ -86,8 +86,8 @@ const Index = () => {
 
       <div className="bg-black py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-primary/10 text-primary backdrop-blur-sm">
+          <div className="text-center mb-24">
+            <span className="inline-block px-4 py-1 mb-6 text-sm font-medium rounded-full bg-primary/10 text-primary backdrop-blur-sm">
               Why Choose Us
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white">
