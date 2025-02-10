@@ -71,16 +71,6 @@ const Index = () => {
             <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-primary/10 text-primary backdrop-blur-sm">
               Stream Smarter
             </span>
-            
-            <div className="flex justify-center items-center mb-8">
-              <div className="w-32 h-32">
-                <img 
-                  src="/lovable-uploads/c677c336-9244-464b-9bd2-56be914a50cc.png" 
-                  alt="Star Rating" 
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-white">
               Unlimited Entertainment
@@ -89,9 +79,19 @@ const Index = () => {
             <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-8">
               Stream your favorite shows, movies, and exclusive content. Start watching today with our risk-free trial.
             </p>
-            <button className="bg-primary text-white px-8 py-4 rounded-lg font-medium transition-all hover:bg-primary/90 hover:scale-105">
+            <button className="bg-primary text-white px-8 py-4 rounded-lg font-medium transition-all hover:bg-primary/90 hover:scale-105 mb-8">
               Start Free Trial
             </button>
+
+            <div className="flex justify-center items-center">
+              <div className="w-32 h-32">
+                <img 
+                  src="/lovable-uploads/c677c336-9244-464b-9bd2-56be914a50cc.png" 
+                  alt="Star Rating" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
