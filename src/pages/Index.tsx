@@ -1,4 +1,3 @@
-
 import { CreditCard, PlayCircle, Tv, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 
@@ -62,14 +61,14 @@ const Index = () => {
             backgroundImage: 'url("https://pioneerstv.com/wp-content/uploads/2024/01/hero.jpg")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            height: '100vh'
+            height: '70vh'
           }}
         >
           {/* Overlay */}
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
 
-        <div className="container mx-auto px-4 py-20 relative z-10">
+        <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="text-center animate-fade-up">
             <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-primary/10 text-primary backdrop-blur-sm">
               Stream Smarter
