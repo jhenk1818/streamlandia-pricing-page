@@ -88,29 +88,39 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Features Section - Now moved outside the hero section */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="grid md:grid-cols-3 gap-8 animate-fade-up">
-          <div className="p-6 text-center bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 shadow-xl">
-            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
-              <PlayCircle className="w-6 h-6 text-primary" />
-            </div>
-            <h3 className="text-xl font-semibold mb-2 text-gray-900">Watch Anywhere</h3>
-            <p className="text-muted">Stream on your phone, tablet, laptop, and TV without paying more.</p>
+      {/* Features Section */}
+      <div className="bg-white py-24">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-primary/10 text-primary">
+              Why Choose Us
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              Stream Like Never Before
+            </h2>
           </div>
-          <div className="p-6 text-center bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 shadow-xl">
-            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
-              <Tv className="w-6 h-6 text-primary" />
+          <div className="grid md:grid-cols-3 gap-8 animate-fade-up">
+            <div className="p-8 text-center bg-white rounded-xl border border-gray-100 shadow-lg hover:shadow-xl transition-all">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
+                <PlayCircle className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">Watch Anywhere</h3>
+              <p className="text-muted">Stream on your phone, tablet, laptop, and TV without paying more.</p>
             </div>
-            <h3 className="text-xl font-semibold mb-2 text-gray-900">4K Quality</h3>
-            <p className="text-muted">Enjoy crystal clear quality with 4K Ultra HD streaming.</p>
-          </div>
-          <div className="p-6 text-center bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 shadow-xl">
-            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
-              <CreditCard className="w-6 h-6 text-primary" />
+            <div className="p-8 text-center bg-white rounded-xl border border-gray-100 shadow-lg hover:shadow-xl transition-all">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
+                <Tv className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">4K Quality</h3>
+              <p className="text-muted">Enjoy crystal clear quality with 4K Ultra HD streaming.</p>
             </div>
-            <h3 className="text-xl font-semibold mb-2 text-gray-900">Cancel Anytime</h3>
-            <p className="text-muted">No long-term contracts. No commitments. Cancel anytime.</p>
+            <div className="p-8 text-center bg-white rounded-xl border border-gray-100 shadow-lg hover:shadow-xl transition-all">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
+                <CreditCard className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">Cancel Anytime</h3>
+              <p className="text-muted">No long-term contracts. No commitments. Cancel anytime.</p>
+            </div>
           </div>
         </div>
       </div>
