@@ -71,16 +71,14 @@ const Index = () => {
               Stream Smarter
             </span>
             
-            <div className="flex justify-center items-center gap-2 mb-8">
-              {[...Array(5)].map((_, i) => (
-                <div key={i} className="w-12 h-12">
-                  <img 
-                    src="/lovable-uploads/c677c336-9244-464b-9bd2-56be914a50cc.png" 
-                    alt="Star Rating" 
-                    className="w-full h-full"
-                  />
-                </div>
-              ))}
+            <div className="flex justify-center items-center mb-8">
+              <div className="w-16 h-16">
+                <img 
+                  src="/lovable-uploads/c677c336-9244-464b-9bd2-56be914a50cc.png" 
+                  alt="Star Rating" 
+                  className="w-full h-full"
+                />
+              </div>
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-white">
