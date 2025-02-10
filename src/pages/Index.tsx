@@ -117,21 +117,21 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 animate-fade-up">
-            <div className="p-8 text-center glass rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-white/5">
+            <div className="p-8 text-center rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-gradient-to-br from-black/40 via-[#403E43]/40 to-[#1EAEDB]/20">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
                 <PlayCircle className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-4 text-white">Watch Anywhere</h3>
               <p className="text-white/80">Stream on your phone, tablet, laptop, and TV without paying more.</p>
             </div>
-            <div className="p-8 text-center glass rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-white/5">
+            <div className="p-8 text-center rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-gradient-to-br from-black/40 via-[#403E43]/40 to-[#1EAEDB]/20">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
                 <Tv className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-4 text-white">4K Quality</h3>
               <p className="text-white/80">Enjoy crystal clear quality with 4K Ultra HD streaming.</p>
             </div>
-            <div className="p-8 text-center glass rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-white/5">
+            <div className="p-8 text-center rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-gradient-to-br from-black/40 via-[#403E43]/40 to-[#1EAEDB]/20">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
                 <CreditCard className="w-8 h-8 text-primary" />
               </div>
