@@ -69,14 +69,14 @@ const Index = () => {
         <div className="container mx-auto px-4 py-20 relative z-10">
           <div className="text-center animate-fade-up">
             <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-primary/10 text-primary backdrop-blur-sm">
-              Stream Smarter
+              Works with all devices
             </span>
 
             <div className="flex justify-center items-center mb-4">
               <img 
                 src="/lovable-uploads/9a4b3b59-98c2-4039-9ef2-f1a80f8b9c93.png" 
                 alt="Platform Logos" 
-                className="h-12 object-contain"
+                className="h-8 object-contain"
               />
             </div>
 
