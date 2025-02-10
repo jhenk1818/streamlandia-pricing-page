@@ -91,7 +91,7 @@ const Index = () => {
               Start Free Trial
             </button>
 
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center gap-4">
               <div className="w-32 h-32">
                 <img 
                   src="/lovable-uploads/c677c336-9244-464b-9bd2-56be914a50cc.png" 
@@ -99,6 +99,7 @@ const Index = () => {
                   className="w-full h-full object-contain"
                 />
               </div>
+              <span className="text-white font-medium text-lg">10,000+ Happy Users</span>
             </div>
           </div>
         </div>
