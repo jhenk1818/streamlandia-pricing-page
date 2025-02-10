@@ -1,4 +1,3 @@
-
 import { CreditCard, PlayCircle, Tv, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 
@@ -87,8 +86,8 @@ const Index = () => {
             <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-8">
               Stream your favorite shows, movies, and exclusive content. Start watching today with our risk-free trial.
             </p>
-            <button className="bg-primary text-white px-8 py-4 rounded-lg font-medium transition-all hover:bg-primary/90 hover:scale-105 mb-8">
-              Start Free Trial
+            <button className="bg-gradient-to-br from-black/40 via-[#403E43]/40 to-[#1EAEDB]/20 text-white px-8 py-4 rounded-xl font-medium transition-all hover:bg-primary/90 hover:scale-105 mb-8 border border-white/10 backdrop-blur-md shadow-lg">
+              Discover Plans
             </button>
 
             <div className="flex justify-center items-center gap-4">
