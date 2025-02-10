@@ -72,6 +72,14 @@ const Index = () => {
               Stream Smarter
             </span>
 
+            <div className="flex justify-center items-center mb-4">
+              <img 
+                src="/lovable-uploads/9a4b3b59-98c2-4039-9ef2-f1a80f8b9c93.png" 
+                alt="Platform Logos" 
+                className="h-12 object-contain"
+              />
+            </div>
+
             <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-white">
               Unlimited Entertainment
               <br /> at Your Fingertips
