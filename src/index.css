@@ -53,7 +53,7 @@ html {
   }
 }
 
-/* Auto-scroll animation for carousel */
+/* Auto-scroll animations for carousels */
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -71,8 +71,29 @@ html {
   }
 }
 
+@keyframes scroll-reverse {
+  0% {
+    transform: translateX(calc(-250px * 5));
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+}
+
 .auto-scroll {
   animation: scroll 20s linear infinite;
+}
+
+.auto-scroll-reverse {
+  animation: scroll-reverse 20s linear infinite;
 }
 
 /* Gradient overlays for carousel */
