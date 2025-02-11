@@ -1,13 +1,11 @@
-import { CreditCard, PlayCircle, Tv, CheckCircle2, Star, UserRound, Loader2 } from "lucide-react";
+
+import { CreditCard, PlayCircle, Tv, CheckCircle2, Star, UserRound } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { useToast } from "@/components/ui/use-toast";
 import Header from "@/components/Header";
 import PaymentButton from "@/components/PaymentButton";
 import { Mail, Phone, MapPin } from "lucide-react";
@@ -15,10 +13,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 const Index = () => {
   const [isAnnual, setIsAnnual] = useState(false);
   const [showLogo, setShowLogo] = useState(false);
-  const [email, setEmail] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
   const carouselEndRef = useRef<HTMLDivElement>(null);
-  const { toast } = useToast();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -46,30 +41,6 @@ const Index = () => {
       }
     };
   }, []);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-
-    try {
-      // This is where you would integrate with your third-party service
-      // For now, we'll simulate a response
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      toast({
-        title: "Login Details Generated",
-        description: "Your IPTV login credentials have been sent to your email.",
-      });
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Unable to verify subscription. Please try again later.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsLoading(false);
-    }
-  };
 
   const plans = [
     {
@@ -326,7 +297,7 @@ const Index = () => {
       <div className="bg-black">
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Stream Like Never Before
             </h2>
             <span className="inline-block px-4 py-1 mb-6 text-sm font-medium rounded-full bg-primary/10 text-primary backdrop-blur-sm">
@@ -490,128 +461,147 @@ const Index = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-            Admin Configuration
-          </h2>
-          <p className="text-white/80 text-lg max-w-2xl mx-auto">
-            Configure integration settings for automated user management
-          </p>
-        </div>
-        <div className="max-w-2xl mx-auto">
-          <ZapierWebhook />
-        </div>
-      </div>
-
-      <div className="mt-32">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-            What Our Users Say
-          </h2>
-          <p className="text-white/80 text-lg max-w-2xl mx-auto">
-            Join thousands of satisfied subscribers enjoying our premium content
-          </p>
-        </div>
-
-        <div className="relative overflow-hidden">
-          <div className="absolute left-0 top-0 bottom-0 w-20 md:w-40 fade-overlay-left z-10"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-20 md:w-40 fade-overlay-right z-10"></div>
-          
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-              dragFree: true,
-              containScroll: false,
-            }}
-            className="w-full"
-          >
-            <CarouselContent className="-ml-2 md:-ml-4 gap-3 md:gap-6 auto-scroll">
-              {[...reviews, ...reviews].map((review, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 basis-[85%] md:basis-1/3">
-                  <div className="p-4 md:p-6 rounded-xl border border-white/10 backdrop-blur-md bg-white/5 h-full">
-                    <div className="flex items-center gap-2 mb-4">
-                      {Array(5).fill(0).map((_, i) => (
-                        <Star
-                          key={i}
-                          className="w-4 h-4 md:w-5 md:h-5 fill-[#F97316] text-[#F97316]"
-                        />
-                      ))}
-                    </div>
-                    <div className="flex items-center gap-2 mb-4">
-                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                        <UserRound className="w-5 h-5 text-primary" />
-                      </div>
-                      <div>
-                        <p className="font-medium text-white text-sm md:text-base">{review.name}</p>
-                        <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-2">
-                          <span className="text-xs md:text-sm text-white/60">{review.date}</span>
-                          <span className="text-xs px-2 py-0.5 rounded-full bg-[#1A1F2C] text-primary whitespace-nowrap">
-                            Verified {review.plan} User
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <p className="text-sm md:text-base text-white/80">{review.comment}</p>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
-        </div>
-      </div>
-
-      <div className="mt-32">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-            Generate Your IPTV Logins
-          </h2>
-          <p className="text-white/80 text-lg max-w-2xl mx-auto">
-            Already subscribed? Generate your login credentials here
-          </p>
-        </div>
-
-        <div className="max-w-xl mx-auto px-4">
-          <div className="bg-[#221F26] rounded-xl border border-white/10 shadow-lg p-8">
-            <p className="text-white/80 mb-6">
-              Enter the email address associated with your subscription to generate your IPTV login credentials.
+      <div className="bg-black">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-12 animate-fade-up" style={{ animationDelay: "0.4s" }}>
+            <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-primary/10 text-primary">
+              Simple Pricing
+            </span>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">Choose Your Plan</h2>
+            <p className="text-muted text-lg max-w-2xl mx-auto mb-8">
+              Select the perfect plan for your entertainment needs
             </p>
-            
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-white/90 mb-1">
-                  Email Address
-                </label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="your@email.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="w-full bg-black/50 border-white/10 text-white"
-                />
-              </div>
-              
-              <Button
-                type="submit"
-                className="w-full bg-primary hover:bg-primary/90"
-                disabled={isLoading}
+          
+            <div className="flex items-center justify-center gap-4 mb-12">
+              <span className={`text-sm ${!isAnnual ? 'text-primary font-medium' : 'text-muted'}`}>Monthly</span>
+              <button
+                onClick={() => setIsAnnual(!isAnnual)}
+                className={`relative w-16 h-8 rounded-full transition-colors ${
+                  isAnnual ? 'bg-primary' : 'bg-muted'
+                }`}
               >
-                {isLoading ? (
-                  <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Verifying...
-                  </>
-                ) : (
-                  "Generate Logins"
-                )}
-              </Button>
-            </form>
+                <div
+                  className={`absolute w-6 h-6 bg-white rounded-full top-1 transition-transform ${
+                    isAnnual ? 'right-1' : 'left-1'
+                  }`}
+                />
+              </button>
+              <span className={`text-sm ${isAnnual ? 'text-primary font-medium' : 'text-muted'}`}>Annual</span>
+            </div>
+          </div>
 
-            <div className="mt-6 text-sm text-white/60">
-              <p>Note: Your login credentials will be sent to the email address associated with your subscription.</p>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {plans.map((plan, index) => (
+              <div
+                key={plan.name}
+                className={`relative rounded-2xl p-8 transition-all duration-300 animate-fade-up ${
+                  plan.popular ? 'overflow-hidden' : 'border border-white/10'
+                } ${plan.color} ${!plan.popular ? plan.hover : ''} ${plan.textColor || 'text-white'} backdrop-blur-md bg-white/5`}
+                style={{ animationDelay: `${0.6 + index * 0.1}s` }}
+              >
+                {plan.popular && (
+                  <>
+                    <div 
+                      className="absolute inset-0"
+                      style={{
+                        padding: '2px',
+                        background: 'linear-gradient(90deg, #000, #1EAEDB, #000)',
+                        backgroundSize: '200% 100%',
+                        animation: 'gradient 3s ease infinite',
+                        WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                        WebkitMaskComposite: 'xor',
+                        maskComposite: 'exclude',
+                        borderRadius: '1rem',
+                      }}
+                    />
+                  </>
+                )}
+                <div className="relative z-10">
+                  {plan.popular && (
+                    <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-white/10 text-white backdrop-blur-sm">
+                      Most Popular
+                    </span>
+                  )}
+                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                  <div className="mb-6">
+                    <span className="text-4xl font-bold">${plan.price}</span>
+                    <span className="text-sm opacity-80">/{isAnnual ? 'year' : 'month'}</span>
+                  </div>
+                  <ul className="space-y-4 mb-8">
+                    {plan.features.map((feature) => (
+                      <li key={feature} className="flex items-center gap-2">
+                        <CheckCircle2 className="w-5 h-5 text-primary" />
+                        <span className="text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <PaymentButton
+                    className={`${
+                      plan.popular
+                        ? 'bg-white text-primary'
+                        : 'bg-primary text-white'
+                    }`}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-32">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
+                What Our Users Say
+              </h2>
+              <p className="text-white/80 text-lg max-w-2xl mx-auto">
+                Join thousands of satisfied subscribers enjoying our premium content
+              </p>
+            </div>
+
+            <div className="relative overflow-hidden">
+              <div className="absolute left-0 top-0 bottom-0 w-20 md:w-40 fade-overlay-left z-10"></div>
+              <div className="absolute right-0 top-0 bottom-0 w-20 md:w-40 fade-overlay-right z-10"></div>
+              
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                  dragFree: true,
+                  containScroll: false,
+                }}
+                className="w-full"
+              >
+                <CarouselContent className="-ml-2 md:-ml-4 gap-3 md:gap-6 auto-scroll">
+                  {[...reviews, ...reviews].map((review, index) => (
+                    <CarouselItem key={index} className="pl-2 md:pl-4 basis-[85%] md:basis-1/3">
+                      <div className="p-4 md:p-6 rounded-xl border border-white/10 backdrop-blur-md bg-white/5 h-full">
+                        <div className="flex items-center gap-2 mb-4">
+                          {Array(5).fill(0).map((_, i) => (
+                            <Star
+                              key={i}
+                              className="w-4 h-4 md:w-5 md:h-5 fill-[#F97316] text-[#F97316]"
+                            />
+                          ))}
+                        </div>
+                        <div className="flex items-center gap-2 mb-4">
+                          <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                            <UserRound className="w-5 h-5 text-primary" />
+                          </div>
+                          <div>
+                            <p className="font-medium text-white text-sm md:text-base">{review.name}</p>
+                            <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-2">
+                              <span className="text-xs md:text-sm text-white/60">{review.date}</span>
+                              <span className="text-xs px-2 py-0.5 rounded-full bg-[#1A1F2C] text-primary whitespace-nowrap">
+                                Verified {review.plan} User
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <p className="text-sm md:text-base text-white/80">{review.comment}</p>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+              </Carousel>
             </div>
           </div>
         </div>
