@@ -70,7 +70,7 @@ const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
               </div>
               <Button
                 onClick={handlePayment}
-                className="w-full bg-black hover:bg-black/90 rounded-lg"
+                className="w-full bg-black hover:bg-black/90 rounded-[20px]"
                 disabled={isProcessing}
               >
                 {isProcessing ? (
@@ -89,7 +89,7 @@ const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
               <p className="text-white/80 mb-6">
                 You will now be redirected to our secure payment page.
               </p>
-              <Button onClick={handleRedirect} className="w-full rounded-lg">
+              <Button onClick={handleRedirect} className="w-full rounded-[20px]">
                 Proceed to Payment
               </Button>
             </div>
@@ -107,7 +107,7 @@ const PaymentButton = ({ className }: { className?: string }) => {
     <>
       <button
         onClick={() => setIsModalOpen(true)}
-        className={`w-full py-3 rounded-lg transition-transform hover:scale-105 ${className}`}
+        className={`w-full py-3 rounded-[20px] transition-transform hover:scale-105 ${className}`}
       >
         Get Started
       </button>
