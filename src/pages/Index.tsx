@@ -126,7 +126,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black pt-16">
+    <div className="min-h-screen bg-black">
       <Header />
       <div className="relative">
         <div 
@@ -607,3 +607,4 @@ const Index = () => {
 };
 
 export default Index;
+
