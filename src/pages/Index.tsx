@@ -518,6 +518,13 @@ const Index = () => {
                     <span>Family Sharing Available</span>
                   </li>
                 </ul>
+                <div className="mt-4">
+                  <img 
+                    src="/lovable-uploads/2cac0da1-13fd-4e24-b77b-f93d744b6ca6.png"
+                    alt="Payment Methods"
+                    className="w-full max-w-[300px] h-auto object-contain"
+                  />
+                </div>
               </div>
 
               <div className="md:w-3/5 flex items-center justify-center p-4">
