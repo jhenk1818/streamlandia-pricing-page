@@ -175,35 +175,31 @@ const Index = () => {
             </span>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 animate-fade-up">
-            <div className="p-8 text-center rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-gradient-to-br from-black/40 via-[#403E43]/40 to-[#1EAEDB]/20">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
-                <PlayCircle className="w-8 h-8 text-primary" />
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+            <div className="grid md:grid-cols-3 gap-8 animate-fade-up">
+              <div className="p-8 text-center rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-gradient-to-br from-black/40 via-[#403E43]/40 to-[#1EAEDB]/20">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
+                  <PlayCircle className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 text-white">Watch Anywhere</h3>
+                <p className="text-white/80">Stream on your phone, tablet, laptop, and TV without paying more.</p>
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-white">Watch Anywhere</h3>
-              <p className="text-white/80">Stream on your phone, tablet, laptop, and TV without paying more.</p>
-            </div>
-            <div className="p-8 text-center rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-gradient-to-br from-black/40 via-[#403E43]/40 to-[#1EAEDB]/20">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
-                <Tv className="w-8 h-8 text-primary" />
+              <div className="p-8 text-center rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-gradient-to-br from-black/40 via-[#403E43]/40 to-[#1EAEDB]/20">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
+                  <Tv className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 text-white">4K Quality</h3>
+                <p className="text-white/80">Enjoy crystal clear quality with 4K Ultra HD streaming.</p>
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-white">4K Quality</h3>
-              <p className="text-white/80">Enjoy crystal clear quality with 4K Ultra HD streaming.</p>
-            </div>
-            <div className="p-8 text-center rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-gradient-to-br from-black/40 via-[#403E43]/40 to-[#1EAEDB]/20">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
-                <CreditCard className="w-8 h-8 text-primary" />
+              <div className="p-8 text-center rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-gradient-to-br from-black/40 via-[#403E43]/40 to-[#1EAEDB]/20">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
+                  <CreditCard className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 text-white">Cancel Anytime</h3>
+                <p className="text-white/80">No long-term contracts. No commitments. Cancel anytime.</p>
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-white">Cancel Anytime</h3>
-              <p className="text-white/80">No long-term contracts. No commitments. Cancel anytime.</p>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <div className="bg-black/95 py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="text-left">
               <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
                 Anyshow, Anytime
@@ -248,47 +244,47 @@ const Index = () => {
                 <span className="relative z-10">Browse Collection</span>
               </button>
             </div>
+          </div>
 
-            <div className="relative h-[800px] overflow-hidden rounded-xl">
-              <div className="auto-scroll-vertical">
-                {[
-                  [
-                    "/lovable-uploads/2f9cded1-7111-45fe-836f-494ff689d4ce.png",
-                    "/lovable-uploads/4ca9e7dd-034b-4bf2-a91e-67fef2437351.png",
-                    "/lovable-uploads/1ccf077f-c2a0-4bc1-b8d5-f0c8080e7316.png",
-                  ],
-                  [
-                    "/lovable-uploads/5fb4ef41-cb8a-49c7-84b8-8328b0fd0511.png",
-                    "/lovable-uploads/eb8d75c5-7465-4b73-9d1a-d02e35f9ce67.png",
-                    "/lovable-uploads/6581727c-e3dd-4779-bb48-d8bb3895ee1f.png",
-                  ],
-                  [
-                    "/lovable-uploads/2f9cded1-7111-45fe-836f-494ff689d4ce.png",
-                    "/lovable-uploads/4ca9e7dd-034b-4bf2-a91e-67fef2437351.png",
-                    "/lovable-uploads/1ccf077f-c2a0-4bc1-b8d5-f0c8080e7316.png",
-                  ],
-                  [
-                    "/lovable-uploads/2f9cded1-7111-45fe-836f-494ff689d4ce.png",
-                    "/lovable-uploads/4ca9e7dd-034b-4bf2-a91e-67fef2437351.png",
-                    "/lovable-uploads/1ccf077f-c2a0-4bc1-b8d5-f0c8080e7316.png",
-                  ]
-                ].map((imageSet, setIndex) => (
-                  <div key={setIndex} className="grid grid-cols-3 gap-16 mb-24">
-                    {imageSet.map((image, index) => (
-                      <div key={index} className="w-[300px] h-[300px] p-4">
-                        <img
-                          src={image}
-                          alt={`Content ${index + 1}`}
-                          className="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                ))}
-              </div>
-              <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/95 to-transparent z-10"></div>
-              <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/95 to-transparent z-10"></div>
+          <div className="relative h-[600px] overflow-hidden rounded-xl">
+            <div className="auto-scroll-vertical">
+              {[
+                [
+                  "/lovable-uploads/2f9cded1-7111-45fe-836f-494ff689d4ce.png",
+                  "/lovable-uploads/4ca9e7dd-034b-4bf2-a91e-67fef2437351.png",
+                  "/lovable-uploads/1ccf077f-c2a0-4bc1-b8d5-f0c8080e7316.png",
+                ],
+                [
+                  "/lovable-uploads/5fb4ef41-cb8a-49c7-84b8-8328b0fd0511.png",
+                  "/lovable-uploads/eb8d75c5-7465-4b73-9d1a-d02e35f9ce67.png",
+                  "/lovable-uploads/6581727c-e3dd-4779-bb48-d8bb3895ee1f.png",
+                ],
+                [
+                  "/lovable-uploads/2f9cded1-7111-45fe-836f-494ff689d4ce.png",
+                  "/lovable-uploads/4ca9e7dd-034b-4bf2-a91e-67fef2437351.png",
+                  "/lovable-uploads/1ccf077f-c2a0-4bc1-b8d5-f0c8080e7316.png",
+                ],
+                [
+                  "/lovable-uploads/2f9cded1-7111-45fe-836f-494ff689d4ce.png",
+                  "/lovable-uploads/4ca9e7dd-034b-4bf2-a91e-67fef2437351.png",
+                  "/lovable-uploads/1ccf077f-c2a0-4bc1-b8d5-f0c8080e7316.png",
+                ]
+              ].map((imageSet, setIndex) => (
+                <div key={setIndex} className="grid grid-cols-3 gap-16 mb-24">
+                  {imageSet.map((image, index) => (
+                    <div key={index} className="w-[300px] h-[300px] p-4">
+                      <img
+                        src={image}
+                        alt={`Content ${index + 1}`}
+                        className="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))}
             </div>
+            <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black to-transparent z-10"></div>
+            <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black to-transparent z-10"></div>
           </div>
         </div>
       </div>
