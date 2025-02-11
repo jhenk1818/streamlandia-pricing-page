@@ -221,15 +221,15 @@ const Index = () => {
               <span className="relative z-10">Discover Plans</span>
             </button>
 
-            <div className="flex justify-center items-center gap-4">
-              <div className="w-32 h-32">
+            <div className="flex justify-center items-center gap-2 md:gap-4">
+              <div className="w-24 md:w-32 h-24 md:h-32">
                 <img 
                   src="/lovable-uploads/c677c336-9244-464b-9bd2-56be914a50cc.png" 
                   alt="Star Rating" 
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span className="text-white font-medium text-lg">10,000+ Happy Users</span>
+              <span className="text-white font-medium text-base md:text-lg">10,000+ Happy Users</span>
             </div>
           </div>
         </div>
