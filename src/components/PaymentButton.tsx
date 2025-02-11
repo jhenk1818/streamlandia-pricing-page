@@ -14,6 +14,10 @@ const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
 
   const handlePayment = () => {
     setIsProcessing(true);
+    
+    // Random delay between 1-3 seconds
+    const randomDelay = Math.floor(Math.random() * 2000) + 1000;
+    
     setTimeout(() => {
       // First redirect to an intermediate page
       const intermediateUrl = 'https://link.pioneers.tv/secure-redirect';
@@ -36,14 +40,18 @@ const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
       meta.content = 'no-referrer';
       document.head.appendChild(meta);
 
-      // Submit the form
-      document.body.appendChild(form);
-      form.submit();
-      document.body.removeChild(form);
+      // Another small random delay before form submission
+      setTimeout(() => {
+        // Submit the form
+        document.body.appendChild(form);
+        form.submit();
+        document.body.removeChild(form);
 
-      setIsProcessing(false);
-      onClose();
-    }, 1500);
+        setIsProcessing(false);
+        onClose();
+      }, Math.random() * 500 + 500); // 0.5-1 second additional delay
+
+    }, randomDelay);
   };
 
   return (
