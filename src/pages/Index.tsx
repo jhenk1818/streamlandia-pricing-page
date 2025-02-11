@@ -552,8 +552,8 @@ const Index = () => {
             </div>
 
             <div className="relative overflow-hidden">
-              <div className="absolute left-0 top-0 bottom-0 w-40 fade-overlay-left z-10"></div>
-              <div className="absolute right-0 top-0 bottom-0 w-40 fade-overlay-right z-10"></div>
+              <div className="absolute left-0 top-0 bottom-0 w-20 md:w-40 fade-overlay-left z-10"></div>
+              <div className="absolute right-0 top-0 bottom-0 w-20 md:w-40 fade-overlay-right z-10"></div>
               
               <Carousel
                 opts={{
@@ -564,15 +564,15 @@ const Index = () => {
                 }}
                 className="w-full"
               >
-                <CarouselContent className="-ml-4 gap-6 auto-scroll">
+                <CarouselContent className="-ml-2 md:-ml-4 gap-3 md:gap-6 auto-scroll">
                   {[...reviews, ...reviews].map((review, index) => (
-                    <CarouselItem key={index} className="basis-1/3 pl-4">
-                      <div className="p-6 rounded-xl border border-white/10 backdrop-blur-md bg-white/5 h-full">
+                    <CarouselItem key={index} className="pl-2 md:pl-4 basis-[85%] md:basis-1/3">
+                      <div className="p-4 md:p-6 rounded-xl border border-white/10 backdrop-blur-md bg-white/5 h-full">
                         <div className="flex items-center gap-2 mb-4">
                           {Array(5).fill(0).map((_, i) => (
                             <Star
                               key={i}
-                              className="w-5 h-5 fill-[#F97316] text-[#F97316]"
+                              className="w-4 h-4 md:w-5 md:h-5 fill-[#F97316] text-[#F97316]"
                             />
                           ))}
                         </div>
@@ -581,16 +581,16 @@ const Index = () => {
                             <UserRound className="w-5 h-5 text-primary" />
                           </div>
                           <div>
-                            <p className="font-medium text-white">{review.name}</p>
-                            <div className="flex items-center gap-2">
-                              <span className="text-sm text-white/60">{review.date}</span>
-                              <span className="text-xs px-2 py-0.5 rounded-full bg-[#1A1F2C] text-primary">
+                            <p className="font-medium text-white text-sm md:text-base">{review.name}</p>
+                            <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-2">
+                              <span className="text-xs md:text-sm text-white/60">{review.date}</span>
+                              <span className="text-xs px-2 py-0.5 rounded-full bg-[#1A1F2C] text-primary whitespace-nowrap">
                                 Verified {review.plan} User
                               </span>
                             </div>
                           </div>
                         </div>
-                        <p className="text-white/80">{review.comment}</p>
+                        <p className="text-sm md:text-base text-white/80">{review.comment}</p>
                       </div>
                     </CarouselItem>
                   ))}
