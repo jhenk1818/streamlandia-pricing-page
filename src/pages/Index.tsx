@@ -248,54 +248,18 @@ const Index = () => {
         </div>
       </div>
 
-      <div className="bg-black py-12 overflow-hidden">
+      <div className="bg-black py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-white">Our Partners</h2>
-          </div>
-          <div className="relative">
-            <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-black to-transparent z-10"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-black to-transparent z-10"></div>
-            
-            <div className="flex space-x-12 animate-scroll">
-              <div className="flex space-x-12 min-w-full">
-                {[
-                  "/lovable-uploads/b10a0c35-fd06-449d-aea4-6c5fadf5ea53.png",
-                  "/lovable-uploads/89bb007c-1f13-45ee-87db-d0b932f43f8a.png",
-                  "/lovable-uploads/42f6a867-eca3-4a9f-8b77-648ad3e69a6b.png",
-                  "/lovable-uploads/82731197-4770-4d28-8b67-32a63cd99e86.png",
-                  "/lovable-uploads/b0d1d466-08f9-4ec0-ae80-59adc02ae8a8.png",
-                  "/lovable-uploads/de083d82-479c-4897-a78c-b34bdea316a1.png",
-                  "/lovable-uploads/29356aab-3e13-4cd0-9b58-3a80dd75d872.png",
-                ].map((logo, index) => (
-                  <div key={index} className="flex-shrink-0">
-                    <img 
-                      src={logo} 
-                      alt={`Partner Logo ${index + 1}`} 
-                      className="h-16 w-auto object-contain"
-                    />
-                  </div>
-                ))}
-              </div>
-              <div className="flex space-x-12 min-w-full">
-                {[
-                  "/lovable-uploads/b10a0c35-fd06-449d-aea4-6c5fadf5ea53.png",
-                  "/lovable-uploads/89bb007c-1f13-45ee-87db-d0b932f43f8a.png",
-                  "/lovable-uploads/42f6a867-eca3-4a9f-8b77-648ad3e69a6b.png",
-                  "/lovable-uploads/82731197-4770-4d28-8b67-32a63cd99e86.png",
-                  "/lovable-uploads/b0d1d466-08f9-4ec0-ae80-59adc02ae8a8.png",
-                  "/lovable-uploads/de083d82-479c-4897-a78c-b34bdea316a1.png",
-                  "/lovable-uploads/29356aab-3e13-4cd0-9b58-3a80dd75d872.png",
-                ].map((logo, index) => (
-                  <div key={`duplicate-${index}`} className="flex-shrink-0">
-                    <img 
-                      src={logo} 
-                      alt={`Partner Logo ${index + 1}`} 
-                      className="h-16 w-auto object-contain"
-                    />
-                  </div>
-                ))}
-              </div>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
+              Works with all devices seamlessly
+            </h2>
+            <div className="max-w-4xl mx-auto">
+              <img 
+                src="/lovable-uploads/c7f3460b-8791-463a-8ff9-7a8ffd42ff85.png"
+                alt="Device Compatibility"
+                className="w-full h-auto rounded-xl shadow-2xl animate-fade-up"
+              />
             </div>
           </div>
         </div>
