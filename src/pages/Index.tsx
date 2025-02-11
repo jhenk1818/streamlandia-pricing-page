@@ -188,12 +188,12 @@ const Index = () => {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-white">
-              Number One IPTV Provider Worldwide
-              <br />
-              Stream Your Favorite Shows,
-              <br /> Movies, and Exclusive Content
+              Unlimited Entertainment
+              <br /> at Your Fingertips
             </h1>
             <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-8">
+              Number One IPTV Provider Worldwide.
+              <br />
               Stream your favorite shows, movies, and exclusive content. Start watching today with our risk-free trial.
             </p>
             <button 
