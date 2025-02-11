@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -110,21 +111,19 @@ html {
 /* Header animation */
 @keyframes borderGlow {
   0% {
-    border-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(30,174,219,0.2);
+    box-shadow: 0 0 15px rgba(30,174,219,0.3);
   }
   50% {
-    border-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(30,174,219,0.8);
+    box-shadow: 0 0 25px rgba(30,174,219,0.5);
   }
   100% {
-    border-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(30,174,219,0.2);
+    box-shadow: 0 0 15px rgba(30,174,219,0.3);
   }
 }
 
 .animate-border-glow {
   animation: borderGlow 2s ease-in-out infinite;
-}
-
-.animate-snake {
-  position: relative;
-  animation: snake 2s linear infinite;
 }
