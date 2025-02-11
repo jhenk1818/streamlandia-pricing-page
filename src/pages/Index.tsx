@@ -249,8 +249,8 @@ const Index = () => {
               </button>
             </div>
 
-            <div className="relative h-[600px] overflow-hidden rounded-xl">
-              <div className="auto-scroll-horizontal flex gap-6">
+            <div className="relative h-[400px] overflow-hidden rounded-xl">
+              <div className="auto-scroll-horizontal flex gap-8">
                 {[
                   "/lovable-uploads/2f9cded1-7111-45fe-836f-494ff689d4ce.png",
                   "/lovable-uploads/4ca9e7dd-034b-4bf2-a91e-67fef2437351.png",
@@ -266,27 +266,12 @@ const Index = () => {
                   "/lovable-uploads/eb8d75c5-7465-4b73-9d1a-d02e35f9ce67.png",
                   "/lovable-uploads/6581727c-e3dd-4779-bb48-d8bb3895ee1f.png"
                 ].map((image, index) => (
-                  <div key={index} className="flex flex-col gap-4 shrink-0">
-                    {[0, 1, 2].map((offset) => {
-                      const imageIndex = (index + offset) % 6;
-                      const imageSrc = [
-                        "/lovable-uploads/2f9cded1-7111-45fe-836f-494ff689d4ce.png",
-                        "/lovable-uploads/4ca9e7dd-034b-4bf2-a91e-67fef2437351.png",
-                        "/lovable-uploads/1ccf077f-c2a0-4bc1-b8d5-f0c8080e7316.png",
-                        "/lovable-uploads/5fb4ef41-cb8a-49c7-84b8-8328b0fd0511.png",
-                        "/lovable-uploads/eb8d75c5-7465-4b73-9d1a-d02e35f9ce67.png",
-                        "/lovable-uploads/6581727c-e3dd-4779-bb48-d8bb3895ee1f.png"
-                      ][imageIndex];
-                      return (
-                        <div key={offset} className="w-[300px] h-[180px]">
-                          <img
-                            src={imageSrc}
-                            alt={`Content ${imageIndex + 1}`}
-                            className="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                      );
-                    })}
+                  <div key={index} className="w-[400px] h-[400px] shrink-0">
+                    <img
+                      src={image}
+                      alt={`Content ${index + 1}`}
+                      className="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
                 ))}
               </div>
