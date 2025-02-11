@@ -1,3 +1,4 @@
+
 import { CreditCard, PlayCircle, Tv, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 import {
@@ -273,7 +274,7 @@ const Index = () => {
                     "/lovable-uploads/1ccf077f-c2a0-4bc1-b8d5-f0c8080e7316.png",
                   ]
                 ].map((imageSet, setIndex) => (
-                  <div key={setIndex} className="grid grid-cols-3 gap-16 mb-32">
+                  <div key={setIndex} className="grid grid-cols-3 gap-24 mb-32">
                     {imageSet.map((image, index) => (
                       <div key={index} className="w-[300px] h-[300px] p-4">
                         <img
@@ -366,3 +367,4 @@ const Index = () => {
 };
 
 export default Index;
+
