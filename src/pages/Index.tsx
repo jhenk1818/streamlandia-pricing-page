@@ -1,3 +1,4 @@
+
 import { CreditCard, PlayCircle, Tv, CheckCircle2 } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import {
@@ -24,6 +25,7 @@ const Index = () => {
       },
       {
         threshold: 0.1,
+        rootMargin: '-50px',
       }
     );
 
