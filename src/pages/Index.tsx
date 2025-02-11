@@ -13,6 +13,7 @@ const Index = () => {
   const [isAnnual, setIsAnnual] = useState(false);
   const [showLogo, setShowLogo] = useState(false);
   const carouselEndRef = useRef<HTMLDivElement>(null);
+  const pricingRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -40,6 +41,10 @@ const Index = () => {
       }
     };
   }, []);
+
+  const scrollToPricing = () => {
+    pricingRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   const plans = [
     {
@@ -198,6 +203,7 @@ const Index = () => {
             </p>
             <button 
               className="relative overflow-hidden text-white px-12 py-4 rounded-full font-medium transition-all hover:scale-105 mb-4 w-64 group"
+              onClick={scrollToPricing}
             >
               <div 
                 className="absolute inset-0 bg-gradient-to-r from-black via-[#1EAEDB] to-black opacity-70"
