@@ -273,9 +273,9 @@ const Index = () => {
                     "/lovable-uploads/1ccf077f-c2a0-4bc1-b8d5-f0c8080e7316.png",
                   ]
                 ].map((imageSet, setIndex) => (
-                  <div key={setIndex} className="grid grid-cols-3 gap-4 mb-4">
+                  <div key={setIndex} className="grid grid-cols-3 gap-8 mb-8">
                     {imageSet.map((image, index) => (
-                      <div key={index} className="w-[250px] h-[250px]">
+                      <div key={index} className="w-[250px] h-[250px] p-2">
                         <img
                           src={image}
                           alt={`Content ${index + 1}`}
