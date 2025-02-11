@@ -48,7 +48,7 @@ const Index = () => {
         "Cancel anytime",
         "First month free",
       ],
-      color: "bg-white",
+      color: "bg-black",
       hover: "hover:border-primary",
     },
     {
@@ -62,7 +62,7 @@ const Index = () => {
         "Offline downloads",
         "No ads",
       ],
-      color: "bg-primary",
+      color: "bg-black",
       textColor: "text-white",
       hover: "hover:bg-primary/90",
       popular: true,
@@ -79,7 +79,7 @@ const Index = () => {
         "No ads",
         "Family sharing",
       ],
-      color: "bg-white",
+      color: "bg-black",
       hover: "hover:border-primary",
     },
   ];
@@ -464,7 +464,7 @@ const Index = () => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2">
-                      <CheckCircle2 className={`w-5 h-5 ${plan.textColor || 'text-primary'}`} />
+                      <CheckCircle2 className="w-5 h-5 text-primary" />
                       <span className="text-sm">{feature}</span>
                     </li>
                   ))}
