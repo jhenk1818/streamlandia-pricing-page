@@ -28,4 +28,3 @@ const ShopifyCheckout = () => {
 };
 
 export default ShopifyCheckout;
-
