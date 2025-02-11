@@ -301,7 +301,8 @@ const Index = () => {
           </div>
 
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-white">Our Partners</h2>
+            <h2 className="text-3xl font-bold text-white mb-2">Thousands of Channels</h2>
+            <p className="text-white/80 text-sm md:text-base">More endless content, more than 33,000 channels to select from</p>
           </div>
           <div className="relative mb-20 w-full overflow-hidden">
             <div className="absolute left-0 top-0 bottom-0 w-[150px] md:w-[200px] bg-gradient-to-r from-black via-black to-transparent z-10"></div>
@@ -619,27 +620,4 @@ const Index = () => {
                 alt="Pioneers TV Logo"
                 className="w-40 h-auto"
               />
-              <p className="text-white/70 text-sm max-w-xs">
-                Experience unlimited entertainment at your fingertips. Stream your favorite shows, movies, and exclusive content anytime, anywhere.
-              </p>
-            </div>
-            
-            <div className="space-y-4">
-              <h3 className="text-white font-semibold text-lg">Contact Us</h3>
-              <div className="space-y-3">
-                <div className="flex items-center gap-2 text-white/70">
-                  <Mail className="w-4 h-4" />
-                  <a href="mailto:contact@pioneerstv.com" className="hover:text-primary transition-colors duration-200">
-                    contact@pioneerstv.com
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-};
-
-export default Index;
+              <p className="text-white
