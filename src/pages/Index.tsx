@@ -432,7 +432,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="w-full max-w-3xl mx-auto mb-20 bg-[#221F26] p-12 rounded-2xl">
+          <div className="w-full max-w-5xl mx-auto mb-20 bg-[#221F26] p-12 rounded-2xl">
             <img
               src="/lovable-uploads/f1625f1b-215d-403f-b3fa-c8a432c5fc77.png"
               alt="Stream on multiple devices"
