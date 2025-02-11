@@ -1,3 +1,4 @@
+<lov-code>
 import { CreditCard, PlayCircle, Tv, CheckCircle2, Star, UserRound } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import {
@@ -265,12 +266,45 @@ const Index = () => {
         </div>
       </div>
 
-      <div className="bg-black py-12 overflow-hidden">
-        <div className="container mx-auto px-4">
+      <div className="bg-black">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-3xl font-bold text-white mb-4">
+              Stream Like Never Before
+            </h2>
+            <span className="inline-block px-4 py-1 mb-6 text-sm font-medium rounded-full bg-primary/10 text-primary backdrop-blur-sm">
+              Why Choose Us
+            </span>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 animate-fade-up mb-20">
+            <div className="p-8 text-center rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-[#221F26]">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
+                <PlayCircle className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-4 text-white">Watch Anywhere</h3>
+              <p className="text-white/80">Stream on your phone, tablet, laptop, and TV without paying more.</p>
+            </div>
+            <div className="p-8 text-center rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-[#221F26]">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
+                <Tv className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-4 text-white">4K Quality</h3>
+              <p className="text-white/80">Enjoy crystal clear quality with 4K Ultra HD streaming.</p>
+            </div>
+            <div className="p-8 text-center rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-[#221F26]">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
+                <CreditCard className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-4 text-white">Cancel Anytime</h3>
+              <p className="text-white/80">No long-term contracts. No commitments. Cancel anytime.</p>
+            </div>
+          </div>
+
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white">Our Partners</h2>
           </div>
-          <div className="relative">
+          <div className="relative mb-20">
             <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-black to-transparent z-10"></div>
             <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-black to-transparent z-10"></div>
             
@@ -313,43 +347,6 @@ const Index = () => {
                   </div>
                 ))}
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="bg-black">
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-3xl font-bold text-white mb-4">
-              Stream Like Never Before
-            </h2>
-            <span className="inline-block px-4 py-1 mb-6 text-sm font-medium rounded-full bg-primary/10 text-primary backdrop-blur-sm">
-              Why Choose Us
-            </span>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 animate-fade-up mb-20">
-            <div className="p-8 text-center rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-[#221F26]">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
-                <PlayCircle className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4 text-white">Watch Anywhere</h3>
-              <p className="text-white/80">Stream on your phone, tablet, laptop, and TV without paying more.</p>
-            </div>
-            <div className="p-8 text-center rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-[#221F26]">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
-                <Tv className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4 text-white">4K Quality</h3>
-              <p className="text-white/80">Enjoy crystal clear quality with 4K Ultra HD streaming.</p>
-            </div>
-            <div className="p-8 text-center rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-[#221F26]">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
-                <CreditCard className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4 text-white">Cancel Anytime</h3>
-              <p className="text-white/80">No long-term contracts. No commitments. Cancel anytime.</p>
             </div>
           </div>
 
@@ -633,40 +630,4 @@ const Index = () => {
               <div className="space-y-3">
                 <div className="flex items-center gap-2 text-white/70">
                   <Mail className="w-4 h-4" />
-                  <a href="mailto:contact@pioneerstv.com" className="hover:text-primary transition-colors">
-                    contact@pioneerstv.com
-                  </a>
-                </div>
-                <div className="flex items-center gap-2 text-white/70">
-                  <Phone className="w-4 h-4" />
-                  <a href="tel:+1234567890" className="hover:text-primary transition-colors">
-                    +1 (234) 567-890
-                  </a>
-                </div>
-                <div className="flex items-center gap-2 text-white/70">
-                  <MapPin className="w-4 h-4" />
-                  <span>123 Streaming Street, Digital City, DC 12345</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="space-y-4">
-              <h3 className="text-white font-semibold text-lg">Business Hours</h3>
-              <div className="space-y-2 text-white/70">
-                <p>Customer Support Available:</p>
-                <p>Monday - Friday: 9:00 AM - 8:00 PM EST</p>
-                <p>Saturday - Sunday: 10:00 AM - 6:00 PM EST</p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="mt-12 pt-8 border-t border-white/10 text-center text-white/50 text-sm">
-            <p>© {new Date().getFullYear()} Pioneers TV. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-};
-
-export default Index;
+                  <a href="mailto:contact@pioneerstv.com" className="hover:text-primary transition-colors
