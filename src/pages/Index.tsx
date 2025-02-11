@@ -359,7 +359,7 @@ const Index = () => {
                   "/lovable-uploads/5fb4ef41-cb8a-49c7-84b8-8328b0fd0511.png",
                   "/lovable-uploads/eb8d75c5-7465-4b73-9d1a-d02e35f9ce67.png"
                 ].map((image, index) => (
-                  <CarouselItem key={index} className="basis-1/5 pl-4">
+                  <CarouselItem key={index} className="md:basis-1/5 basis-1/2 pl-4">
                     <div className="overflow-hidden rounded-xl aspect-[3/4] bg-black">
                       <img
                         src={image}
@@ -409,7 +409,7 @@ const Index = () => {
                   "/lovable-uploads/5fb4ef41-cb8a-49c7-84b8-8328b0fd0511.png",
                   "/lovable-uploads/eb8d75c5-7465-4b73-9d1a-d02e35f9ce67.png"
                 ].map((image, index) => (
-                  <CarouselItem key={index} className="basis-1/5 pl-4">
+                  <CarouselItem key={index} className="md:basis-1/5 basis-1/2 pl-4">
                     <div className="overflow-hidden rounded-xl aspect-[3/4] bg-black">
                       <img
                         src={image}
