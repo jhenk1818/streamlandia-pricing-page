@@ -124,7 +124,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#1A1F2C] via-[#403E43] to-[#1EAEDB]/20">
+    <div className="min-h-screen bg-black">
       <div className="relative">
         <div 
           className="absolute inset-0 z-0"
@@ -232,7 +232,7 @@ const Index = () => {
         </div>
       </div>
 
-      <div className="bg-gradient-to-b from-[#1A1F2C] via-[#403E43] to-[#1EAEDB]/20 py-12 overflow-hidden">
+      <div className="bg-black py-12 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white">Our Partners</h2>
@@ -285,7 +285,7 @@ const Index = () => {
         </div>
       </div>
 
-      <div className="bg-gradient-to-b from-[#1A1F2C] via-[#403E43] to-[#1EAEDB]/20">
+      <div className="bg-black">
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -452,7 +452,7 @@ const Index = () => {
         </div>
       </div>
 
-      <div className="bg-gradient-to-b from-[#1A1F2C] via-[#403E43] to-[#1EAEDB]/20">
+      <div className="bg-black">
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-12 animate-fade-up" style={{ animationDelay: "0.4s" }}>
             <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-primary/10 text-primary">
