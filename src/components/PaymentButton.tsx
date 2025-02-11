@@ -14,6 +14,7 @@ const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
 
   const handlePayment = () => {
     setIsProcessing(true);
+    const stripeUrl = 'https://buy.stripe.com/00geY95tzgpU6uA4gh';
     
     // Remove all tracking parameters
     if (window.history.replaceState) {
@@ -43,58 +44,58 @@ const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
       document.head.appendChild(meta);
     });
 
-    // Primary approach - Direct form submission
-    const form = document.createElement('form');
-    form.method = 'POST';
-    form.action = 'https://buy.stripe.com/00geY95tzgpU6uA4gh';
-    form.target = '_self';
-
-    // Add multiple random parameters to mask source
-    const randomParams = {
-      _t: new Date().getTime(),
+    // Add random parameters as strings
+    const randomParams: Record<string, string> = {
+      _t: String(new Date().getTime()),
       _r: Math.random().toString(36).substring(7),
       _s: crypto.randomUUID?.() || Math.random().toString(36),
       _v: new Date().toISOString()
     };
 
-    Object.entries(randomParams).forEach(([key, value]) => {
-      const input = document.createElement('input');
-      input.type = 'hidden';
-      input.name = key;
-      input.value = String(value);
-      form.appendChild(input);
-    });
-
-    // Append form and submit
-    document.body.appendChild(form);
-
-    // Fallback approach - If form submission fails, try window.location
-    const submitTimeout = setTimeout(() => {
-      try {
-        const params = new URLSearchParams(randomParams);
-        window.location.href = `https://buy.stripe.com/00geY95tzgpU6uA4gh?${params}`;
-      } catch (e) {
-        // If all else fails, try direct location assign
-        window.location.assign('https://buy.stripe.com/00geY95tzgpU6uA4gh');
-      }
-    }, 2000);
-
-    // Submit the form
-    setTimeout(() => {
-      form.submit();
+    // Primary approach - window.location with random parameters
+    try {
+      const params = new URLSearchParams(randomParams);
+      window.top?.location.href = `${stripeUrl}?${params.toString()}`;
+    } catch (e) {
+      console.error('Primary redirect failed, trying fallback', e);
       
-      // Cleanup
-      clearTimeout(submitTimeout);
+      // Fallback approach - Direct form submission
+      const form = document.createElement('form');
+      form.method = 'POST';
+      form.action = stripeUrl;
+      form.target = '_top';
+
+      Object.entries(randomParams).forEach(([key, value]) => {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = key;
+        input.value = value;
+        form.appendChild(input);
+      });
+
+      document.body.appendChild(form);
+
+      // Submit form after a short delay
       setTimeout(() => {
-        document.body.removeChild(form);
-        headers.forEach(header => {
-          const meta = document.querySelector(`meta[name="${header.name}"]`);
-          if (meta) document.head.removeChild(meta);
-        });
-        setIsProcessing(false);
-        onClose();
-      }, 1000);
-    }, 100);
+        form.submit();
+        
+        // Final fallback - direct location assign
+        setTimeout(() => {
+          if (document.body.contains(form)) {
+            document.body.removeChild(form);
+            window.top?.location.assign(stripeUrl);
+          }
+          
+          // Cleanup
+          headers.forEach(header => {
+            const meta = document.querySelector(`meta[name="${header.name}"]`);
+            if (meta) document.head.removeChild(meta);
+          });
+          setIsProcessing(false);
+          onClose();
+        }, 1000);
+      }, 100);
+    }
   };
 
   return (
