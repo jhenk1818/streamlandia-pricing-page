@@ -19,34 +19,15 @@ const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
     const randomDelay = Math.floor(Math.random() * 2000) + 1000;
     
     setTimeout(() => {
-      // First redirect to an intermediate page
-      const intermediateUrl = 'https://link.pioneers.tv/secure-redirect';
-      
-      // Create a form that POSTs to the intermediate URL
-      const form = document.createElement('form');
-      form.method = 'POST';
-      form.action = intermediateUrl;
-      
-      // Add the final destination as a hidden field
-      const destinationInput = document.createElement('input');
-      destinationInput.type = 'hidden';
-      destinationInput.name = 'destination';
-      destinationInput.value = 'https://buy.stripe.com/00geY95tzgpU6uA4gh';
-      form.appendChild(destinationInput);
-      
       // Add security headers
       const meta = document.createElement('meta');
       meta.name = 'referrer';
       meta.content = 'no-referrer';
       document.head.appendChild(meta);
 
-      // Another small random delay before form submission
+      // Another small random delay before redirect
       setTimeout(() => {
-        // Submit the form
-        document.body.appendChild(form);
-        form.submit();
-        document.body.removeChild(form);
-
+        window.location.href = 'https://buy.stripe.com/00geY95tzgpU6uA4gh';
         setIsProcessing(false);
         onClose();
       }, Math.random() * 500 + 500); // 0.5-1 second additional delay
