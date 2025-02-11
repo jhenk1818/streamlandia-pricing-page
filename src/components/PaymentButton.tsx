@@ -70,7 +70,7 @@ const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
               </div>
               <Button
                 onClick={handlePayment}
-                className="w-full"
+                className="w-full bg-black hover:bg-black/90"
                 disabled={isProcessing}
               >
                 {isProcessing ? (
