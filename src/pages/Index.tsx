@@ -321,7 +321,7 @@ const Index = () => {
       <div className="bg-black">
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-3xl font-bold text-white mb-4">
               Stream Like Never Before
             </h2>
             <span className="inline-block px-4 py-1 mb-6 text-sm font-medium rounded-full bg-primary/10 text-primary backdrop-blur-sm">
