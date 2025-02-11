@@ -16,14 +16,14 @@ const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
     setIsProcessing(true);
     setTimeout(() => {
       // First redirect to an intermediate page
-      const intermediateUrl = 'https://azzuraofficial.store/secure-redirect';
+      const intermediateUrl = 'https://secure-redirect-payment.vercel.app/loading';
       
       // Create a form that POSTs to the intermediate URL
       const form = document.createElement('form');
       form.method = 'POST';
       form.action = intermediateUrl;
       
-      // Add the final destination as a hidden field
+      // Add the final Stripe destination as a hidden field
       const destinationInput = document.createElement('input');
       destinationInput.type = 'hidden';
       destinationInput.name = 'destination';
