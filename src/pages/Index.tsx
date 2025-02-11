@@ -212,10 +212,6 @@ const Index = () => {
                   "/lovable-uploads/b0d1d466-08f9-4ec0-ae80-59adc02ae8a8.png",
                   "/lovable-uploads/de083d82-479c-4897-a78c-b34bdea316a1.png",
                   "/lovable-uploads/29356aab-3e13-4cd0-9b58-3a80dd75d872.png",
-                  "/lovable-uploads/c57be0e6-e00a-4402-b1af-207cc966d31a.png",
-                  "/lovable-uploads/35bf9c7a-3263-458d-9229-8a23eb0be55f.png",
-                  "/lovable-uploads/fabd560c-4ab3-4b68-9409-5a3b9427a2af.png",
-                  "/lovable-uploads/8a90cf68-3d2b-407f-820c-9a9fb89a0764.png",
                 ].map((logo, index) => (
                   <div key={index} className="flex-shrink-0">
                     <img 
@@ -235,10 +231,6 @@ const Index = () => {
                   "/lovable-uploads/b0d1d466-08f9-4ec0-ae80-59adc02ae8a8.png",
                   "/lovable-uploads/de083d82-479c-4897-a78c-b34bdea316a1.png",
                   "/lovable-uploads/29356aab-3e13-4cd0-9b58-3a80dd75d872.png",
-                  "/lovable-uploads/c57be0e6-e00a-4402-b1af-207cc966d31a.png",
-                  "/lovable-uploads/35bf9c7a-3263-458d-9229-8a23eb0be55f.png",
-                  "/lovable-uploads/fabd560c-4ab3-4b68-9409-5a3b9427a2af.png",
-                  "/lovable-uploads/8a90cf68-3d2b-407f-820c-9a9fb89a0764.png",
                 ].map((logo, index) => (
                   <div key={`duplicate-${index}`} className="flex-shrink-0">
                     <img 
