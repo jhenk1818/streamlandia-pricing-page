@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header className="fixed top-4 left-4 right-4 z-50 bg-black/90 backdrop-blur-md border border-white/10 rounded-full animate-border-glow">
-      <div className="container mx-auto px-16">
-        <div className="flex items-center justify-center h-16 gap-16">
-          <div className="flex items-center">
+      <div className="container mx-auto px-8">
+        <div className="flex items-center justify-between h-16">
+          <div className="flex items-center ml-4">
             <img 
               src="/lovable-uploads/293ee0b8-86b2-47bb-a202-64407806b5fc.png" 
               alt="Pioneers TV Logo" 
