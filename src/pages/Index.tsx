@@ -1,4 +1,4 @@
-import { CreditCard, PlayCircle, Tv, CheckCircle2 } from "lucide-react";
+import { CreditCard, PlayCircle, Tv, CheckCircle2, Star, UserRound } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import {
   Carousel,
@@ -82,6 +82,45 @@ const Index = () => {
       color: "bg-black",
       hover: "hover:border-primary",
     },
+  ];
+
+  const reviews = [
+    {
+      name: "Sarah Mitchell",
+      comment: "The streaming quality is exceptional! I've never experienced such crisp 4K content before.",
+      date: "March 15, 2024",
+      plan: "Premium"
+    },
+    {
+      name: "James Wilson",
+      comment: "Being able to watch on multiple devices is a game-changer for our family. Worth every penny!",
+      date: "March 14, 2024",
+      plan: "Family"
+    },
+    {
+      name: "Emily Rodriguez",
+      comment: "The content library is massive and there's always something new to watch. Highly recommend!",
+      date: "March 13, 2024",
+      plan: "Premium"
+    },
+    {
+      name: "Michael Chang",
+      comment: "Perfect for my needs. The offline downloads feature is super convenient for my commute.",
+      date: "March 12, 2024",
+      plan: "Basic"
+    },
+    {
+      name: "Lisa Anderson",
+      comment: "Customer service is outstanding, and the streaming quality never disappoints.",
+      date: "March 11, 2024",
+      plan: "Family"
+    },
+    {
+      name: "David Thompson",
+      comment: "Easy to use interface and great selection of shows. Exactly what I was looking for!",
+      date: "March 10, 2024",
+      plan: "Basic"
+    }
   ];
 
   return (
@@ -499,6 +538,64 @@ const Index = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-32">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
+                What Our Users Say
+              </h2>
+              <p className="text-white/80 text-lg max-w-2xl mx-auto">
+                Join thousands of satisfied subscribers enjoying our premium content
+              </p>
+            </div>
+
+            <div className="relative overflow-hidden">
+              <div className="absolute left-0 top-0 bottom-0 w-40 fade-overlay-left z-10"></div>
+              <div className="absolute right-0 top-0 bottom-0 w-40 fade-overlay-right z-10"></div>
+              
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                  dragFree: true,
+                  containScroll: false,
+                }}
+                className="w-full"
+              >
+                <CarouselContent className="-ml-4 gap-6 auto-scroll">
+                  {[...reviews, ...reviews].map((review, index) => (
+                    <CarouselItem key={index} className="basis-1/3 pl-4">
+                      <div className="p-6 rounded-xl border border-white/10 backdrop-blur-md bg-white/5 h-full">
+                        <div className="flex items-center gap-2 mb-4">
+                          {Array(5).fill(0).map((_, i) => (
+                            <Star
+                              key={i}
+                              className="w-5 h-5 fill-[#F97316] text-[#F97316]"
+                            />
+                          ))}
+                        </div>
+                        <div className="flex items-center gap-2 mb-4">
+                          <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                            <UserRound className="w-5 h-5 text-primary" />
+                          </div>
+                          <div>
+                            <p className="font-medium text-white">{review.name}</p>
+                            <div className="flex items-center gap-2">
+                              <span className="text-sm text-white/60">{review.date}</span>
+                              <span className="text-xs px-2 py-0.5 rounded-full bg-[#1A1F2C] text-primary">
+                                Verified {review.plan} User
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <p className="text-white/80">{review.comment}</p>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+              </Carousel>
+            </div>
           </div>
         </div>
       </div>
