@@ -303,9 +303,9 @@ const Index = () => {
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white">Our Partners</h2>
           </div>
-          <div className="relative mb-20">
-            <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-black to-transparent z-10"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-black to-transparent z-10"></div>
+          <div className="relative mb-20 w-full overflow-hidden">
+            <div className="absolute left-0 top-0 bottom-0 w-[150px] md:w-[200px] bg-gradient-to-r from-black via-black to-transparent z-10"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-[150px] md:w-[200px] bg-gradient-to-l from-black via-black to-transparent z-10"></div>
             
             <div className="flex space-x-12 animate-scroll">
               <div className="flex space-x-12 min-w-full">
