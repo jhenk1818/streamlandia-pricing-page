@@ -480,52 +480,51 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <div className="space-y-6 p-8 rounded-2xl border border-white/10 backdrop-blur-md bg-white/5">
-              <h3 className="text-2xl font-bold text-white mb-6">All Features Include:</h3>
-              <ul className="space-y-4">
-                <li className="flex items-center gap-3 text-white">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="space-y-4 p-6 rounded-2xl border border-white/10 backdrop-blur-md bg-white/5">
+              <h3 className="text-xl font-bold text-white mb-4">All Features Include:</h3>
+              <ul className="space-y-3">
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary" />
                   <span>4K Ultra HD Streaming Quality</span>
                 </li>
-                <li className="flex items-center gap-3 text-white">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary" />
                   <span>Watch on Multiple Devices</span>
                 </li>
-                <li className="flex items-center gap-3 text-white">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary" />
                   <span>Offline Downloads</span>
                 </li>
-                <li className="flex items-center gap-3 text-white">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary" />
                   <span>Ad-Free Entertainment</span>
                 </li>
-                <li className="flex items-center gap-3 text-white">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary" />
                   <span>Cancel Anytime</span>
                 </li>
-                <li className="flex items-center gap-3 text-white">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary" />
                   <span>24/7 Customer Support</span>
                 </li>
-                <li className="flex items-center gap-3 text-white">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary" />
                   <span>Regular Content Updates</span>
                 </li>
-                <li className="flex items-center gap-3 text-white">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary" />
                   <span>Family Sharing Available</span>
                 </li>
               </ul>
-              <PaymentButton className="w-full mt-8 bg-primary text-white" />
-            </div>
-
-            <div className="relative h-full">
-              <img 
-                src="/lovable-uploads/2ba0c9ba-923f-463d-a214-c35c66239dbf.png"
-                alt="Pricing Plans"
-                className="w-full h-full object-contain rounded-2xl"
-              />
+              <div className="relative mt-6">
+                <img 
+                  src="/lovable-uploads/2ba0c9ba-923f-463d-a214-c35c66239dbf.png"
+                  alt="Pricing Plans"
+                  className="w-full h-auto object-contain rounded-xl"
+                />
+              </div>
+              <PaymentButton className="w-full mt-4 bg-primary text-white" />
             </div>
           </div>
 
