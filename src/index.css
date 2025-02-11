@@ -35,11 +35,20 @@ html {
   }
 }
 
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
+@keyframes snake {
+  0% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+  }
+  50% {
+    clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%);
+  }
+  75% {
+    clip-path: polygon(100% 100%, 100% 0%, 0% 0%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
   }
 }
