@@ -42,7 +42,7 @@ const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-md max-w-[95%] w-full p-4 sm:p-6 bg-gradient-to-br from-black via-[#403E43] to-[#1EAEDB]">
+      <DialogContent className="sm:max-w-md max-w-[95%] w-full p-4 sm:p-6 bg-gradient-to-br from-black via-[#403E43] to-[#1EAEDB] rounded-3xl">
         <div className="w-full">
           <div className="flex items-center justify-center gap-2 mb-4 sm:mb-6">
             <Lock className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" />
@@ -120,4 +120,3 @@ const PaymentButton = ({ className }: { className?: string }) => {
 };
 
 export default PaymentButton;
-
