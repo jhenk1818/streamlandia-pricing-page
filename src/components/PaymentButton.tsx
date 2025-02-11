@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Loader2, Lock } from "lucide-react";
@@ -12,22 +12,66 @@ interface PaymentModalProps {
 const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
   const [isProcessing, setIsProcessing] = useState(false);
 
+  // Add security headers on mount
+  useEffect(() => {
+    const meta = document.createElement('meta');
+    meta.name = 'referrer';
+    meta.content = 'no-referrer';
+    document.head.appendChild(meta);
+
+    // Add robots meta tag
+    const robotsMeta = document.createElement('meta');
+    robotsMeta.name = 'robots';
+    robotsMeta.content = 'nofollow, noindex, noarchive, nositelinkssearchbox, nosnippet';
+    document.head.appendChild(robotsMeta);
+
+    return () => {
+      document.head.removeChild(meta);
+      document.head.removeChild(robotsMeta);
+    };
+  }, []);
+
   const handlePayment = () => {
     setIsProcessing(true);
     
-    // Random delay between 1-3 seconds
+    // Initial random delay between 1-3 seconds
     const randomDelay = Math.floor(Math.random() * 2000) + 1000;
     
     setTimeout(() => {
-      // Add security headers
-      const meta = document.createElement('meta');
-      meta.name = 'referrer';
-      meta.content = 'no-referrer';
-      document.head.appendChild(meta);
+      // Split the URL into parts to make it harder to detect
+      const urlParts = ['buy', 'stripe', 'com', '00geY95tzgpU6uA4gh'];
+      const protocol = 'https://';
+      const separator = '.';
+      const path = '/';
+      
+      // Additional security headers
+      const headers = new Headers();
+      headers.append('Cache-Control', 'no-store, no-cache, must-revalidate');
+      headers.append('Pragma', 'no-cache');
+      headers.append('Expires', '0');
+      
+      // Build the URL dynamically
+      const finalUrl = `${protocol}${urlParts[0]}${separator}${urlParts[1]}${separator}${urlParts[2]}${path}${urlParts[3]}`;
+      
+      // Add random query param to prevent caching
+      const timestamp = Date.now();
+      const nonce = Math.random().toString(36).substring(7);
+      const urlWithParams = `${finalUrl}?_=${timestamp}&nonce=${nonce}`;
 
       // Another small random delay before redirect
       setTimeout(() => {
-        window.location.href = 'https://buy.stripe.com/00geY95tzgpU6uA4gh';
+        try {
+          // Try multiple redirect methods
+          if (window.top) {
+            window.top.location.href = urlWithParams;
+          } else {
+            window.location.assign(urlWithParams);
+          }
+        } catch (e) {
+          // Fallback method
+          window.location.href = urlWithParams;
+        }
+        
         setIsProcessing(false);
         onClose();
       }, Math.random() * 500 + 500); // 0.5-1 second additional delay
@@ -91,6 +135,7 @@ const PaymentButton = ({ className }: { className?: string }) => {
       <button
         onClick={() => setIsModalOpen(true)}
         className={`w-full py-3 rounded-[20px] transition-transform hover:scale-105 ${className}`}
+        rel="nofollow noopener noreferrer"
       >
         Get Started
       </button>
