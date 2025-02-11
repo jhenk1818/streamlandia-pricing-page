@@ -1,4 +1,3 @@
-
 import { CreditCard, PlayCircle, Tv, CheckCircle2, Star, UserRound } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import {
@@ -7,6 +6,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import Header from "@/components/Header";
+import PaymentButton from "@/components/PaymentButton";
 
 const Index = () => {
   const [isAnnual, setIsAnnual] = useState(false);
@@ -528,15 +528,13 @@ const Index = () => {
                       </li>
                     ))}
                   </ul>
-                  <button
-                    className={`w-full py-3 rounded-lg transition-transform hover:scale-105 ${
+                  <PaymentButton
+                    className={`${
                       plan.popular
                         ? 'bg-white text-primary'
                         : 'bg-primary text-white'
                     }`}
-                  >
-                    Get Started
-                  </button>
+                  />
                 </div>
               </div>
             ))}
