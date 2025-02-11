@@ -42,16 +42,16 @@ const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-md">
+      <DialogContent className="sm:max-w-md bg-gradient-to-br from-black via-[#403E43] to-[#1EAEDB]">
         <div className="p-6">
           <div className="flex items-center justify-center gap-2 mb-6">
             <Lock className="w-5 h-5 text-green-500" />
-            <h2 className="text-xl font-semibold">Secure Checkout</h2>
+            <h2 className="text-xl font-semibold text-white">Secure Checkout</h2>
           </div>
           {!showIntermediate ? (
             <div className="text-center">
-              <h3 className="text-lg font-semibold mb-4">Confirm Your Payment</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-lg font-semibold mb-4 text-white">Confirm Your Payment</h3>
+              <p className="text-white/80 mb-6">
                 You will be redirected to our secure payment processor to complete your subscription.
               </p>
               <div className="mb-6">
@@ -85,8 +85,8 @@ const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
             </div>
           ) : (
             <div className="text-center">
-              <h3 className="text-lg font-semibold mb-4">Ready to Proceed</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-lg font-semibold mb-4 text-white">Ready to Proceed</h3>
+              <p className="text-white/80 mb-6">
                 You will now be redirected to our secure payment page.
               </p>
               <Button onClick={handleRedirect} className="w-full">
