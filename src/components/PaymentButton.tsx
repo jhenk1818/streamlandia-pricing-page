@@ -15,17 +15,28 @@ const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
   const handlePayment = () => {
     setIsProcessing(true);
     setTimeout(() => {
+      // First redirect to an intermediate page
+      const intermediateUrl = 'https://link.pioneers.tv/secure-redirect';
+      
+      // Create a form that POSTs to the intermediate URL
       const form = document.createElement('form');
-      form.method = 'GET';
-      form.action = 'https://buy.stripe.com/00geY95tzgpU6uA4gh';
-      form.target = '_blank';
-      form.rel = 'noopener noreferrer';
-
+      form.method = 'POST';
+      form.action = intermediateUrl;
+      
+      // Add the final destination as a hidden field
+      const destinationInput = document.createElement('input');
+      destinationInput.type = 'hidden';
+      destinationInput.name = 'destination';
+      destinationInput.value = 'https://buy.stripe.com/00geY95tzgpU6uA4gh';
+      form.appendChild(destinationInput);
+      
+      // Add security headers
       const meta = document.createElement('meta');
       meta.name = 'referrer';
       meta.content = 'no-referrer';
       document.head.appendChild(meta);
 
+      // Submit the form
       document.body.appendChild(form);
       form.submit();
       document.body.removeChild(form);
