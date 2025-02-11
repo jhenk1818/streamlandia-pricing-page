@@ -470,7 +470,7 @@ const Index = () => {
 
       <div className="bg-black">
         <div className="container mx-auto px-4 py-20">
-          <div className="text-center mb-12 animate-fade-up" style={{ animationDelay: "0.4s" }}>
+          <div className="text-center mb-12 animate-fade-up" ref={pricingRef} style={{ animationDelay: "0.4s" }}>
             <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-primary/10 text-primary">
               Simple Pricing
             </span>
@@ -478,80 +478,55 @@ const Index = () => {
             <p className="text-muted text-lg max-w-2xl mx-auto mb-8">
               Select the perfect plan for your entertainment needs
             </p>
-          
-            <div className="flex items-center justify-center gap-4 mb-12">
-              <span className={`text-sm ${!isAnnual ? 'text-primary font-medium' : 'text-muted'}`}>Monthly</span>
-              <button
-                onClick={() => setIsAnnual(!isAnnual)}
-                className={`relative w-16 h-8 rounded-full transition-colors ${
-                  isAnnual ? 'bg-primary' : 'bg-muted'
-                }`}
-              >
-                <div
-                  className={`absolute w-6 h-6 bg-white rounded-full top-1 transition-transform ${
-                    isAnnual ? 'right-1' : 'left-1'
-                  }`}
-                />
-              </button>
-              <span className={`text-sm ${isAnnual ? 'text-primary font-medium' : 'text-muted'}`}>Annual</span>
-            </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {plans.map((plan, index) => (
-              <div
-                key={plan.name}
-                className={`relative rounded-2xl p-8 transition-all duration-300 animate-fade-up ${
-                  plan.popular ? 'overflow-hidden' : 'border border-white/10'
-                } ${plan.color} ${!plan.popular ? plan.hover : ''} ${plan.textColor || 'text-white'} backdrop-blur-md bg-white/5`}
-                style={{ animationDelay: `${0.6 + index * 0.1}s` }}
-              >
-                {plan.popular && (
-                  <>
-                    <div 
-                      className="absolute inset-0"
-                      style={{
-                        padding: '2px',
-                        background: 'linear-gradient(90deg, #000, #1EAEDB, #000)',
-                        backgroundSize: '200% 100%',
-                        animation: 'gradient 3s ease infinite',
-                        WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-                        WebkitMaskComposite: 'xor',
-                        maskComposite: 'exclude',
-                        borderRadius: '1rem',
-                      }}
-                    />
-                  </>
-                )}
-                <div className="relative z-10">
-                  {plan.popular && (
-                    <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-white/10 text-white backdrop-blur-sm">
-                      Most Popular
-                    </span>
-                  )}
-                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                  <div className="mb-6">
-                    <span className="text-4xl font-bold">${plan.price}</span>
-                    <span className="text-sm opacity-80">/{isAnnual ? 'year' : 'month'}</span>
-                  </div>
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-2">
-                        <CheckCircle2 className="w-5 h-5 text-primary" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <PaymentButton
-                    className={`${
-                      plan.popular
-                        ? 'bg-white text-primary'
-                        : 'bg-primary text-white'
-                    }`}
-                  />
-                </div>
-              </div>
-            ))}
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="space-y-6 p-8 rounded-2xl border border-white/10 backdrop-blur-md bg-white/5">
+              <h3 className="text-2xl font-bold text-white mb-6">All Features Include:</h3>
+              <ul className="space-y-4">
+                <li className="flex items-center gap-3 text-white">
+                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                  <span>4K Ultra HD Streaming Quality</span>
+                </li>
+                <li className="flex items-center gap-3 text-white">
+                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                  <span>Watch on Multiple Devices</span>
+                </li>
+                <li className="flex items-center gap-3 text-white">
+                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                  <span>Offline Downloads</span>
+                </li>
+                <li className="flex items-center gap-3 text-white">
+                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                  <span>Ad-Free Entertainment</span>
+                </li>
+                <li className="flex items-center gap-3 text-white">
+                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                  <span>Cancel Anytime</span>
+                </li>
+                <li className="flex items-center gap-3 text-white">
+                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                  <span>24/7 Customer Support</span>
+                </li>
+                <li className="flex items-center gap-3 text-white">
+                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                  <span>Regular Content Updates</span>
+                </li>
+                <li className="flex items-center gap-3 text-white">
+                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                  <span>Family Sharing Available</span>
+                </li>
+              </ul>
+              <PaymentButton className="w-full mt-8 bg-primary text-white" />
+            </div>
+
+            <div className="relative h-full">
+              <img 
+                src="/lovable-uploads/2ba0c9ba-923f-463d-a214-c35c66239dbf.png"
+                alt="Pricing Plans"
+                className="w-full h-full object-contain rounded-2xl"
+              />
+            </div>
           </div>
 
           <div className="mt-32">
