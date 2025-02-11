@@ -413,15 +413,16 @@ const Index = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-12 animate-fade-up" style={{ animationDelay: "0.4s" }}>
-          <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-primary/10 text-primary">
-            Simple Pricing
-          </span>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Choose Your Plan</h2>
-          <p className="text-muted text-lg max-w-2xl mx-auto mb-8">
-            Select the perfect plan for your entertainment needs
-          </p>
+      <div className="bg-black">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-12 animate-fade-up" style={{ animationDelay: "0.4s" }}>
+            <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-primary/10 text-primary">
+              Simple Pricing
+            </span>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">Choose Your Plan</h2>
+            <p className="text-muted text-lg max-w-2xl mx-auto mb-8">
+              Select the perfect plan for your entertainment needs
+            </p>
           
           <div className="flex items-center justify-center gap-4 mb-12">
             <span className={`text-sm ${!isAnnual ? 'text-primary font-medium' : 'text-muted'}`}>Monthly</span>
