@@ -633,3 +633,40 @@ const Index = () => {
               <div className="space-y-3">
                 <div className="flex items-center gap-2 text-white/70">
                   <Mail className="w-4 h-4" />
+                  <a href="mailto:contact@pioneerstv.com" className="hover:text-primary transition-colors">
+                    contact@pioneerstv.com
+                  </a>
+                </div>
+                <div className="flex items-center gap-2 text-white/70">
+                  <Phone className="w-4 h-4" />
+                  <a href="tel:+1234567890" className="hover:text-primary transition-colors">
+                    +1 (234) 567-890
+                  </a>
+                </div>
+                <div className="flex items-center gap-2 text-white/70">
+                  <MapPin className="w-4 h-4" />
+                  <span>123 Streaming Street, Digital City, DC 12345</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="space-y-4">
+              <h3 className="text-white font-semibold text-lg">Business Hours</h3>
+              <div className="space-y-2 text-white/70">
+                <p>Customer Support Available:</p>
+                <p>Monday - Friday: 9:00 AM - 8:00 PM EST</p>
+                <p>Saturday - Sunday: 10:00 AM - 6:00 PM EST</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-12 pt-8 border-t border-white/10 text-center text-white/50 text-sm">
+            <p>© {new Date().getFullYear()} Pioneers TV. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default Index;
