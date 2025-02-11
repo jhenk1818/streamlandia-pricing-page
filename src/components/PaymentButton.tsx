@@ -42,40 +42,40 @@ const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-md bg-gradient-to-br from-black via-[#403E43] to-[#1EAEDB]">
-        <div className="p-6">
-          <div className="flex items-center justify-center gap-2 mb-6">
-            <Lock className="w-5 h-5 text-green-500" />
-            <h2 className="text-xl font-semibold text-white">Secure Checkout</h2>
+      <DialogContent className="sm:max-w-md max-w-[95%] w-full p-4 sm:p-6 bg-gradient-to-br from-black via-[#403E43] to-[#1EAEDB]">
+        <div className="w-full">
+          <div className="flex items-center justify-center gap-2 mb-4 sm:mb-6">
+            <Lock className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" />
+            <h2 className="text-lg sm:text-xl font-semibold text-white">Secure Checkout</h2>
           </div>
           {!showIntermediate ? (
             <div className="text-center">
-              <h3 className="text-lg font-semibold mb-4 text-white">Confirm Your Payment</h3>
-              <p className="text-white/80 mb-6">
+              <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-white">Confirm Your Payment</h3>
+              <p className="text-sm sm:text-base text-white/80 mb-4 sm:mb-6">
                 You will be redirected to our secure payment processor to complete your subscription.
               </p>
-              <div className="mb-6">
+              <div className="mb-4 sm:mb-6">
                 <img
                   src="/lovable-uploads/e95d1082-2c64-41a3-9798-c1ebacbc77c8.png"
                   alt="Credit Cards"
-                  className="w-full max-w-[300px] mx-auto mb-6"
+                  className="w-full max-w-[250px] sm:max-w-[300px] mx-auto mb-4 sm:mb-6"
                 />
               </div>
-              <div className="flex justify-center gap-4 mb-6">
+              <div className="flex justify-center gap-4 mb-4 sm:mb-6">
                 <img
                   src="/lovable-uploads/39e12f88-1320-4aca-9bc1-dfafc46add31.png"
                   alt="Payment Methods"
-                  className="w-full max-w-[400px]"
+                  className="w-full max-w-[300px] sm:max-w-[400px]"
                 />
               </div>
               <Button
                 onClick={handlePayment}
-                className="w-full bg-black hover:bg-black/90 rounded-[20px]"
+                className="w-full bg-black hover:bg-black/90 rounded-[20px] text-sm sm:text-base py-2 sm:py-3"
                 disabled={isProcessing}
               >
                 {isProcessing ? (
-                  <div className="flex items-center gap-2">
-                    <Loader2 className="w-4 h-4 animate-spin" />
+                  <div className="flex items-center justify-center gap-2">
+                    <Loader2 className="w-3 h-3 sm:w-4 sm:h-4 animate-spin" />
                     Processing...
                   </div>
                 ) : (
@@ -85,11 +85,14 @@ const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
             </div>
           ) : (
             <div className="text-center">
-              <h3 className="text-lg font-semibold mb-4 text-white">Ready to Proceed</h3>
-              <p className="text-white/80 mb-6">
+              <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-white">Ready to Proceed</h3>
+              <p className="text-sm sm:text-base text-white/80 mb-4 sm:mb-6">
                 You will now be redirected to our secure payment page.
               </p>
-              <Button onClick={handleRedirect} className="w-full rounded-[20px]">
+              <Button 
+                onClick={handleRedirect} 
+                className="w-full rounded-[20px] text-sm sm:text-base py-2 sm:py-3"
+              >
                 Proceed to Payment
               </Button>
             </div>
@@ -117,3 +120,4 @@ const PaymentButton = ({ className }: { className?: string }) => {
 };
 
 export default PaymentButton;
+
