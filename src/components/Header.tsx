@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="fixed top-4 left-4 right-4 z-50 bg-black/90 backdrop-blur-md border border-white/10 rounded-2xl">
+    <header className="fixed top-4 left-4 right-4 z-50 bg-black/90 backdrop-blur-md border border-white/10 rounded-full animate-fade-in">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
