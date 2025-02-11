@@ -1,4 +1,3 @@
-<lov-code>
 import { CreditCard, PlayCircle, Tv, CheckCircle2, Star, UserRound } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import {
@@ -630,4 +629,4 @@ const Index = () => {
               <div className="space-y-3">
                 <div className="flex items-center gap-2 text-white/70">
                   <Mail className="w-4 h-4" />
-                  <a href="mailto:contact@pioneerstv.com" className="hover:text-primary transition-colors
+                  <a href="mailto:contact@pioneerstv.com" className="hover:text-primary transition-colors duration-2
