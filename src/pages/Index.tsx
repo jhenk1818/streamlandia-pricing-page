@@ -140,7 +140,7 @@ const Index = () => {
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
 
-        <div className="container mx-auto px-4 py-20 relative z-10">
+        <div className="container mx-auto px-4 pt-32 pb-20 relative z-10">
           <div className="text-center animate-fade-up">
             <span className="relative inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full">
               <div 
