@@ -518,7 +518,6 @@ const Index = () => {
                     <span>Family Sharing Available</span>
                   </li>
                 </ul>
-                <PaymentButton className="w-full mt-4 bg-primary text-white" />
               </div>
 
               <div className="md:w-1/2 flex items-center">
