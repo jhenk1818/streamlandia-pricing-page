@@ -133,13 +133,13 @@ const Index = () => {
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: 'url("https://pioneerstv.com/wp-content/uploads/2024/01/hero.jpg")',
+            backgroundImage: 'url("/lovable-uploads/199f59c2-2889-41de-ae7c-ed253796993b.png")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             height: '85vh'
           }}
         >
-          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-black/70"></div>
         </div>
 
         <div className="container mx-auto px-4 pt-32 pb-20 relative z-10">
