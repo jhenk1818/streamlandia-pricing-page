@@ -1,8 +1,9 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Loader2, Lock } from "lucide-react";
+import { useToast } from "@/components/ui/use-toast";
 
 interface PaymentModalProps {
   isOpen: boolean;
@@ -12,6 +13,7 @@ interface PaymentModalProps {
 const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
   const [isProcessing, setIsProcessing] = useState(false);
   const [showIntermediate, setShowIntermediate] = useState(false);
+  const { toast } = useToast();
 
   const handlePayment = () => {
     setIsProcessing(true);
@@ -28,6 +30,9 @@ const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
     form.target = '_blank';
     form.rel = 'noopener noreferrer';
 
+    // Set a flag in localStorage when redirecting to Stripe
+    localStorage.setItem('stripeRedirectTime', new Date().toISOString());
+
     const meta = document.createElement('meta');
     meta.name = 'referrer';
     meta.content = 'no-referrer';
@@ -39,6 +44,39 @@ const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
 
     onClose();
   };
+
+  // Check if user is returning from Stripe
+  useEffect(() => {
+    const checkStripeReturn = () => {
+      const stripeRedirectTime = localStorage.getItem('stripeRedirectTime');
+      
+      if (stripeRedirectTime) {
+        // Check if the URL contains success parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const isSuccess = urlParams.get('success');
+        
+        if (isSuccess === 'true') {
+          toast({
+            title: "Thank you for your purchase!",
+            description: "Your payment was successful.",
+          });
+          // Clear the flag
+          localStorage.removeItem('stripeRedirectTime');
+        }
+      }
+    };
+
+    // Check when component mounts
+    checkStripeReturn();
+
+    // Also check when window gains focus (user returns from Stripe tab)
+    const handleFocus = () => {
+      checkStripeReturn();
+    };
+
+    window.addEventListener('focus', handleFocus);
+    return () => window.removeEventListener('focus', handleFocus);
+  }, [toast]);
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
