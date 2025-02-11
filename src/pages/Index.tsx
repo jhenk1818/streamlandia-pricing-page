@@ -11,7 +11,6 @@ import { useToast } from "@/components/ui/use-toast";
 import Header from "@/components/Header";
 import PaymentButton from "@/components/PaymentButton";
 import { Mail, Phone, MapPin } from "lucide-react";
-import ZapierWebhook from "@/components/ZapierWebhook";
 
 const Index = () => {
   const [isAnnual, setIsAnnual] = useState(false);
