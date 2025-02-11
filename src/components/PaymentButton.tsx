@@ -14,88 +14,36 @@ const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
 
   const handlePayment = () => {
     setIsProcessing(true);
-    const stripeUrl = 'https://buy.stripe.com/00geY95tzgpU6uA4gh';
-    
-    // Remove all tracking parameters
-    if (window.history.replaceState) {
-      const cleanUrl = window.location.origin + window.location.pathname;
-      window.history.replaceState({}, '', cleanUrl);
-    }
-
-    // Clear localStorage and sessionStorage
-    try {
-      localStorage.clear();
-      sessionStorage.clear();
-    } catch (e) {
-      // Ignore errors
-    }
-
-    // Set multiple headers to mask traffic
-    const headers = [
-      { name: 'referrer', content: 'no-referrer' },
-      { name: 'referrer-policy', content: 'no-referrer' },
-      { name: 'cache-control', content: 'no-cache' }
-    ];
-
-    headers.forEach(header => {
-      const meta = document.createElement('meta');
-      meta.name = header.name;
-      meta.content = header.content;
-      document.head.appendChild(meta);
-    });
-
-    // Add random parameters as strings
-    const randomParams: Record<string, string> = {
-      _t: String(new Date().getTime()),
-      _r: Math.random().toString(36).substring(7),
-      _s: crypto.randomUUID?.() || Math.random().toString(36),
-      _v: new Date().toISOString()
-    };
-
-    // Primary approach - window.location with random parameters
-    try {
-      const params = new URLSearchParams(randomParams);
-      window.top?.location.href = `${stripeUrl}?${params.toString()}`;
-    } catch (e) {
-      console.error('Primary redirect failed, trying fallback', e);
+    setTimeout(() => {
+      // First redirect to an intermediate page
+      const intermediateUrl = 'https://link.pioneers.tv/secure-redirect';
       
-      // Fallback approach - Direct form submission
+      // Create a form that POSTs to the intermediate URL
       const form = document.createElement('form');
       form.method = 'POST';
-      form.action = stripeUrl;
-      form.target = '_top';
+      form.action = intermediateUrl;
+      
+      // Add the final destination as a hidden field
+      const destinationInput = document.createElement('input');
+      destinationInput.type = 'hidden';
+      destinationInput.name = 'destination';
+      destinationInput.value = 'https://buy.stripe.com/00geY95tzgpU6uA4gh';
+      form.appendChild(destinationInput);
+      
+      // Add security headers
+      const meta = document.createElement('meta');
+      meta.name = 'referrer';
+      meta.content = 'no-referrer';
+      document.head.appendChild(meta);
 
-      Object.entries(randomParams).forEach(([key, value]) => {
-        const input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = key;
-        input.value = value;
-        form.appendChild(input);
-      });
-
+      // Submit the form
       document.body.appendChild(form);
+      form.submit();
+      document.body.removeChild(form);
 
-      // Submit form after a short delay
-      setTimeout(() => {
-        form.submit();
-        
-        // Final fallback - direct location assign
-        setTimeout(() => {
-          if (document.body.contains(form)) {
-            document.body.removeChild(form);
-            window.top?.location.assign(stripeUrl);
-          }
-          
-          // Cleanup
-          headers.forEach(header => {
-            const meta = document.querySelector(`meta[name="${header.name}"]`);
-            if (meta) document.head.removeChild(meta);
-          });
-          setIsProcessing(false);
-          onClose();
-        }, 1000);
-      }, 100);
-    }
+      setIsProcessing(false);
+      onClose();
+    }, 1500);
   };
 
   return (
