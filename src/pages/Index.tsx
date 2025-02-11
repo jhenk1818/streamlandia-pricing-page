@@ -11,6 +11,7 @@ import { useToast } from "@/components/ui/use-toast";
 import Header from "@/components/Header";
 import PaymentButton from "@/components/PaymentButton";
 import { Mail, Phone, MapPin } from "lucide-react";
+import ZapierWebhook from "@/components/ZapierWebhook";
 
 const Index = () => {
   const [isAnnual, setIsAnnual] = useState(false);
@@ -490,122 +491,134 @@ const Index = () => {
         </div>
       </div>
 
-          <div className="mt-32">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-                What Our Users Say
-              </h2>
-              <p className="text-white/80 text-lg max-w-2xl mx-auto">
-                Join thousands of satisfied subscribers enjoying our premium content
-              </p>
-            </div>
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
+            Admin Configuration
+          </h2>
+          <p className="text-white/80 text-lg max-w-2xl mx-auto">
+            Configure integration settings for automated user management
+          </p>
+        </div>
+        <div className="max-w-2xl mx-auto">
+          <ZapierWebhook />
+        </div>
+      </div>
 
-            <div className="relative overflow-hidden">
-              <div className="absolute left-0 top-0 bottom-0 w-20 md:w-40 fade-overlay-left z-10"></div>
-              <div className="absolute right-0 top-0 bottom-0 w-20 md:w-40 fade-overlay-right z-10"></div>
-              
-              <Carousel
-                opts={{
-                  align: "start",
-                  loop: true,
-                  dragFree: true,
-                  containScroll: false,
-                }}
-                className="w-full"
-              >
-                <CarouselContent className="-ml-2 md:-ml-4 gap-3 md:gap-6 auto-scroll">
-                  {[...reviews, ...reviews].map((review, index) => (
-                    <CarouselItem key={index} className="pl-2 md:pl-4 basis-[85%] md:basis-1/3">
-                      <div className="p-4 md:p-6 rounded-xl border border-white/10 backdrop-blur-md bg-white/5 h-full">
-                        <div className="flex items-center gap-2 mb-4">
-                          {Array(5).fill(0).map((_, i) => (
-                            <Star
-                              key={i}
-                              className="w-4 h-4 md:w-5 md:h-5 fill-[#F97316] text-[#F97316]"
-                            />
-                          ))}
-                        </div>
-                        <div className="flex items-center gap-2 mb-4">
-                          <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                            <UserRound className="w-5 h-5 text-primary" />
-                          </div>
-                          <div>
-                            <p className="font-medium text-white text-sm md:text-base">{review.name}</p>
-                            <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-2">
-                              <span className="text-xs md:text-sm text-white/60">{review.date}</span>
-                              <span className="text-xs px-2 py-0.5 rounded-full bg-[#1A1F2C] text-primary whitespace-nowrap">
-                                Verified {review.plan} User
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                        <p className="text-sm md:text-base text-white/80">{review.comment}</p>
+      <div className="mt-32">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
+            What Our Users Say
+          </h2>
+          <p className="text-white/80 text-lg max-w-2xl mx-auto">
+            Join thousands of satisfied subscribers enjoying our premium content
+          </p>
+        </div>
+
+        <div className="relative overflow-hidden">
+          <div className="absolute left-0 top-0 bottom-0 w-20 md:w-40 fade-overlay-left z-10"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-20 md:w-40 fade-overlay-right z-10"></div>
+          
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+              dragFree: true,
+              containScroll: false,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4 gap-3 md:gap-6 auto-scroll">
+              {[...reviews, ...reviews].map((review, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-[85%] md:basis-1/3">
+                  <div className="p-4 md:p-6 rounded-xl border border-white/10 backdrop-blur-md bg-white/5 h-full">
+                    <div className="flex items-center gap-2 mb-4">
+                      {Array(5).fill(0).map((_, i) => (
+                        <Star
+                          key={i}
+                          className="w-4 h-4 md:w-5 md:h-5 fill-[#F97316] text-[#F97316]"
+                        />
+                      ))}
+                    </div>
+                    <div className="flex items-center gap-2 mb-4">
+                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                        <UserRound className="w-5 h-5 text-primary" />
                       </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-              </Carousel>
-            </div>
-          </div>
-
-          {/* Generate Logins Section */}
-          <div className="mt-32">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-                Generate Your IPTV Logins
-              </h2>
-              <p className="text-white/80 text-lg max-w-2xl mx-auto">
-                Already subscribed? Generate your login credentials here
-              </p>
-            </div>
-
-            <div className="max-w-xl mx-auto px-4">
-              <div className="bg-[#221F26] rounded-xl border border-white/10 shadow-lg p-8">
-                <p className="text-white/80 mb-6">
-                  Enter the email address associated with your subscription to generate your IPTV login credentials.
-                </p>
-                
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-white/90 mb-1">
-                      Email Address
-                    </label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="your@email.com"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
-                      className="w-full bg-black/50 border-white/10 text-white"
-                    />
+                      <div>
+                        <p className="font-medium text-white text-sm md:text-base">{review.name}</p>
+                        <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-2">
+                          <span className="text-xs md:text-sm text-white/60">{review.date}</span>
+                          <span className="text-xs px-2 py-0.5 rounded-full bg-[#1A1F2C] text-primary whitespace-nowrap">
+                            Verified {review.plan} User
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <p className="text-sm md:text-base text-white/80">{review.comment}</p>
                   </div>
-                  
-                  <Button
-                    type="submit"
-                    className="w-full bg-primary hover:bg-primary/90"
-                    disabled={isLoading}
-                  >
-                    {isLoading ? (
-                      <>
-                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                        Verifying...
-                      </>
-                    ) : (
-                      "Generate Logins"
-                    )}
-                  </Button>
-                </form>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
+      </div>
 
-                <div className="mt-6 text-sm text-white/60">
-                  <p>Note: Your login credentials will be sent to the email address associated with your subscription.</p>
-                </div>
+      <div className="mt-32">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
+            Generate Your IPTV Logins
+          </h2>
+          <p className="text-white/80 text-lg max-w-2xl mx-auto">
+            Already subscribed? Generate your login credentials here
+          </p>
+        </div>
+
+        <div className="max-w-xl mx-auto px-4">
+          <div className="bg-[#221F26] rounded-xl border border-white/10 shadow-lg p-8">
+            <p className="text-white/80 mb-6">
+              Enter the email address associated with your subscription to generate your IPTV login credentials.
+            </p>
+            
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-white/90 mb-1">
+                  Email Address
+                </label>
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="your@email.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  className="w-full bg-black/50 border-white/10 text-white"
+                />
               </div>
+              
+              <Button
+                type="submit"
+                className="w-full bg-primary hover:bg-primary/90"
+                disabled={isLoading}
+              >
+                {isLoading ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Verifying...
+                  </>
+                ) : (
+                  "Generate Logins"
+                )}
+              </Button>
+            </form>
+
+            <div className="mt-6 text-sm text-white/60">
+              <p>Note: Your login credentials will be sent to the email address associated with your subscription.</p>
             </div>
           </div>
+        </div>
+      </div>
 
-          {/* Existing footer section */}
-          <footer className="bg-[#1A1F2C] py-16">
+      <footer className="bg-[#1A1F2C] py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="space-y-4">
