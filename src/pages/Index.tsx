@@ -257,12 +257,14 @@ const Index = () => {
                   "/lovable-uploads/1ccf077f-c2a0-4bc1-b8d5-f0c8080e7316.png",
                   "/lovable-uploads/5fb4ef41-cb8a-49c7-84b8-8328b0fd0511.png",
                   "/lovable-uploads/eb8d75c5-7465-4b73-9d1a-d02e35f9ce67.png",
+                  "/lovable-uploads/6581727c-e3dd-4779-bb48-d8bb3895ee1f.png",
                   // Duplicate images for seamless loop
                   "/lovable-uploads/2f9cded1-7111-45fe-836f-494ff689d4ce.png",
                   "/lovable-uploads/4ca9e7dd-034b-4bf2-a91e-67fef2437351.png",
                   "/lovable-uploads/1ccf077f-c2a0-4bc1-b8d5-f0c8080e7316.png",
                   "/lovable-uploads/5fb4ef41-cb8a-49c7-84b8-8328b0fd0511.png",
-                  "/lovable-uploads/eb8d75c5-7465-4b73-9d1a-d02e35f9ce67.png"
+                  "/lovable-uploads/eb8d75c5-7465-4b73-9d1a-d02e35f9ce67.png",
+                  "/lovable-uploads/6581727c-e3dd-4779-bb48-d8bb3895ee1f.png"
                 ].map((image, index) => (
                   <div key={index} className="w-full h-[400px] shrink-0">
                     <img
