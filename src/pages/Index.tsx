@@ -1,4 +1,3 @@
-
 import { CreditCard, PlayCircle, Tv, CheckCircle2, Star, UserRound } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import {
@@ -133,11 +132,11 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black w-full overflow-hidden">
       <Header />
-      <div className="relative">
+      <div className="relative w-full">
         <div 
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-0 w-full"
           style={{
             backgroundImage: 'url("/lovable-uploads/199f59c2-2889-41de-ae7c-ed253796993b.png")',
             backgroundSize: 'cover',
@@ -146,14 +145,14 @@ const Index = () => {
           }}
         >
           <div 
-            className="absolute inset-0"
+            className="absolute inset-0 w-full"
             style={{
               background: 'linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,1) 85%, rgba(0,0,0,1) 100%)'
             }}
           ></div>
         </div>
 
-        <div className="container mx-auto px-4 pt-32 pb-20 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 relative z-10">
           <div className="text-center animate-fade-up">
             <span className="relative inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full">
               <div 
@@ -249,8 +248,8 @@ const Index = () => {
         </div>
       </div>
 
-      <div className="bg-black py-20">
-        <div className="container mx-auto px-4">
+      <div className="bg-black py-20 w-full">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               Works with all devices seamlessly
@@ -266,8 +265,8 @@ const Index = () => {
         </div>
       </div>
 
-      <div className="bg-black">
-        <div className="container mx-auto px-4 py-20">
+      <div className="bg-black w-full">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-3xl font-bold text-white mb-4">
               Stream Like Never Before
@@ -482,8 +481,8 @@ const Index = () => {
         </div>
       </div>
 
-      <div className="bg-black">
-        <div className="container mx-auto px-4 py-20">
+      <div className="bg-black w-full">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center mb-12 animate-fade-up" ref={pricingRef} style={{ animationDelay: "0.4s" }}>
             <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-primary/10 text-primary">
               Simple Pricing
@@ -611,8 +610,8 @@ const Index = () => {
         </div>
       </div>
 
-      <footer className="bg-[#1A1F2C] py-16">
-        <div className="container mx-auto px-4">
+      <footer className="bg-[#1A1F2C] py-16 w-full">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="space-y-4">
               <img 
