@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import { Chatbot } from "./components/Chatbot";
 
 const queryClient = new QueryClient();
 
@@ -21,10 +22,10 @@ const App = () => {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </HashRouter>
+        <Chatbot />
       </TooltipProvider>
     </QueryClientProvider>
   );
 };
 
 export default App;
-
