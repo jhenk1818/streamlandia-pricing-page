@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -56,12 +57,31 @@ html {
 @keyframes scroll {
   0% {
     transform: translateX(0);
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
   }
   100% {
     transform: translateX(calc(-250px * 5));
+    opacity: 0;
   }
 }
 
 .auto-scroll {
   animation: scroll 20s linear infinite;
+}
+
+/* Gradient overlays for carousel */
+.fade-overlay-left {
+  background: linear-gradient(to right, rgb(0, 0, 0) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.fade-overlay-right {
+  background: linear-gradient(to left, rgb(0, 0, 0) 0%, transparent 100%);
+  pointer-events: none;
 }

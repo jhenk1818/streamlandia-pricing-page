@@ -1,4 +1,3 @@
-
 import { CreditCard, PlayCircle, Tv, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 import {
@@ -176,7 +175,7 @@ const Index = () => {
             </span>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 animate-fade-up">
+          <div className="grid md:grid-cols-3 gap-8 animate-fade-up mb-20">
             <div className="p-8 text-center rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-gradient-to-br from-black/40 via-[#403E43]/40 to-[#1EAEDB]/20">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
                 <PlayCircle className="w-8 h-8 text-primary" />
@@ -199,11 +198,7 @@ const Index = () => {
               <p className="text-white/80">No long-term contracts. No commitments. Cancel anytime.</p>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div className="bg-black/95 py-20">
-        <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               Anyshow, Anytime
@@ -214,13 +209,15 @@ const Index = () => {
           </div>
 
           <div className="relative overflow-hidden">
+            <div className="absolute left-0 top-0 bottom-0 w-40 fade-overlay-left z-10"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-40 fade-overlay-right z-10"></div>
+            
             <Carousel
               opts={{
                 align: "start",
                 loop: true,
                 dragFree: true,
                 containScroll: false,
-                autoplay: true,
               }}
               className="w-full"
             >
@@ -250,9 +247,6 @@ const Index = () => {
                 ))}
               </CarouselContent>
             </Carousel>
-
-            <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-black/95 to-transparent z-10"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-black/95 to-transparent z-10"></div>
           </div>
         </div>
       </div>
