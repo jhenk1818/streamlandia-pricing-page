@@ -251,52 +251,20 @@ const Index = () => {
 
           <div className="text-center mb-12 mt-20">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-              Trending Now
+              Watch Everywhere
             </h2>
             <p className="text-white/80 text-lg max-w-2xl mx-auto">
-              Discover what's hot and trending in our creative community
+              Stream seamlessly across all your favorite devices - from phones to tablets and smart TVs
             </p>
           </div>
 
-          <div className="relative overflow-hidden mt-12">
-            <div className="absolute left-0 top-0 bottom-0 w-40 fade-overlay-left z-10"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-40 fade-overlay-right z-10"></div>
-            
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-                dragFree: true,
-                containScroll: false,
-              }}
-              className="w-full"
-            >
-              <CarouselContent className="-ml-4 gap-6 auto-scroll-reverse">
-                {[
-                  "/lovable-uploads/eb8d75c5-7465-4b73-9d1a-d02e35f9ce67.png",
-                  "/lovable-uploads/5fb4ef41-cb8a-49c7-84b8-8328b0fd0511.png",
-                  "/lovable-uploads/1ccf077f-c2a0-4bc1-b8d5-f0c8080e7316.png",
-                  "/lovable-uploads/4ca9e7dd-034b-4bf2-a91e-67fef2437351.png",
-                  "/lovable-uploads/2f9cded1-7111-45fe-836f-494ff689d4ce.png",
-                  // Duplicate images for seamless loop
-                  "/lovable-uploads/eb8d75c5-7465-4b73-9d1a-d02e35f9ce67.png",
-                  "/lovable-uploads/5fb4ef41-cb8a-49c7-84b8-8328b0fd0511.png",
-                  "/lovable-uploads/1ccf077f-c2a0-4bc1-b8d5-f0c8080e7316.png",
-                  "/lovable-uploads/4ca9e7dd-034b-4bf2-a91e-67fef2437351.png",
-                  "/lovable-uploads/2f9cded1-7111-45fe-836f-494ff689d4ce.png"
-                ].map((image, index) => (
-                  <CarouselItem key={index} className="basis-1/5 pl-4">
-                    <div className="overflow-hidden rounded-xl aspect-[3/4] bg-black">
-                      <img
-                        src={image}
-                        alt={`Creator ${index + 1}`}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-            </Carousel>
+          <div className="w-full max-w-5xl mx-auto mb-20">
+            <img
+              src="/lovable-uploads/f1625f1b-215d-403f-b3fa-c8a432c5fc77.png"
+              alt="Stream on multiple devices"
+              className="w-full h-auto rounded-xl shadow-2xl animate-fade-up"
+              style={{ animationDelay: "0.2s" }}
+            />
           </div>
         </div>
       </div>
