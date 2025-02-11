@@ -1,3 +1,4 @@
+
 import { CreditCard, PlayCircle, Tv, CheckCircle2, Star, UserRound } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import {
@@ -139,7 +140,12 @@ const Index = () => {
             height: '85vh'
           }}
         >
-          <div className="absolute inset-0 bg-black/70"></div>
+          <div 
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.8) 70%, rgba(0,0,0,1) 100%)'
+            }}
+          ></div>
         </div>
 
         <div className="container mx-auto px-4 pt-32 pb-20 relative z-10">
