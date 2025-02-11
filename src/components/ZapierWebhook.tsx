@@ -7,6 +7,7 @@ import { Loader2 } from "lucide-react";
 
 const ZapierWebhook = () => {
   const [webhookUrl, setWebhookUrl] = useState("");
+  const [apiKey, setApiKey] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
@@ -17,6 +18,15 @@ const ZapierWebhook = () => {
       toast({
         title: "Error",
         description: "Please enter your Zapier webhook URL",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (!apiKey) {
+      toast({
+        title: "Error",
+        description: "Please enter your API key",
         variant: "destructive",
       });
       return;
@@ -37,7 +47,6 @@ const ZapierWebhook = () => {
         }
       };
 
-      // Mock IPTV API data that Zapier will use
       const mockIptvData = {
         action: "new",
         type: "mag",
@@ -52,6 +61,7 @@ const ZapierWebhook = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "Authorization": `Bearer ${apiKey}`
         },
         mode: "no-cors",
         body: JSON.stringify({
@@ -96,6 +106,20 @@ const ZapierWebhook = () => {
             placeholder="https://hooks.zapier.com/..."
             value={webhookUrl}
             onChange={(e) => setWebhookUrl(e.target.value)}
+            className="w-full bg-black/50 border-white/10 text-white"
+          />
+        </div>
+
+        <div>
+          <label htmlFor="apiKey" className="block text-sm font-medium text-white/90 mb-1">
+            API Key
+          </label>
+          <Input
+            id="apiKey"
+            type="password"
+            placeholder="Enter your API key"
+            value={apiKey}
+            onChange={(e) => setApiKey(e.target.value)}
             className="w-full bg-black/50 border-white/10 text-white"
           />
         </div>
