@@ -424,62 +424,63 @@ const Index = () => {
               Select the perfect plan for your entertainment needs
             </p>
           
-          <div className="flex items-center justify-center gap-4 mb-12">
-            <span className={`text-sm ${!isAnnual ? 'text-primary font-medium' : 'text-muted'}`}>Monthly</span>
-            <button
-              onClick={() => setIsAnnual(!isAnnual)}
-              className={`relative w-16 h-8 rounded-full transition-colors ${
-                isAnnual ? 'bg-primary' : 'bg-muted'
-              }`}
-            >
-              <div
-                className={`absolute w-6 h-6 bg-white rounded-full top-1 transition-transform ${
-                  isAnnual ? 'right-1' : 'left-1'
-                }`}
-              />
-            </button>
-            <span className={`text-sm ${isAnnual ? 'text-primary font-medium' : 'text-muted'}`}>Annual</span>
-          </div>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {plans.map((plan, index) => (
-            <div
-              key={plan.name}
-              className={`rounded-2xl p-8 border transition-all duration-300 animate-fade-up ${
-                plan.color
-              } ${plan.hover} ${plan.textColor || 'text-gray-900'}`}
-              style={{ animationDelay: `${0.6 + index * 0.1}s` }}
-            >
-              {plan.popular && (
-                <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-white/20 text-white">
-                  Most Popular
-                </span>
-              )}
-              <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-              <div className="mb-6">
-                <span className="text-4xl font-bold">${plan.price}</span>
-                <span className="text-sm opacity-80">/{isAnnual ? 'year' : 'month'}</span>
-              </div>
-              <ul className="space-y-4 mb-8">
-                {plan.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-2">
-                    <CheckCircle2 className={`w-5 h-5 ${plan.textColor || 'text-primary'}`} />
-                    <span className="text-sm">{feature}</span>
-                  </li>
-                ))}
-              </ul>
+            <div className="flex items-center justify-center gap-4 mb-12">
+              <span className={`text-sm ${!isAnnual ? 'text-primary font-medium' : 'text-muted'}`}>Monthly</span>
               <button
-                className={`w-full py-3 rounded-lg transition-transform hover:scale-105 ${
-                  plan.popular
-                    ? 'bg-white text-primary'
-                    : 'bg-primary text-white'
+                onClick={() => setIsAnnual(!isAnnual)}
+                className={`relative w-16 h-8 rounded-full transition-colors ${
+                  isAnnual ? 'bg-primary' : 'bg-muted'
                 }`}
               >
-                Get Started
+                <div
+                  className={`absolute w-6 h-6 bg-white rounded-full top-1 transition-transform ${
+                    isAnnual ? 'right-1' : 'left-1'
+                  }`}
+                />
               </button>
+              <span className={`text-sm ${isAnnual ? 'text-primary font-medium' : 'text-muted'}`}>Annual</span>
             </div>
-          ))}
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {plans.map((plan, index) => (
+              <div
+                key={plan.name}
+                className={`rounded-2xl p-8 border transition-all duration-300 animate-fade-up ${
+                  plan.color
+                } ${plan.hover} ${plan.textColor || 'text-gray-900'}`}
+                style={{ animationDelay: `${0.6 + index * 0.1}s` }}
+              >
+                {plan.popular && (
+                  <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-white/20 text-white">
+                    Most Popular
+                  </span>
+                )}
+                <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold">${plan.price}</span>
+                  <span className="text-sm opacity-80">/{isAnnual ? 'year' : 'month'}</span>
+                </div>
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature) => (
+                    <li key={feature} className="flex items-center gap-2">
+                      <CheckCircle2 className={`w-5 h-5 ${plan.textColor || 'text-primary'}`} />
+                      <span className="text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <button
+                  className={`w-full py-3 rounded-lg transition-transform hover:scale-105 ${
+                    plan.popular
+                      ? 'bg-white text-primary'
+                      : 'bg-primary text-white'
+                  }`}
+                >
+                  Get Started
+                </button>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
