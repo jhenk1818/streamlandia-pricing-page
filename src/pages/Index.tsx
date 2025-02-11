@@ -1,3 +1,4 @@
+
 import { CreditCard, PlayCircle, Tv, CheckCircle2, Star, UserRound } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import {
@@ -188,7 +189,7 @@ const Index = () => {
               Stream your favorite shows, movies, and exclusive content. Start watching today with our risk-free trial.
             </p>
             <button 
-              className="relative overflow-hidden text-white px-12 py-4 rounded-full font-medium transition-all hover:scale-105 mb-8 w-64 group"
+              className="relative overflow-hidden text-white px-12 py-4 rounded-full font-medium transition-all hover:scale-105 mb-4 w-64 group"
             >
               <div 
                 className="absolute inset-0 bg-gradient-to-r from-black via-[#1EAEDB] to-black opacity-70"
