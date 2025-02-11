@@ -194,7 +194,7 @@ const Index = () => {
             <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-8">
               #1 IPTV Provider Worldwide.
               <br />
-              Stream your favorite shows, movies, and exclusive content. Start watching today with our risk-free trial.
+              Stream your favorite shows, movies, and exclusive content. Start watching today.
             </p>
             <button 
               className="relative overflow-hidden text-white px-12 py-4 rounded-full font-medium transition-all hover:scale-105 mb-4 w-64 group"
