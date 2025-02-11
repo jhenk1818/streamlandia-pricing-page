@@ -181,7 +181,7 @@ const Index = () => {
                   }}
                 ></div>
               </div>
-              <span className="relative z-10 text-white">Works with all devices</span>
+              <span className="relative z-10 text-white">Works with all devices seamlessly</span>
             </span>
 
             <div className="flex justify-center items-center mb-4">
