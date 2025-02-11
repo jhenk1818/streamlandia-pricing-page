@@ -11,33 +11,28 @@ interface PaymentModalProps {
 
 const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
   const [isProcessing, setIsProcessing] = useState(false);
-  const [showIntermediate, setShowIntermediate] = useState(false);
 
   const handlePayment = () => {
     setIsProcessing(true);
     setTimeout(() => {
-      setShowIntermediate(true);
+      const form = document.createElement('form');
+      form.method = 'GET';
+      form.action = 'https://buy.stripe.com/00geY95tzgpU6uA4gh';
+      form.target = '_blank';
+      form.rel = 'noopener noreferrer';
+
+      const meta = document.createElement('meta');
+      meta.name = 'referrer';
+      meta.content = 'no-referrer';
+      document.head.appendChild(meta);
+
+      document.body.appendChild(form);
+      form.submit();
+      document.body.removeChild(form);
+
       setIsProcessing(false);
+      onClose();
     }, 1500);
-  };
-
-  const handleRedirect = () => {
-    const form = document.createElement('form');
-    form.method = 'GET';
-    form.action = 'https://buy.stripe.com/00geY95tzgpU6uA4gh';
-    form.target = '_blank';
-    form.rel = 'noopener noreferrer';
-
-    const meta = document.createElement('meta');
-    meta.name = 'referrer';
-    meta.content = 'no-referrer';
-    document.head.appendChild(meta);
-
-    document.body.appendChild(form);
-    form.submit();
-    document.body.removeChild(form);
-
-    onClose();
   };
 
   return (
@@ -48,55 +43,40 @@ const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
             <Lock className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" />
             <h2 className="text-lg sm:text-xl font-semibold text-white">Secure Checkout</h2>
           </div>
-          {!showIntermediate ? (
-            <div className="text-center">
-              <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-white">Confirm Your Payment</h3>
-              <p className="text-sm sm:text-base text-white/80 mb-4 sm:mb-6">
-                You will be redirected to our secure payment processor to complete your subscription.
-              </p>
-              <div className="mb-4 sm:mb-6">
-                <img
-                  src="/lovable-uploads/e95d1082-2c64-41a3-9798-c1ebacbc77c8.png"
-                  alt="Credit Cards"
-                  className="w-full max-w-[250px] sm:max-w-[300px] mx-auto mb-4 sm:mb-6"
-                />
-              </div>
-              <div className="flex justify-center gap-4 mb-4 sm:mb-6">
-                <img
-                  src="/lovable-uploads/39e12f88-1320-4aca-9bc1-dfafc46add31.png"
-                  alt="Payment Methods"
-                  className="w-full max-w-[300px] sm:max-w-[400px]"
-                />
-              </div>
-              <Button
-                onClick={handlePayment}
-                className="w-full bg-black hover:bg-black/90 rounded-[20px] text-sm sm:text-base py-2 sm:py-3"
-                disabled={isProcessing}
-              >
-                {isProcessing ? (
-                  <div className="flex items-center justify-center gap-2">
-                    <Loader2 className="w-3 h-3 sm:w-4 sm:h-4 animate-spin" />
-                    Processing...
-                  </div>
-                ) : (
-                  "Continue to Payment"
-                )}
-              </Button>
+          <div className="text-center">
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-white">Confirm Your Payment</h3>
+            <p className="text-sm sm:text-base text-white/80 mb-4 sm:mb-6">
+              You will be redirected to our secure payment processor to complete your subscription.
+            </p>
+            <div className="mb-4 sm:mb-6">
+              <img
+                src="/lovable-uploads/e95d1082-2c64-41a3-9798-c1ebacbc77c8.png"
+                alt="Credit Cards"
+                className="w-full max-w-[250px] sm:max-w-[300px] mx-auto mb-4 sm:mb-6"
+              />
             </div>
-          ) : (
-            <div className="text-center">
-              <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-white">Ready to Proceed</h3>
-              <p className="text-sm sm:text-base text-white/80 mb-4 sm:mb-6">
-                You will now be redirected to our secure payment page.
-              </p>
-              <Button 
-                onClick={handleRedirect} 
-                className="w-full rounded-[20px] text-sm sm:text-base py-2 sm:py-3"
-              >
-                Proceed to Payment
-              </Button>
+            <div className="flex justify-center gap-4 mb-4 sm:mb-6">
+              <img
+                src="/lovable-uploads/39e12f88-1320-4aca-9bc1-dfafc46add31.png"
+                alt="Payment Methods"
+                className="w-full max-w-[300px] sm:max-w-[400px]"
+              />
             </div>
-          )}
+            <Button
+              onClick={handlePayment}
+              className="w-full bg-black hover:bg-black/90 rounded-[20px] text-sm sm:text-base py-2 sm:py-3"
+              disabled={isProcessing}
+            >
+              {isProcessing ? (
+                <div className="flex items-center justify-center gap-2">
+                  <Loader2 className="w-3 h-3 sm:w-4 sm:h-4 animate-spin" />
+                  Processing...
+                </div>
+              ) : (
+                "Continue to Payment"
+              )}
+            </Button>
+          </div>
         </div>
       </DialogContent>
     </Dialog>
