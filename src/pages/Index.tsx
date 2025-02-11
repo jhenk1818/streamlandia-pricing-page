@@ -482,9 +482,9 @@ const Index = () => {
 
           <div className="max-w-5xl mx-auto">
             <div className="flex flex-col md:flex-row gap-8 p-6 rounded-2xl border border-white/10 backdrop-blur-md bg-white/5">
-              <div className="md:w-2/5 space-y-3 flex flex-col justify-center">
+              <div className="md:w-2/5 space-y-4 flex flex-col justify-center">
                 <h3 className="text-xl font-bold text-white mb-4">All Features Include:</h3>
-                <ul className="space-y-3">
+                <ul className="space-y-3.5">
                   <li className="flex items-center gap-2 text-white text-sm">
                     <CheckCircle2 className="w-4 h-4 text-primary" />
                     <span>4K Ultra HD Streaming Quality</span>
@@ -518,7 +518,7 @@ const Index = () => {
                     <span>Family Sharing Available</span>
                   </li>
                 </ul>
-                <div className="mt-4">
+                <div className="mt-8 mb-4">
                   <img 
                     src="/lovable-uploads/2cac0da1-13fd-4e24-b77b-f93d744b6ca6.png"
                     alt="Payment Methods"
