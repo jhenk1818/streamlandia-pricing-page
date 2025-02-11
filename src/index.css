@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -65,4 +64,18 @@ html {
 
 .auto-scroll-horizontal {
   animation: scrollHorizontal 30s linear infinite;
+}
+
+/* Auto-scroll animation for vertical carousel */
+@keyframes scrollVertical {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(-1200px));
+  }
+}
+
+.auto-scroll-vertical {
+  animation: scrollVertical 30s linear infinite;
 }
