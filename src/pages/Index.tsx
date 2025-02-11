@@ -522,7 +522,7 @@ const Index = () => {
 
               <div className="md:w-3/5 flex items-center justify-center p-4">
                 <img 
-                  src="/lovable-uploads/2ba0c9ba-923f-463d-a214-c35c66239dbf.png"
+                  src="/lovable-uploads/bc0a21d6-2323-45eb-859c-a49658aff7bb.png"
                   alt="Pricing Plans"
                   className="w-full h-auto object-contain rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
                 />
