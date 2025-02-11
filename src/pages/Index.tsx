@@ -67,8 +67,34 @@ const Index = () => {
 
         <div className="container mx-auto px-4 py-20 relative z-10">
           <div className="text-center animate-fade-up">
-            <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-primary/10 text-primary backdrop-blur-sm">
-              Works with all devices
+            <span className="relative inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full">
+              <div 
+                className="absolute inset-0 bg-gradient-to-r from-black via-[#1EAEDB] to-black opacity-70"
+              ></div>
+              <div 
+                className="absolute inset-0"
+                style={{
+                  padding: '2px',
+                  background: 'linear-gradient(90deg, #000, #1EAEDB, #000)',
+                  backgroundSize: '200% 100%',
+                  animation: 'gradient 3s ease infinite',
+                  WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                  WebkitMaskComposite: 'xor',
+                  maskComposite: 'exclude',
+                  borderRadius: '9999px',
+                }}
+              >
+                <div 
+                  className="absolute inset-0"
+                  style={{
+                    background: 'linear-gradient(90deg, #000, #1EAEDB, #000)',
+                    backgroundSize: '200% 100%',
+                    animation: 'snake 4s linear infinite',
+                    borderRadius: '9999px',
+                  }}
+                ></div>
+              </div>
+              <span className="relative z-10 text-white">Works with all devices</span>
             </span>
 
             <div className="flex justify-center items-center mb-4">
