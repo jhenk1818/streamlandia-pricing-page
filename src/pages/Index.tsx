@@ -193,6 +193,53 @@ const Index = () => {
         </div>
       </div>
 
+      <div className="bg-white py-12 overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900">Our Partners</h2>
+          </div>
+          <div className="relative">
+            <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-white to-transparent z-10"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-white to-transparent z-10"></div>
+            
+            <div className="flex space-x-12 animate-scroll">
+              <div className="flex space-x-12 min-w-full">
+                {[
+                  "/lovable-uploads/c57be0e6-e00a-4402-b1af-207cc966d31a.png",
+                  "/lovable-uploads/35bf9c7a-3263-458d-9229-8a23eb0be55f.png",
+                  "/lovable-uploads/fabd560c-4ab3-4b68-9409-5a3b9427a2af.png",
+                  "/lovable-uploads/8a90cf68-3d2b-407f-820c-9a9fb89a0764.png",
+                ].map((logo, index) => (
+                  <div key={index} className="flex-shrink-0">
+                    <img 
+                      src={logo} 
+                      alt={`Partner Logo ${index + 1}`} 
+                      className="h-16 w-auto object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
+              <div className="flex space-x-12 min-w-full">
+                {[
+                  "/lovable-uploads/c57be0e6-e00a-4402-b1af-207cc966d31a.png",
+                  "/lovable-uploads/35bf9c7a-3263-458d-9229-8a23eb0be55f.png",
+                  "/lovable-uploads/fabd560c-4ab3-4b68-9409-5a3b9427a2af.png",
+                  "/lovable-uploads/8a90cf68-3d2b-407f-820c-9a9fb89a0764.png",
+                ].map((logo, index) => (
+                  <div key={`duplicate-${index}`} className="flex-shrink-0">
+                    <img 
+                      src={logo} 
+                      alt={`Partner Logo ${index + 1}`} 
+                      className="h-16 w-auto object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="bg-black">
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-12">
