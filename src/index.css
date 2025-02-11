@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -53,30 +52,16 @@ html {
   }
 }
 
-/* Auto-scroll animation for horizontal carousel */
-@keyframes scrollHorizontal {
+/* Auto-scroll animation for carousel */
+@keyframes scroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-400px * 6));
+    transform: translateX(calc(-250px * 5));
   }
 }
 
-.auto-scroll-horizontal {
-  animation: scrollHorizontal 30s linear infinite;
-}
-
-/* Auto-scroll animation for vertical carousel */
-@keyframes scrollVertical {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-66.67%);
-  }
-}
-
-.auto-scroll-vertical {
-  animation: scrollVertical 30s linear infinite;
+.auto-scroll {
+  animation: scroll 20s linear infinite;
 }
