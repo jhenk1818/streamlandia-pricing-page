@@ -1,3 +1,4 @@
+
 import { CreditCard, PlayCircle, Tv, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 
@@ -87,10 +88,22 @@ const Index = () => {
               Stream your favorite shows, movies, and exclusive content. Start watching today with our risk-free trial.
             </p>
             <button 
-              className="relative overflow-hidden text-white px-12 py-4 rounded-full font-medium transition-all hover:scale-105 mb-8 border-2 border-white/70 backdrop-blur-md shadow-lg w-64"
+              className="relative overflow-hidden text-white px-12 py-4 rounded-full font-medium transition-all hover:scale-105 mb-8 w-64 group"
             >
               <div 
                 className="absolute inset-0 bg-gradient-to-r from-black via-[#1EAEDB] to-black opacity-70 animate-[gradient_3s_ease_infinite] bg-[length:200%_200%]"
+              ></div>
+              <div 
+                className="absolute inset-0 border-2 rounded-full animate-[spin_3s_linear_infinite] bg-gradient-to-r from-black via-[#1EAEDB] to-black opacity-50"
+                style={{
+                  padding: '2px',
+                  background: 'linear-gradient(90deg, #000, #1EAEDB, #000)',
+                  backgroundSize: '200% 100%',
+                  animation: 'gradient 3s ease infinite, spin 8s linear infinite',
+                  WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                  WebkitMaskComposite: 'xor',
+                  maskComposite: 'exclude',
+                }}
               ></div>
               <span className="relative z-10">Discover Plans</span>
             </button>
