@@ -480,9 +480,9 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <div className="flex flex-col md:flex-row gap-8 p-6 rounded-2xl border border-white/10 backdrop-blur-md bg-white/5">
-              <div className="md:w-1/2 space-y-3">
+              <div className="md:w-2/5 space-y-3">
                 <h3 className="text-xl font-bold text-white mb-4">All Features Include:</h3>
                 <ul className="space-y-3">
                   <li className="flex items-center gap-2 text-white text-sm">
@@ -520,11 +520,11 @@ const Index = () => {
                 </ul>
               </div>
 
-              <div className="md:w-1/2 flex items-center">
+              <div className="md:w-3/5 flex items-center justify-center p-4">
                 <img 
                   src="/lovable-uploads/2ba0c9ba-923f-463d-a214-c35c66239dbf.png"
                   alt="Pricing Plans"
-                  className="w-full h-auto object-contain rounded-xl"
+                  className="w-full h-auto object-contain rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </div>
