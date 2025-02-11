@@ -26,15 +26,15 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#9b87f5",
+          DEFAULT: "#1EAEDB",
           foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "#7E69AB",
+          DEFAULT: "#0EA5E9",
           foreground: "#ffffff",
         },
         accent: {
-          DEFAULT: "#F1F0FB",
+          DEFAULT: "#D3E4FD",
           foreground: "#1a1a1a",
         },
         muted: {
@@ -70,3 +70,4 @@ export default {
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+
