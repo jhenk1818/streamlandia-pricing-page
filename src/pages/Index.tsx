@@ -1,4 +1,3 @@
-
 import { CreditCard, PlayCircle, Tv, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 import {
@@ -204,27 +203,54 @@ const Index = () => {
 
       <div className="bg-black/95 py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-              Anyshow, Anytime
-            </h2>
-            <p className="text-white/80 text-lg max-w-2xl mx-auto">
-              Join our community of content creators sharing their amazing stories
-            </p>
-          </div>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="text-left">
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
+                Anyshow, Anytime
+              </h2>
+              <p className="text-white/80 text-lg mb-8">
+                Join our community of content creators sharing their amazing stories. 
+                Experience a world of unlimited entertainment at your fingertips.
+              </p>
+              <p className="text-white/80 text-lg mb-8">
+                Whether you're into action, drama, comedy, or documentaries, 
+                find your perfect match in our vast collection of shows and movies.
+              </p>
+              <button 
+                className="relative overflow-hidden text-white px-8 py-3 rounded-full font-medium transition-all hover:scale-105 group"
+              >
+                <div 
+                  className="absolute inset-0 bg-gradient-to-r from-black via-[#1EAEDB] to-black opacity-70"
+                ></div>
+                <div 
+                  className="absolute inset-0"
+                  style={{
+                    padding: '2px',
+                    background: 'linear-gradient(90deg, #000, #1EAEDB, #000)',
+                    backgroundSize: '200% 100%',
+                    animation: 'gradient 3s ease infinite',
+                    WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                    WebkitMaskComposite: 'xor',
+                    maskComposite: 'exclude',
+                    borderRadius: '9999px',
+                  }}
+                >
+                  <div 
+                    className="absolute inset-0"
+                    style={{
+                      background: 'linear-gradient(90deg, #000, #1EAEDB, #000)',
+                      backgroundSize: '200% 100%',
+                      animation: 'snake 4s linear infinite',
+                      borderRadius: '9999px',
+                    }}
+                  ></div>
+                </div>
+                <span className="relative z-10">Browse Collection</span>
+              </button>
+            </div>
 
-          <div className="relative overflow-hidden">
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-                dragFree: true,
-                containScroll: false,
-                autoplay: true,
-              }}
-              className="w-full"
-            >
-              <CarouselContent className="-ml-4 gap-6 auto-scroll">
+            <div className="relative h-[600px] overflow-hidden rounded-xl">
+              <div className="auto-scroll-vertical flex flex-col gap-6">
                 {[
                   "/lovable-uploads/2f9cded1-7111-45fe-836f-494ff689d4ce.png",
                   "/lovable-uploads/4ca9e7dd-034b-4bf2-a91e-67fef2437351.png",
@@ -238,21 +264,18 @@ const Index = () => {
                   "/lovable-uploads/5fb4ef41-cb8a-49c7-84b8-8328b0fd0511.png",
                   "/lovable-uploads/eb8d75c5-7465-4b73-9d1a-d02e35f9ce67.png"
                 ].map((image, index) => (
-                  <CarouselItem key={index} className="basis-1/5 pl-4">
-                    <div className="overflow-hidden rounded-xl aspect-[3/4] bg-black">
-                      <img
-                        src={image}
-                        alt={`Creator ${index + 1}`}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                  </CarouselItem>
+                  <div key={index} className="w-full h-[400px] shrink-0">
+                    <img
+                      src={image}
+                      alt={`Content ${index + 1}`}
+                      className="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
                 ))}
-              </CarouselContent>
-            </Carousel>
-
-            <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-black/95 to-transparent z-10"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-black/95 to-transparent z-10"></div>
+              </div>
+              <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/95 to-transparent z-10"></div>
+              <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/95 to-transparent z-10"></div>
+            </div>
           </div>
         </div>
       </div>
