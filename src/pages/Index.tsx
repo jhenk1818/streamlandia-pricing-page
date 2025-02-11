@@ -447,13 +447,12 @@ const Index = () => {
               <div
                 key={plan.name}
                 className={`relative rounded-2xl p-8 transition-all duration-300 animate-fade-up ${
-                  plan.popular ? 'overflow-hidden' : 'border'
-                } ${plan.color} ${!plan.popular ? plan.hover : ''} ${plan.textColor || 'text-gray-900'}`}
+                  plan.popular ? 'overflow-hidden' : 'border border-white/10'
+                } ${plan.color} ${!plan.popular ? plan.hover : ''} ${plan.textColor || 'text-white'} backdrop-blur-md bg-white/5`}
                 style={{ animationDelay: `${0.6 + index * 0.1}s` }}
               >
                 {plan.popular && (
                   <>
-                    <div className="absolute inset-0 bg-gradient-to-r from-black via-[#1EAEDB] to-black opacity-70"></div>
                     <div 
                       className="absolute inset-0"
                       style={{
@@ -466,22 +465,12 @@ const Index = () => {
                         maskComposite: 'exclude',
                         borderRadius: '1rem',
                       }}
-                    >
-                      <div 
-                        className="absolute inset-0"
-                        style={{
-                          background: 'linear-gradient(90deg, #000, #1EAEDB, #000)',
-                          backgroundSize: '200% 100%',
-                          animation: 'snake 4s linear infinite',
-                          borderRadius: '1rem',
-                        }}
-                      ></div>
-                    </div>
+                    />
                   </>
                 )}
                 <div className="relative z-10">
                   {plan.popular && (
-                    <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-white/20 text-white">
+                    <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-white/10 text-white backdrop-blur-sm">
                       Most Popular
                     </span>
                   )}
