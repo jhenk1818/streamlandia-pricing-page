@@ -482,7 +482,7 @@ const Index = () => {
 
           <div className="max-w-5xl mx-auto">
             <div className="flex flex-col md:flex-row gap-8 p-6 rounded-2xl border border-white/10 backdrop-blur-md bg-white/5">
-              <div className="md:w-2/5 space-y-3">
+              <div className="md:w-2/5 space-y-3 flex flex-col justify-center">
                 <h3 className="text-xl font-bold text-white mb-4">All Features Include:</h3>
                 <ul className="space-y-3">
                   <li className="flex items-center gap-2 text-white text-sm">
