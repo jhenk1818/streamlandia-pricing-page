@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -15,53 +14,45 @@ const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
   const handlePayment = () => {
     setIsProcessing(true);
     
-    // Set various headers to mask traffic source
+    // Set no-referrer policy
     const meta = document.createElement('meta');
     meta.name = 'referrer';
     meta.content = 'no-referrer';
     document.head.appendChild(meta);
 
-    // Clear referrer and UTM parameters
+    // Clear URL parameters
     if (window.history.replaceState) {
       window.history.replaceState({}, '', window.location.pathname);
     }
 
-    // Create a proxy iframe to break referrer chain
-    const iframe = document.createElement('iframe');
-    iframe.style.display = 'none';
-    document.body.appendChild(iframe);
+    // Create and submit form directly
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = 'https://buy.stripe.com/00geY95tzgpU6uA4gh';
     
+    // Add random parameters to mask source
+    const timestamp = new Date().getTime();
+    const randomParam = Math.random().toString(36).substring(7);
+    
+    const paramInput = document.createElement('input');
+    paramInput.type = 'hidden';
+    paramInput.name = '_t';
+    paramInput.value = `${timestamp}_${randomParam}`;
+    form.appendChild(paramInput);
+
+    // Append form to body and submit
+    document.body.appendChild(form);
     setTimeout(() => {
-      // Create form inside iframe
-      const iframeDoc = iframe.contentWindow?.document;
-      if (iframeDoc) {
-        const form = iframeDoc.createElement('form');
-        form.method = 'POST';
-        form.target = '_top'; // Force top-level navigation
-        form.action = 'https://buy.stripe.com/00geY95tzgpU6uA4gh';
-        
-        // Add random parameters to further mask source
-        const timestamp = new Date().getTime();
-        const randomParam = Math.random().toString(36).substring(7);
-        
-        const paramInput = iframeDoc.createElement('input');
-        paramInput.type = 'hidden';
-        paramInput.name = '_t';
-        paramInput.value = `${timestamp}_${randomParam}`;
-        form.appendChild(paramInput);
-
-        iframeDoc.body.appendChild(form);
-        form.submit();
-      }
-
-      // Don't remove the iframe immediately
+      form.submit();
+      
+      // Cleanup after submission
       setTimeout(() => {
-        document.body.removeChild(iframe);
+        document.body.removeChild(form);
         document.head.removeChild(meta);
         setIsProcessing(false);
         onClose();
-      }, 2000); // Give more time for the form submission to complete
-    }, 1000);
+      }, 1000);
+    }, 500);
   };
 
   return (
