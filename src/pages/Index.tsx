@@ -6,6 +6,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import Header from "@/components/Header";
 
 const Index = () => {
   const [isAnnual, setIsAnnual] = useState(false);
@@ -125,7 +126,8 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black pt-16">
+      <Header />
       <div className="relative">
         <div 
           className="absolute inset-0 z-0"
