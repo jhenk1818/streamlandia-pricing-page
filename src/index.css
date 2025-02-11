@@ -123,3 +123,8 @@ html {
 .animate-border-glow {
   animation: borderGlow 2s ease-in-out infinite;
 }
+
+.animate-snake {
+  position: relative;
+  animation: snake 2s linear infinite;
+}
