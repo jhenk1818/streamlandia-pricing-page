@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/carousel";
 import Header from "@/components/Header";
 import PaymentButton from "@/components/PaymentButton";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const Index = () => {
   const [isAnnual, setIsAnnual] = useState(false);
@@ -599,6 +600,58 @@ const Index = () => {
           </div>
         </div>
       </div>
+
+      <footer className="bg-[#1A1F2C] py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="space-y-4">
+              <img 
+                src="/lovable-uploads/73f47615-a95f-43b5-ab17-4035a79eed56.png"
+                alt="Pioneers TV Logo"
+                className="w-40 h-auto"
+              />
+              <p className="text-white/70 text-sm max-w-xs">
+                Experience unlimited entertainment at your fingertips. Stream your favorite shows, movies, and exclusive content anytime, anywhere.
+              </p>
+            </div>
+            
+            <div className="space-y-4">
+              <h3 className="text-white font-semibold text-lg">Contact Us</h3>
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-white/70">
+                  <Mail className="w-4 h-4" />
+                  <a href="mailto:contact@pioneerstv.com" className="hover:text-primary transition-colors">
+                    contact@pioneerstv.com
+                  </a>
+                </div>
+                <div className="flex items-center gap-2 text-white/70">
+                  <Phone className="w-4 h-4" />
+                  <a href="tel:+1234567890" className="hover:text-primary transition-colors">
+                    +1 (234) 567-890
+                  </a>
+                </div>
+                <div className="flex items-center gap-2 text-white/70">
+                  <MapPin className="w-4 h-4" />
+                  <span>123 Streaming Street, Digital City, DC 12345</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="space-y-4">
+              <h3 className="text-white font-semibold text-lg">Business Hours</h3>
+              <div className="space-y-2 text-white/70">
+                <p>Customer Support Available:</p>
+                <p>Monday - Friday: 9:00 AM - 8:00 PM EST</p>
+                <p>Saturday - Sunday: 10:00 AM - 6:00 PM EST</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-12 pt-8 border-t border-white/10 text-center text-white/50 text-sm">
+            <p>© {new Date().getFullYear()} Pioneers TV. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
