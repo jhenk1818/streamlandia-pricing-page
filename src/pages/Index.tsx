@@ -1,5 +1,5 @@
 import { CreditCard, PlayCircle, Tv, CheckCircle2 } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -8,6 +8,35 @@ import {
 
 const Index = () => {
   const [isAnnual, setIsAnnual] = useState(false);
+  const [showLogo, setShowLogo] = useState(false);
+  const carouselEndRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setShowLogo(true);
+          } else {
+            setShowLogo(false);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    if (carouselEndRef.current) {
+      observer.observe(carouselEndRef.current);
+    }
+
+    return () => {
+      if (carouselEndRef.current) {
+        observer.unobserve(carouselEndRef.current);
+      }
+    };
+  }, []);
 
   const plans = [
     {
@@ -316,6 +345,18 @@ const Index = () => {
               style={{ animationDelay: "0.2s" }}
             />
           </div>
+
+          <div ref={carouselEndRef} className="h-1 w-full" />
+
+          {showLogo && (
+            <div className="flex justify-center items-center mb-20 animate-fade-in">
+              <img 
+                src="/lovable-uploads/73f47615-a95f-43b5-ab17-4035a79eed56.png"
+                alt="Pioneers TV Logo"
+                className="w-64 h-auto"
+              />
+            </div>
+          )}
         </div>
       </div>
 
