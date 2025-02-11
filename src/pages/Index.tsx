@@ -256,7 +256,7 @@ const Index = () => {
             </h2>
             <div className="max-w-4xl mx-auto">
               <img 
-                src="/lovable-uploads/c7f3460b-8791-463a-8ff9-7a8ffd42ff85.png"
+                src="/lovable-uploads/986d0b73-f833-425b-a4a8-3b263461d169.png"
                 alt="Device Compatibility"
                 className="w-full h-auto rounded-xl shadow-2xl animate-fade-up"
               />
