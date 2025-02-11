@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
+import { Loader2, Lock } from "lucide-react";
 
 interface PaymentModalProps {
   isOpen: boolean;
@@ -44,12 +44,30 @@ const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-md">
         <div className="p-6">
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <Lock className="w-5 h-5 text-green-500" />
+            <h2 className="text-xl font-semibold">Secure Checkout</h2>
+          </div>
           {!showIntermediate ? (
             <div className="text-center">
               <h3 className="text-lg font-semibold mb-4">Confirm Your Payment</h3>
               <p className="text-gray-600 mb-6">
                 You will be redirected to our secure payment processor to complete your subscription.
               </p>
+              <div className="mb-6">
+                <img
+                  src="/lovable-uploads/e95d1082-2c64-41a3-9798-c1ebacbc77c8.png"
+                  alt="Credit Cards"
+                  className="w-full max-w-[300px] mx-auto mb-6"
+                />
+              </div>
+              <div className="flex justify-center gap-4 mb-6">
+                <img
+                  src="/lovable-uploads/39e12f88-1320-4aca-9bc1-dfafc46add31.png"
+                  alt="Payment Methods"
+                  className="w-full max-w-[400px]"
+                />
+              </div>
               <Button
                 onClick={handlePayment}
                 className="w-full"
