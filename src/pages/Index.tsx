@@ -1,4 +1,3 @@
-<lov-code>
 import { CreditCard, PlayCircle, Tv, CheckCircle2, Star, UserRound } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import {
@@ -9,7 +8,6 @@ import {
 import Header from "@/components/Header";
 import PaymentButton from "@/components/PaymentButton";
 import { Mail, Phone, MapPin } from "lucide-react";
-import ContactForm from "@/components/ContactForm";
 
 const Index = () => {
   const [isAnnual, setIsAnnual] = useState(false);
@@ -643,3 +641,15 @@ const Index = () => {
                   <Mail className="w-4 h-4" />
                   <a href="mailto:contact@pioneerstv.com" className="hover:text-primary transition-colors">
                     contact@pioneerstv.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default Index;
