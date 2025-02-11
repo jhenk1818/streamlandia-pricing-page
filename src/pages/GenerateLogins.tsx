@@ -22,18 +22,17 @@ const GenerateLogins = () => {
     setIsLoading(true);
 
     try {
-      // This is where we'll integrate with your IPTV API
+      // In production, this would call your backend API that has access to your IPTV API key
       // For now, we'll simulate the API response
       await new Promise(resolve => setTimeout(resolve, 1500));
       
-      // Simulated response - will be replaced with actual API call
-      const mockResponse = {
+      const mockCredentials = {
         username: "user_" + Math.random().toString(36).substr(2, 9),
         password: Math.random().toString(36).substr(2, 9),
         expiryDate: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
       };
       
-      setLoginDetails(mockResponse);
+      setLoginDetails(mockCredentials);
       
       toast({
         title: "Success!",

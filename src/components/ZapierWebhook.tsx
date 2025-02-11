@@ -26,20 +26,39 @@ const ZapierWebhook = () => {
     console.log("Triggering Zapier webhook:", webhookUrl);
 
     try {
+      const mockStripeData = {
+        customer_email: "test@example.com",
+        subscription: {
+          id: "sub_" + Math.random().toString(36).substr(2, 9),
+          plan: {
+            nickname: "Premium Plan",
+            amount: 1999
+          }
+        }
+      };
+
+      // Mock IPTV API data that Zapier will use
+      const mockIptvData = {
+        action: "new",
+        type: "mag",
+        user: "MAG" + Math.floor(Math.random() * 1000000),
+        sub: 12,
+        pack: 132,
+        country: "dk",
+        notes: "Created via Stripe payment"
+      };
+
       const response = await fetch(webhookUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        mode: "no-cors", // Handle CORS
+        mode: "no-cors",
         body: JSON.stringify({
           timestamp: new Date().toISOString(),
-          event_type: "test_trigger",
-          test_data: {
-            customer_email: "test@example.com",
-            subscription_type: "premium",
-            amount: 19.99
-          }
+          stripe_data: mockStripeData,
+          iptv_data: mockIptvData,
+          api_endpoint: "https://my8k.me/api/api.php"
         }),
       });
 
@@ -63,7 +82,7 @@ const ZapierWebhook = () => {
     <div className="bg-[#221F26] rounded-xl border border-white/10 p-6 space-y-4">
       <h3 className="text-xl font-semibold text-white">Zapier Webhook Configuration</h3>
       <p className="text-white/80 text-sm">
-        Configure your Zapier webhook to automate user creation in your IPTV system when a Stripe payment is received.
+        Configure your Zapier webhook to automate IPTV user creation when a Stripe payment is received.
       </p>
       
       <form onSubmit={handleTrigger} className="space-y-4">
@@ -98,11 +117,12 @@ const ZapierWebhook = () => {
       </form>
 
       <div className="mt-4 text-sm text-white/60">
-        <p>After testing, make sure to:</p>
+        <p>Your Zap should:</p>
         <ol className="list-decimal list-inside space-y-1 mt-2">
-          <li>Configure the Stripe trigger in Zapier</li>
-          <li>Set up your IPTV API action in Zapier</li>
-          <li>Test the complete automation flow</li>
+          <li>Trigger when a Stripe payment is successful</li>
+          <li>Call the IPTV API to create a new user</li>
+          <li>Store the generated credentials</li>
+          <li>Send confirmation email to the customer</li>
         </ol>
       </div>
     </div>
