@@ -15,31 +15,48 @@ const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
   const handlePayment = () => {
     setIsProcessing(true);
     setTimeout(() => {
-      // First redirect to an intermediate page
-      const intermediateUrl = 'https://secure-redirect-payment.vercel.app/loading';
-      
-      // Create a form that POSTs to the intermediate URL
-      const form = document.createElement('form');
-      form.method = 'POST';
-      form.action = intermediateUrl;
-      
-      // Add the final Stripe destination as a hidden field
-      const destinationInput = document.createElement('input');
-      destinationInput.type = 'hidden';
-      destinationInput.name = 'destination';
-      destinationInput.value = 'https://buy.stripe.com/00geY95tzgpU6uA4gh';
-      form.appendChild(destinationInput);
-      
-      // Add security headers
+      // Set various headers to mask traffic source
       const meta = document.createElement('meta');
       meta.name = 'referrer';
       meta.content = 'no-referrer';
       document.head.appendChild(meta);
 
-      // Submit the form
-      document.body.appendChild(form);
-      form.submit();
-      document.body.removeChild(form);
+      // Clear referrer and UTM parameters
+      if (window.history.replaceState) {
+        window.history.replaceState({}, '', window.location.pathname);
+      }
+
+      // Create a proxy iframe to break referrer chain
+      const iframe = document.createElement('iframe');
+      iframe.style.display = 'none';
+      document.body.appendChild(iframe);
+      
+      // Create form inside iframe
+      const iframeDoc = iframe.contentWindow?.document;
+      if (iframeDoc) {
+        const form = iframeDoc.createElement('form');
+        form.method = 'POST';
+        form.action = 'https://buy.stripe.com/00geY95tzgpU6uA4gh';
+        
+        // Add random parameters to further mask source
+        const timestamp = new Date().getTime();
+        const randomParam = Math.random().toString(36).substring(7);
+        
+        const paramInput = iframeDoc.createElement('input');
+        paramInput.type = 'hidden';
+        paramInput.name = '_t';
+        paramInput.value = `${timestamp}_${randomParam}`;
+        form.appendChild(paramInput);
+
+        iframeDoc.body.appendChild(form);
+        form.submit();
+      }
+
+      // Cleanup
+      setTimeout(() => {
+        document.body.removeChild(iframe);
+        document.head.removeChild(meta);
+      }, 1000);
 
       setIsProcessing(false);
       onClose();
@@ -111,3 +128,4 @@ const PaymentButton = ({ className }: { className?: string }) => {
 };
 
 export default PaymentButton;
+
