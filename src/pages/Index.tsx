@@ -249,6 +249,15 @@ const Index = () => {
             </Carousel>
           </div>
 
+          <div className="text-center mb-12 mt-20">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
+              Trending Now
+            </h2>
+            <p className="text-white/80 text-lg max-w-2xl mx-auto">
+              Discover what's hot and trending in our creative community
+            </p>
+          </div>
+
           <div className="relative overflow-hidden mt-12">
             <div className="absolute left-0 top-0 bottom-0 w-40 fade-overlay-left z-10"></div>
             <div className="absolute right-0 top-0 bottom-0 w-40 fade-overlay-right z-10"></div>
