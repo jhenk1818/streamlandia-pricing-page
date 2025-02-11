@@ -1,4 +1,4 @@
-
+<lov-code>
 import { CreditCard, PlayCircle, Tv, CheckCircle2, Star, UserRound } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import {
@@ -9,6 +9,7 @@ import {
 import Header from "@/components/Header";
 import PaymentButton from "@/components/PaymentButton";
 import { Mail, Phone, MapPin } from "lucide-react";
+import ContactForm from "@/components/ContactForm";
 
 const Index = () => {
   const [isAnnual, setIsAnnual] = useState(false);
@@ -461,6 +462,20 @@ const Index = () => {
         </div>
       </div>
 
+      <div className="bg-black py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Join Our Community
+            </h2>
+            <p className="text-white/80 text-lg max-w-2xl mx-auto">
+              Subscribe to receive updates and exclusive content
+            </p>
+          </div>
+          <ContactForm />
+        </div>
+      </div>
+
       <div className="bg-black">
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-12 animate-fade-up" style={{ animationDelay: "0.4s" }}>
@@ -628,38 +643,3 @@ const Index = () => {
                   <Mail className="w-4 h-4" />
                   <a href="mailto:contact@pioneerstv.com" className="hover:text-primary transition-colors">
                     contact@pioneerstv.com
-                  </a>
-                </div>
-                <div className="flex items-center gap-2 text-white/70">
-                  <Phone className="w-4 h-4" />
-                  <a href="tel:+1234567890" className="hover:text-primary transition-colors">
-                    +1 (234) 567-890
-                  </a>
-                </div>
-                <div className="flex items-center gap-2 text-white/70">
-                  <MapPin className="w-4 h-4" />
-                  <span>123 Streaming Street, Digital City, DC 12345</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="space-y-4">
-              <h3 className="text-white font-semibold text-lg">Business Hours</h3>
-              <div className="space-y-2 text-white/70">
-                <p>Customer Support Available:</p>
-                <p>Monday - Friday: 9:00 AM - 8:00 PM EST</p>
-                <p>Saturday - Sunday: 10:00 AM - 6:00 PM EST</p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="mt-12 pt-8 border-t border-white/10 text-center text-white/50 text-sm">
-            <p>© {new Date().getFullYear()} Pioneers TV. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-};
-
-export default Index;
