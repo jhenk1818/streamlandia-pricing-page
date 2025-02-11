@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -14,45 +15,86 @@ const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
   const handlePayment = () => {
     setIsProcessing(true);
     
-    // Set no-referrer policy
-    const meta = document.createElement('meta');
-    meta.name = 'referrer';
-    meta.content = 'no-referrer';
-    document.head.appendChild(meta);
-
-    // Clear URL parameters
+    // Remove all tracking parameters
     if (window.history.replaceState) {
-      window.history.replaceState({}, '', window.location.pathname);
+      const cleanUrl = window.location.origin + window.location.pathname;
+      window.history.replaceState({}, '', cleanUrl);
     }
 
-    // Create and submit form directly
+    // Clear localStorage and sessionStorage
+    try {
+      localStorage.clear();
+      sessionStorage.clear();
+    } catch (e) {
+      // Ignore errors
+    }
+
+    // Set multiple headers to mask traffic
+    const headers = [
+      { name: 'referrer', content: 'no-referrer' },
+      { name: 'referrer-policy', content: 'no-referrer' },
+      { name: 'cache-control', content: 'no-cache' }
+    ];
+
+    headers.forEach(header => {
+      const meta = document.createElement('meta');
+      meta.name = header.name;
+      meta.content = header.content;
+      document.head.appendChild(meta);
+    });
+
+    // Primary approach - Direct form submission
     const form = document.createElement('form');
     form.method = 'POST';
     form.action = 'https://buy.stripe.com/00geY95tzgpU6uA4gh';
-    
-    // Add random parameters to mask source
-    const timestamp = new Date().getTime();
-    const randomParam = Math.random().toString(36).substring(7);
-    
-    const paramInput = document.createElement('input');
-    paramInput.type = 'hidden';
-    paramInput.name = '_t';
-    paramInput.value = `${timestamp}_${randomParam}`;
-    form.appendChild(paramInput);
+    form.target = '_self';
 
-    // Append form to body and submit
+    // Add multiple random parameters to mask source
+    const randomParams = {
+      _t: new Date().getTime(),
+      _r: Math.random().toString(36).substring(7),
+      _s: crypto.randomUUID?.() || Math.random().toString(36),
+      _v: new Date().toISOString()
+    };
+
+    Object.entries(randomParams).forEach(([key, value]) => {
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = key;
+      input.value = String(value);
+      form.appendChild(input);
+    });
+
+    // Append form and submit
     document.body.appendChild(form);
+
+    // Fallback approach - If form submission fails, try window.location
+    const submitTimeout = setTimeout(() => {
+      try {
+        const params = new URLSearchParams(randomParams);
+        window.location.href = `https://buy.stripe.com/00geY95tzgpU6uA4gh?${params}`;
+      } catch (e) {
+        // If all else fails, try direct location assign
+        window.location.assign('https://buy.stripe.com/00geY95tzgpU6uA4gh');
+      }
+    }, 2000);
+
+    // Submit the form
     setTimeout(() => {
       form.submit();
       
-      // Cleanup after submission
+      // Cleanup
+      clearTimeout(submitTimeout);
       setTimeout(() => {
         document.body.removeChild(form);
-        document.head.removeChild(meta);
+        headers.forEach(header => {
+          const meta = document.querySelector(`meta[name="${header.name}"]`);
+          if (meta) document.head.removeChild(meta);
+        });
         setIsProcessing(false);
         onClose();
       }, 1000);
-    }, 500);
+    }, 100);
   };
 
   return (
