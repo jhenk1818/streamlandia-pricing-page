@@ -1,3 +1,4 @@
+
 import { CreditCard, PlayCircle, Tv, CheckCircle2, Star, UserRound } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import {
@@ -7,7 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import Header from "@/components/Header";
 import PaymentButton from "@/components/PaymentButton";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail } from "lucide-react";
 
 const Index = () => {
   const [isAnnual, setIsAnnual] = useState(false);
@@ -629,4 +630,17 @@ const Index = () => {
               <div className="space-y-3">
                 <div className="flex items-center gap-2 text-white/70">
                   <Mail className="w-4 h-4" />
-                  <a href="mailto:contact@pioneerstv.com" className="hover:text-primary transition-colors duration-2
+                  <a href="mailto:contact@pioneerstv.com" className="hover:text-primary transition-colors duration-200">
+                    contact@pioneerstv.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default Index;
