@@ -14,28 +14,30 @@ const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
 
   const handlePayment = () => {
     setIsProcessing(true);
+    
+    // Set various headers to mask traffic source
+    const meta = document.createElement('meta');
+    meta.name = 'referrer';
+    meta.content = 'no-referrer';
+    document.head.appendChild(meta);
+
+    // Clear referrer and UTM parameters
+    if (window.history.replaceState) {
+      window.history.replaceState({}, '', window.location.pathname);
+    }
+
+    // Create a proxy iframe to break referrer chain
+    const iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
+    
     setTimeout(() => {
-      // Set various headers to mask traffic source
-      const meta = document.createElement('meta');
-      meta.name = 'referrer';
-      meta.content = 'no-referrer';
-      document.head.appendChild(meta);
-
-      // Clear referrer and UTM parameters
-      if (window.history.replaceState) {
-        window.history.replaceState({}, '', window.location.pathname);
-      }
-
-      // Create a proxy iframe to break referrer chain
-      const iframe = document.createElement('iframe');
-      iframe.style.display = 'none';
-      document.body.appendChild(iframe);
-      
       // Create form inside iframe
       const iframeDoc = iframe.contentWindow?.document;
       if (iframeDoc) {
         const form = iframeDoc.createElement('form');
         form.method = 'POST';
+        form.target = '_top'; // Force top-level navigation
         form.action = 'https://buy.stripe.com/00geY95tzgpU6uA4gh';
         
         // Add random parameters to further mask source
@@ -52,15 +54,14 @@ const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
         form.submit();
       }
 
-      // Cleanup
+      // Don't remove the iframe immediately
       setTimeout(() => {
         document.body.removeChild(iframe);
         document.head.removeChild(meta);
-      }, 1000);
-
-      setIsProcessing(false);
-      onClose();
-    }, 1500);
+        setIsProcessing(false);
+        onClose();
+      }, 2000); // Give more time for the form submission to complete
+    }, 1000);
   };
 
   return (
@@ -128,4 +129,3 @@ const PaymentButton = ({ className }: { className?: string }) => {
 };
 
 export default PaymentButton;
-
