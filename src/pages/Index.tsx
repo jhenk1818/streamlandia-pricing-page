@@ -495,6 +495,73 @@ const Index = () => {
             </div>
           </div>
 
+          <div className="relative rounded-3xl overflow-hidden bg-[#0A0F1E] p-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-12">Choose My Plan</h2>
+            
+            <div className="space-y-4">
+              <div className="relative rounded-full overflow-hidden bg-gradient-to-r from-[#0A0F1E] via-[#1450F] to-[#0A0F1E] p-[2px] group hover:from-[#1450F] hover:via-[#1450F] hover:to-[#1450F] transition-all duration-300">
+                <div className="flex items-center justify-between bg-[#0A0F1E] rounded-full p-4 px-6">
+                  <div className="flex items-center gap-4">
+                    <div className="w-6 h-6 rounded-full border-2 border-white flex items-center justify-center">
+                      <div className="w-3 h-3 bg-white rounded-full"></div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-2xl font-bold text-white">$74.99</span>
+                      <span className="text-white/60">per year</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2 bg-[#1450F]/10 px-4 py-2 rounded-full">
+                    <span className="text-white">1</span>
+                    <span className="text-white">Devices</span>
+                    <span className="text-white">+</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative rounded-full overflow-hidden bg-gradient-to-r from-[#0A0F1E] via-[#1450F] to-[#0A0F1E] p-[2px] group hover:from-[#1450F] hover:via-[#1450F] hover:to-[#1450F] transition-all duration-300">
+                <div className="flex items-center justify-between bg-[#0A0F1E] rounded-full p-4 px-6">
+                  <div className="flex items-center gap-4">
+                    <div className="w-6 h-6 rounded-full border-2 border-white/20 flex items-center justify-center">
+                      <div className="w-3 h-3 bg-white/20 rounded-full"></div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-2xl font-bold text-white">$49.99</span>
+                      <span className="text-white/60">per 6 months</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2 bg-[#1450F]/10 px-4 py-2 rounded-full">
+                    <span className="text-white">1</span>
+                    <span className="text-white">Devices</span>
+                    <span className="text-white">+</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative rounded-full overflow-hidden bg-gradient-to-r from-[#0A0F1E] via-[#1450F] to-[#0A0F1E] p-[2px] group hover:from-[#1450F] hover:via-[#1450F] hover:to-[#1450F] transition-all duration-300">
+                <div className="flex items-center justify-between bg-[#0A0F1E] rounded-full p-4 px-6">
+                  <div className="flex items-center gap-4">
+                    <div className="w-6 h-6 rounded-full border-2 border-white/20 flex items-center justify-center">
+                      <div className="w-3 h-3 bg-white/20 rounded-full"></div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-2xl font-bold text-white">$34.99</span>
+                      <span className="text-white/60">per 3 months</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2 bg-[#1450F]/10 px-4 py-2 rounded-full">
+                    <span className="text-white">1</span>
+                    <span className="text-white">Devices</span>
+                    <span className="text-white">+</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button className="w-full bg-[#1450F] hover:bg-[#1450F]/90 text-white font-semibold py-4 rounded-xl mt-8 transition-all duration-300">
+              Continue
+            </button>
+          </div>
+
           <footer className="bg-[#1A1F2C] py-16 w-full">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
