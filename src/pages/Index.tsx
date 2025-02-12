@@ -546,7 +546,7 @@ const Index = () => {
               <img 
                 src="/lovable-uploads/6f69184e-d161-4eaa-a3db-b0d0abe59996.png"
                 alt="Payment Methods"
-                className="w-full max-w-xl h-auto object-contain"
+                className="w-full max-w-md h-auto object-contain"
               />
             </div>
           </div>
