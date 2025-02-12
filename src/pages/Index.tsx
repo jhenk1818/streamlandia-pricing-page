@@ -402,7 +402,7 @@ const Index = () => {
 
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-              Popular Shows
+              Watch Sports With No Limits
             </h2>
             <p className="text-white/80 text-lg max-w-2xl mx-auto">
               Discover what everyone's watching right now
