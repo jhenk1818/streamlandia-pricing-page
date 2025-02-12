@@ -593,3 +593,32 @@ const Index = () => {
                       <span className="text-white">1</span>
                       <span className="text-white">Devices</span>
                       <span className="text-white">+</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button className="w-full bg-[#1450F] hover:bg-[#1450F]/90 text-white font-semibold py-4 rounded-xl mt-8 transition-all duration-300">
+                Continue
+              </button>
+            </div>
+          </div>
+
+          <div ref={carouselEndRef} className="h-1 w-full" />
+
+          {showLogo && (
+            <div className="flex justify-center items-center mb-20 animate-fade-in">
+              <img 
+                src="/lovable-uploads/73f47615-a95f-43b5-ab17-4035a79eed56.png"
+                alt="Pioneers TV Logo"
+                className="w-64 h-auto"
+              />
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Index;
