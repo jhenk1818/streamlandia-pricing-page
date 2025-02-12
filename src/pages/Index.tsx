@@ -95,37 +95,37 @@ const Index = () => {
   const reviews = [
     {
       name: "Sarah Mitchell",
-      comment: "The streaming quality is exceptional! I've never experienced such crisp 4K content before.",
+      comment: "Best IPTV service I've tried! The streaming quality is exceptional and there's no buffering even in 4K. Worth every penny.",
       date: "January 15, 2024",
       plan: "Premium"
     },
     {
       name: "James Wilson",
-      comment: "Being able to watch on multiple devices is a game-changer for our family. Worth every penny!",
+      comment: "Finally found a reliable IPTV provider that the whole family loves. Multiple device support is fantastic, and the channel selection is incredible.",
       date: "February 28, 2024",
       plan: "Family"
     },
     {
       name: "Emily Rodriguez",
-      comment: "The content library is massive and there's always something new to watch. Highly recommend!",
+      comment: "Been using this service for 3 months now and I'm amazed by the content library. Definitely the most stable IPTV service I've experienced.",
       date: "December 13, 2023",
       plan: "Premium"
     },
     {
       name: "Michael Chang",
-      comment: "Perfect for my needs. The offline downloads feature is super convenient for my commute.",
+      comment: "Love how this IPTV service lets me download content for offline viewing. Perfect for my commute and travel. No more buffering or connection issues!",
       date: "March 2, 2024",
       plan: "Basic"
     },
     {
       name: "Lisa Anderson",
-      comment: "Customer service is outstanding, and the streaming quality never disappoints.",
+      comment: "Switched from another provider and couldn't be happier! The channel quality and customer support are outstanding. Best IPTV decision I've made.",
       date: "January 21, 2024",
       plan: "Family"
     },
     {
       name: "David Thompson",
-      comment: "Easy to use interface and great selection of shows. Exactly what I was looking for!",
+      comment: "The interface is super user-friendly and the IPTV stream quality is consistently excellent. Never looking back to cable TV again!",
       date: "February 10, 2024",
       plan: "Basic"
     }
