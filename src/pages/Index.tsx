@@ -535,12 +535,20 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-3xl mx-auto space-y-8">
             <img 
               src="/lovable-uploads/bc0a21d6-2323-45eb-859c-a49658aff7bb.png"
               alt="Pricing Plans"
               className="w-full h-auto object-contain rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
             />
+            
+            <div className="flex justify-center items-center gap-8 px-4">
+              <img 
+                src="/lovable-uploads/6f69184e-d161-4eaa-a3db-b0d0abe59996.png"
+                alt="Payment Methods"
+                className="w-full max-w-xl h-auto object-contain"
+              />
+            </div>
           </div>
 
           <div className="mt-32">
