@@ -461,17 +461,12 @@ const Index = () => {
 
           <div className="w-full max-w-5xl mx-auto mb-20">
             <div className="flex flex-col md:flex-row gap-8 p-6 rounded-2xl border border-white/10 backdrop-blur-md bg-white/5">
-              <div className="md:w-2/5 space-y-6">
+              <div className="md:w-2/5">
                 <img
                   src="/lovable-uploads/f1625f1b-215d-403f-b3fa-c8a432c5fc77.png"
                   alt="Stream on multiple devices"
-                  className="w-full h-auto rounded-xl shadow-2xl animate-fade-up mb-6"
+                  className="w-full h-auto rounded-xl shadow-2xl animate-fade-up"
                   style={{ animationDelay: "0.2s" }}
-                />
-                <img 
-                  src="/lovable-uploads/2cac0da1-13fd-4e24-b77b-f93d744b6ca6.png"
-                  alt="Payment Methods"
-                  className="w-full max-w-[300px] h-auto object-contain mx-auto"
                 />
               </div>
               <div className="md:w-3/5 space-y-6 flex flex-col justify-center">
