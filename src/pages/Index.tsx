@@ -536,59 +536,12 @@ const Index = () => {
           </div>
 
           <div className="max-w-5xl mx-auto">
-            <div className="flex flex-col md:flex-row gap-8 p-6 rounded-2xl border border-white/10 backdrop-blur-md bg-white/5">
-              <div className="md:w-2/5 space-y-6 flex flex-col justify-center">
-                <h3 className="text-xl font-bold text-white mb-6">All Features Include:</h3>
-                <ul className="space-y-4">
-                  <li className="flex items-center gap-2 text-white text-sm">
-                    <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>4K Ultra HD Streaming Quality</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-white text-sm">
-                    <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>Watch on Multiple Devices</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-white text-sm">
-                    <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>Offline Downloads</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-white text-sm">
-                    <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>Ad-Free Entertainment</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-white text-sm">
-                    <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>Cancel Anytime</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-white text-sm">
-                    <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>24/7 Customer Support</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-white text-sm">
-                    <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>Regular Content Updates</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-white text-sm">
-                    <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>Family Sharing Available</span>
-                  </li>
-                </ul>
-                <div className="mt-12 mb-4">
-                  <img 
-                    src="/lovable-uploads/2cac0da1-13fd-4e24-b77b-f93d744b6ca6.png"
-                    alt="Payment Methods"
-                    className="w-full max-w-[300px] h-auto object-contain"
-                  />
-                </div>
-              </div>
-
-              <div className="md:w-3/5 flex items-center justify-center p-4">
-                <img 
-                  src="/lovable-uploads/bc0a21d6-2323-45eb-859c-a49658aff7bb.png"
-                  alt="Pricing Plans"
-                  className="w-full h-auto object-contain rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
-                />
-              </div>
+            <div className="p-6 rounded-2xl border border-white/10 backdrop-blur-md bg-white/5">
+              <img 
+                src="/lovable-uploads/bc0a21d6-2323-45eb-859c-a49658aff7bb.png"
+                alt="Pricing Plans"
+                className="w-full h-auto object-contain rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
+              />
             </div>
           </div>
 
