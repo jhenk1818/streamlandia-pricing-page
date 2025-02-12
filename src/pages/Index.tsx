@@ -578,13 +578,18 @@ const Index = () => {
                   {[...reviews, ...reviews].map((review, index) => (
                     <CarouselItem key={index} className="pl-2 md:pl-4 basis-[85%] md:basis-1/3">
                       <div className="p-4 md:p-6 rounded-xl border border-white/10 backdrop-blur-md bg-white/5 h-full">
-                        <div className="flex items-center gap-2 mb-4">
-                          {Array(5).fill(0).map((_, i) => (
-                            <Star
-                              key={i}
-                              className="w-4 h-4 md:w-5 md:h-5 fill-[#F97316] text-[#F97316]"
-                            />
-                          ))}
+                        <div className="flex items-center justify-between mb-4">
+                          <div className="flex items-center gap-2">
+                            {Array(5).fill(0).map((_, i) => (
+                              <Star
+                                key={i}
+                                className="w-4 h-4 md:w-5 md:h-5 fill-[#F97316] text-[#F97316]"
+                              />
+                            ))}
+                          </div>
+                          <span className="text-xs px-2 py-0.5 rounded-full bg-[#1A1F2C] text-primary whitespace-nowrap">
+                            Verified {review.plan} User
+                          </span>
                         </div>
                         <div className="flex items-center gap-2 mb-4">
                           <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
@@ -592,12 +597,7 @@ const Index = () => {
                           </div>
                           <div>
                             <p className="font-medium text-white text-sm md:text-base">{review.name}</p>
-                            <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-2">
-                              <span className="text-xs md:text-sm text-white/60">{review.date}</span>
-                              <span className="text-xs px-2 py-0.5 rounded-full bg-[#1A1F2C] text-primary whitespace-nowrap">
-                                Verified {review.plan} User
-                              </span>
-                            </div>
+                            <span className="text-xs md:text-sm text-white/60">{review.date}</span>
                           </div>
                         </div>
                         <p className="text-sm md:text-base text-white/80">{review.comment}</p>
@@ -620,27 +620,4 @@ const Index = () => {
                 alt="Pioneers TV Logo"
                 className="w-40 h-auto"
               />
-              <p className="text-white/70 text-sm max-w-xs">
-                Experience unlimited entertainment at your fingertips. Stream your favorite shows, movies, and exclusive content anytime, anywhere.
-              </p>
-            </div>
-            
-            <div className="space-y-4">
-              <h3 className="text-white font-semibold text-lg">Contact Us</h3>
-              <div className="space-y-3">
-                <div className="flex items-center gap-2 text-white/70">
-                  <Mail className="w-4 h-4" />
-                  <a href="mailto:contact@pioneerstv.com" className="hover:text-primary transition-colors duration-200">
-                    contact@pioneerstv.com
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-};
-
-export default Index;
+              <p className="text-
