@@ -536,13 +536,11 @@ const Index = () => {
           </div>
 
           <div className="max-w-5xl mx-auto">
-            <div className="p-6 rounded-2xl border border-white/10 backdrop-blur-md bg-white/5">
-              <img 
-                src="/lovable-uploads/bc0a21d6-2323-45eb-859c-a49658aff7bb.png"
-                alt="Pricing Plans"
-                className="w-full h-auto object-contain rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
-              />
-            </div>
+            <img 
+              src="/lovable-uploads/bc0a21d6-2323-45eb-859c-a49658aff7bb.png"
+              alt="Pricing Plans"
+              className="w-full h-auto object-contain rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
+            />
           </div>
 
           <div className="mt-32">
