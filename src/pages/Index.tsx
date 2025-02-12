@@ -535,113 +535,61 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-8">
-            <img 
-              src="/lovable-uploads/bc0a21d6-2323-45eb-859c-a49658aff7bb.png"
-              alt="Pricing Plans"
-              className="w-full h-auto object-contain rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
-            />
-            
-            <div className="flex justify-center items-center gap-8 px-4">
-              <img 
-                src="/lovable-uploads/6f69184e-d161-4eaa-a3db-b0d0abe59996.png"
-                alt="Payment Methods"
-                className="w-full max-w-md h-auto object-contain"
-              />
-            </div>
-          </div>
-
-          <div className="mt-32">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-                What Our Users Say
-              </h2>
-              <p className="text-white/80 text-lg max-w-2xl mx-auto">
-                Join thousands of satisfied subscribers enjoying our premium content
-              </p>
-            </div>
-
-            <div className="relative overflow-hidden">
-              <div className="absolute left-0 top-0 bottom-0 w-20 md:w-40 fade-overlay-left z-10"></div>
-              <div className="absolute right-0 top-0 bottom-0 w-20 md:w-40 fade-overlay-right z-10"></div>
+          <div className="w-full max-w-5xl mx-auto mb-20">
+            <div className="relative rounded-3xl overflow-hidden bg-[#0A0F1E] p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-12">Choose My Plan</h2>
               
-              <Carousel
-                opts={{
-                  align: "start",
-                  loop: true,
-                  dragFree: true,
-                  containScroll: false,
-                }}
-                className="w-full"
-              >
-                <CarouselContent className="-ml-2 md:-ml-4 gap-3 md:gap-6 auto-scroll">
-                  {[...reviews, ...reviews].map((review, index) => (
-                    <CarouselItem key={index} className="pl-2 md:pl-4 basis-[85%] md:basis-1/3">
-                      <div className="p-4 md:p-6 rounded-xl border border-white/10 backdrop-blur-md bg-white/5 h-full">
-                        <div className="flex items-center justify-between mb-4">
-                          <div className="flex items-center gap-2">
-                            {Array(5).fill(0).map((_, i) => (
-                              <Star
-                                key={i}
-                                className="w-4 h-4 md:w-5 md:h-5 fill-[#F97316] text-[#F97316]"
-                              />
-                            ))}
-                          </div>
-                          <div className="flex items-center gap-1.5 text-xs px-2 py-0.5 rounded-full bg-[#1A1F2C] text-primary whitespace-nowrap">
-                            <CheckCircle2 className="w-3 h-3" />
-                            <span>Verified Client</span>
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-2 mb-4">
-                          <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                            <UserRound className="w-5 h-5 text-primary" />
-                          </div>
-                          <div>
-                            <p className="font-medium text-white text-sm md:text-base">{review.name}</p>
-                            <span className="text-xs md:text-sm text-white/60">{review.date}</span>
-                          </div>
-                        </div>
-                        <p className="text-sm md:text-base text-white/80">{review.comment}</p>
+              <div className="space-y-4">
+                <div className="relative rounded-full overflow-hidden bg-gradient-to-r from-[#0A0F1E] via-[#1450F] to-[#0A0F1E] p-[2px] group hover:from-[#1450F] hover:via-[#1450F] hover:to-[#1450F] transition-all duration-300">
+                  <div className="flex items-center justify-between bg-[#0A0F1E] rounded-full p-4 px-6">
+                    <div className="flex items-center gap-4">
+                      <div className="w-6 h-6 rounded-full border-2 border-white flex items-center justify-center">
+                        <div className="w-3 h-3 bg-white rounded-full"></div>
                       </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-              </Carousel>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <footer className="bg-[#1A1F2C] py-16 w-full">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div className="space-y-4">
-              <img 
-                src="/lovable-uploads/73f47615-a95f-43b5-ab17-4035a79eed56.png"
-                alt="Pioneers TV Logo"
-                className="w-40 h-auto"
-              />
-              <p className="text-white/70 text-sm max-w-xs">
-                Experience unlimited entertainment at your fingertips. Stream your favorite shows, movies, and exclusive content anytime, anywhere.
-              </p>
-            </div>
-            
-            <div className="space-y-4">
-              <h3 className="text-white font-semibold text-lg">Contact Us</h3>
-              <div className="space-y-3">
-                <div className="flex items-center gap-2 text-white/70">
-                  <Mail className="w-4 h-4" />
-                  <a href="mailto:contact@pioneerstv.com" className="hover:text-primary transition-colors duration-200">
-                    contact@pioneerstv.com
-                  </a>
+                      <div className="flex items-center gap-2">
+                        <span className="text-2xl font-bold text-white">$74.99</span>
+                        <span className="text-white/60">per year</span>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2 bg-[#1450F]/10 px-4 py-2 rounded-full">
+                      <span className="text-white">1</span>
+                      <span className="text-white">Devices</span>
+                      <span className="text-white">+</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-};
 
-export default Index;
+                <div className="relative rounded-full overflow-hidden bg-gradient-to-r from-[#0A0F1E] via-[#1450F] to-[#0A0F1E] p-[2px] group hover:from-[#1450F] hover:via-[#1450F] hover:to-[#1450F] transition-all duration-300">
+                  <div className="flex items-center justify-between bg-[#0A0F1E] rounded-full p-4 px-6">
+                    <div className="flex items-center gap-4">
+                      <div className="w-6 h-6 rounded-full border-2 border-white/20 flex items-center justify-center">
+                        <div className="w-3 h-3 bg-white/20 rounded-full"></div>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-2xl font-bold text-white">$49.99</span>
+                        <span className="text-white/60">per 6 months</span>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2 bg-[#1450F]/10 px-4 py-2 rounded-full">
+                      <span className="text-white">1</span>
+                      <span className="text-white">Devices</span>
+                      <span className="text-white">+</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="relative rounded-full overflow-hidden bg-gradient-to-r from-[#0A0F1E] via-[#1450F] to-[#0A0F1E] p-[2px] group hover:from-[#1450F] hover:via-[#1450F] hover:to-[#1450F] transition-all duration-300">
+                  <div className="flex items-center justify-between bg-[#0A0F1E] rounded-full p-4 px-6">
+                    <div className="flex items-center gap-4">
+                      <div className="w-6 h-6 rounded-full border-2 border-white/20 flex items-center justify-center">
+                        <div className="w-3 h-3 bg-white/20 rounded-full"></div>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-2xl font-bold text-white">$34.99</span>
+                        <span className="text-white/60">per 3 months</span>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2 bg-[#1450F]/10 px-4 py-2 rounded-full">
+                      <span className="text-white">1</span>
+                      <span className="text-white">Devices</span>
+                      <span className="text-white">+</span>
