@@ -1,5 +1,5 @@
 import { CreditCard, PlayCircle, Tv, CheckCircle2, Star, UserRound, Headphones } from "lucide-react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -11,36 +11,7 @@ import { Mail } from "lucide-react";
 
 const Index = () => {
   const [isAnnual, setIsAnnual] = useState(false);
-  const [showLogo, setShowLogo] = useState(false);
-  const carouselEndRef = useRef<HTMLDivElement>(null);
   const pricingRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setShowLogo(true);
-          } else {
-            setShowLogo(false);
-          }
-        });
-      },
-      {
-        threshold: 0.1,
-      }
-    );
-
-    if (carouselEndRef.current) {
-      observer.observe(carouselEndRef.current);
-    }
-
-    return () => {
-      if (carouselEndRef.current) {
-        observer.unobserve(carouselEndRef.current);
-      }
-    };
-  }, []);
 
   const scrollToPricing = () => {
     pricingRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -509,48 +480,6 @@ const Index = () => {
             </div>
           </div>
 
-          <div ref={carouselEndRef} className="h-1 w-full" />
-
-          {showLogo && (
-            <div className="flex justify-center items-center mb-20 animate-fade-in">
-              <img 
-                src="/lovable-uploads/73f47615-a95f-43b5-ab17-4035a79eed56.png"
-                alt="Pioneers TV Logo"
-                className="w-64 h-auto"
-              />
-            </div>
-          )}
-        </div>
-      </div>
-
-      <div className="bg-black w-full">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center mb-12 animate-fade-up" ref={pricingRef} style={{ animationDelay: "0.4s" }}>
-            <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-primary/10 text-primary">
-              Simple Pricing
-            </span>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">Choose Your Plan</h2>
-            <p className="text-muted text-lg max-w-2xl mx-auto mb-8">
-              Select the perfect plan for your entertainment needs
-            </p>
-          </div>
-
-          <div className="max-w-3xl mx-auto space-y-8">
-            <img 
-              src="/lovable-uploads/bc0a21d6-2323-45eb-859c-a49658aff7bb.png"
-              alt="Pricing Plans"
-              className="w-full h-auto object-contain rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
-            />
-            
-            <div className="flex justify-center items-center gap-8 px-4">
-              <img 
-                src="/lovable-uploads/6f69184e-d161-4eaa-a3db-b0d0abe59996.png"
-                alt="Payment Methods"
-                className="w-full max-w-md h-auto object-contain"
-              />
-            </div>
-          </div>
-
           <div className="mt-32">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
@@ -687,24 +616,4 @@ const Index = () => {
             </div>
           </div>
           
-          <div className="mt-12 pt-8 border-t border-white/10">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <p className="text-white/70 text-sm">
-                © 2024 Pioneers TV. All rights reserved.
-              </p>
-              <div className="flex items-center gap-6">
-                <img 
-                  src="/lovable-uploads/6f69184e-d161-4eaa-a3db-b0d0abe59996.png"
-                  alt="Payment Methods"
-                  className="h-6 w-auto object-contain"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-};
-
-export default Index;
+          <
