@@ -113,7 +113,7 @@ const Index = () => {
     },
     {
       name: "Michael Chang",
-      comment: "Love how this IPTV service lets me download content for offline viewing. Perfect for my commute and travel. No more buffering or connection issues!",
+      comment: "Incredible channel variety and zero lag! This IPTV service has transformed how I watch TV. The picture quality is amazing and the prices are unbeatable.",
       date: "March 2, 2024",
       plan: "Basic"
     },
