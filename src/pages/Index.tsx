@@ -452,20 +452,67 @@ const Index = () => {
 
           <div className="text-center mb-12 mt-20">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-              Watch Everywhere
+              All Features Include
             </h2>
             <p className="text-white/80 text-lg max-w-2xl mx-auto">
-              Stream seamlessly across all your favorite devices - from phones to tablets and smart TVs
+              Everything you need for the ultimate entertainment experience
             </p>
           </div>
 
-          <div className="w-full max-w-5xl mx-auto mb-20 bg-[#221F26] p-12 rounded-2xl">
-            <img
-              src="/lovable-uploads/f1625f1b-215d-403f-b3fa-c8a432c5fc77.png"
-              alt="Stream on multiple devices"
-              className="w-full h-auto rounded-xl shadow-2xl animate-fade-up"
-              style={{ animationDelay: "0.2s" }}
-            />
+          <div className="w-full max-w-5xl mx-auto mb-20">
+            <div className="flex flex-col md:flex-row gap-8 p-6 rounded-2xl border border-white/10 backdrop-blur-md bg-white/5">
+              <div className="md:w-2/5">
+                <img
+                  src="/lovable-uploads/f1625f1b-215d-403f-b3fa-c8a432c5fc77.png"
+                  alt="Stream on multiple devices"
+                  className="w-full h-auto rounded-xl shadow-2xl animate-fade-up"
+                  style={{ animationDelay: "0.2s" }}
+                />
+              </div>
+              <div className="md:w-3/5 space-y-6 flex flex-col justify-center">
+                <ul className="space-y-4">
+                  <li className="flex items-center gap-2 text-white text-sm">
+                    <CheckCircle2 className="w-4 h-4 text-primary" />
+                    <span>4K Ultra HD Streaming Quality</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-white text-sm">
+                    <CheckCircle2 className="w-4 h-4 text-primary" />
+                    <span>Watch on Multiple Devices</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-white text-sm">
+                    <CheckCircle2 className="w-4 h-4 text-primary" />
+                    <span>Offline Downloads</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-white text-sm">
+                    <CheckCircle2 className="w-4 h-4 text-primary" />
+                    <span>Ad-Free Entertainment</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-white text-sm">
+                    <CheckCircle2 className="w-4 h-4 text-primary" />
+                    <span>Cancel Anytime</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-white text-sm">
+                    <CheckCircle2 className="w-4 h-4 text-primary" />
+                    <span>24/7 Customer Support</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-white text-sm">
+                    <CheckCircle2 className="w-4 h-4 text-primary" />
+                    <span>Regular Content Updates</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-white text-sm">
+                    <CheckCircle2 className="w-4 h-4 text-primary" />
+                    <span>Family Sharing Available</span>
+                  </li>
+                </ul>
+                <div className="mt-8">
+                  <img 
+                    src="/lovable-uploads/2cac0da1-13fd-4e24-b77b-f93d744b6ca6.png"
+                    alt="Payment Methods"
+                    className="w-full max-w-[300px] h-auto object-contain"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
 
           <div ref={carouselEndRef} className="h-1 w-full" />
