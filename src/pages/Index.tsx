@@ -96,37 +96,37 @@ const Index = () => {
     {
       name: "Sarah Mitchell",
       comment: "The streaming quality is exceptional! I've never experienced such crisp 4K content before.",
-      date: "March 15, 2024",
+      date: "January 15, 2024",
       plan: "Premium"
     },
     {
       name: "James Wilson",
       comment: "Being able to watch on multiple devices is a game-changer for our family. Worth every penny!",
-      date: "March 14, 2024",
+      date: "February 28, 2024",
       plan: "Family"
     },
     {
       name: "Emily Rodriguez",
       comment: "The content library is massive and there's always something new to watch. Highly recommend!",
-      date: "March 13, 2024",
+      date: "December 13, 2023",
       plan: "Premium"
     },
     {
       name: "Michael Chang",
       comment: "Perfect for my needs. The offline downloads feature is super convenient for my commute.",
-      date: "March 12, 2024",
+      date: "March 2, 2024",
       plan: "Basic"
     },
     {
       name: "Lisa Anderson",
       comment: "Customer service is outstanding, and the streaming quality never disappoints.",
-      date: "March 11, 2024",
+      date: "January 21, 2024",
       plan: "Family"
     },
     {
       name: "David Thompson",
       comment: "Easy to use interface and great selection of shows. Exactly what I was looking for!",
-      date: "March 10, 2024",
+      date: "February 10, 2024",
       plan: "Basic"
     }
   ];
