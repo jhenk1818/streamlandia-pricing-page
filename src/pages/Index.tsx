@@ -616,6 +616,21 @@ const Index = () => {
         ))}
       </div>
 
+      <div className="w-full max-w-4xl mx-auto mb-20">
+        <img 
+          src="/lovable-uploads/e95d1082-2c64-41a3-9798-c1ebacbc77c8.png"
+          alt="Credit Cards"
+          className="w-full max-w-[250px] sm:max-w-[300px] mx-auto mb-4 sm:mb-6"
+        />
+        <div className="flex justify-center gap-4">
+          <img
+            src="/lovable-uploads/39e12f88-1320-4aca-9bc1-dfafc46add31.png"
+            alt="Payment Methods"
+            className="w-full max-w-[300px] sm:max-w-[400px]"
+          />
+        </div>
+      </div>
+
       <footer className="bg-[#1A1F2C] py-16 w-full">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
