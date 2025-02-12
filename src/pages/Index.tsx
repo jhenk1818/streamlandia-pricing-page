@@ -276,14 +276,7 @@ const Index = () => {
             </span>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8 animate-fade-up mb-20">
-            <div className="p-8 text-center rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-[#221F26]">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
-                <PlayCircle className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4 text-white">Watch Anywhere</h3>
-              <p className="text-white/80">Stream on your phone, tablet, laptop, and TV without paying more.</p>
-            </div>
+          <div className="grid md:grid-cols-3 gap-8 animate-fade-up mb-20">
             <div className="p-8 text-center rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-[#221F26]">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
                 <Tv className="w-8 h-8 text-primary" />
