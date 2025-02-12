@@ -295,8 +295,8 @@ const Index = () => {
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
                 <CreditCard className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-white">Cancel Anytime</h3>
-              <p className="text-white/80">No long-term contracts. No commitments. Cancel anytime.</p>
+              <h3 className="text-xl font-semibold mb-4 text-white">Payment Options</h3>
+              <p className="text-white/80">We offer all major payment methods from credit cards and debit and many more.</p>
             </div>
             <div className="p-8 text-center rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-[#221F26]">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
