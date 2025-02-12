@@ -480,248 +480,114 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="mt-32">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-                What Our Users Say
-              </h2>
-              <p className="text-white/80 text-lg max-w-2xl mx-auto">
-                Join thousands of satisfied subscribers enjoying our premium content
-              </p>
-            </div>
-
-            <div className="relative overflow-hidden">
-              <div className="absolute left-0 top-0 bottom-0 w-20 md:w-40 fade-overlay-left z-10"></div>
-              <div className="absolute right-0 top-0 bottom-0 w-20 md:w-40 fade-overlay-right z-10"></div>
-              
-              <Carousel
-                opts={{
-                  align: "start",
-                  loop: true,
-                  dragFree: true,
-                  containScroll: false,
-                }}
-                className="w-full"
-              >
-                <CarouselContent className="-ml-2 md:-ml-4 gap-3 md:gap-6 auto-scroll">
-                  {[...reviews, ...reviews].map((review, index) => (
-                    <CarouselItem key={index} className="pl-2 md:pl-4 basis-[85%] md:basis-1/3">
-                      <div className="p-4 md:p-6 rounded-xl border border-white/10 backdrop-blur-md bg-white/5 h-full">
-                        <div className="flex items-center justify-between mb-4">
-                          <div className="flex items-center gap-2">
-                            {Array(5).fill(0).map((_, i) => (
-                              <Star
-                                key={i}
-                                className="w-4 h-4 md:w-5 md:h-5 fill-[#F97316] text-[#F97316]"
-                              />
-                            ))}
-                          </div>
-                          <div className="flex items-center gap-1.5 text-xs px-2 py-0.5 rounded-full bg-[#1A1F2C] text-primary whitespace-nowrap">
-                            <CheckCircle2 className="w-3 h-3" />
-                            <span>Verified Client</span>
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-2 mb-4">
-                          <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                            <UserRound className="w-5 h-5 text-primary" />
-                          </div>
-                          <div>
-                            <p className="font-medium text-white text-sm md:text-base">{review.name}</p>
-                            <span className="text-xs md:text-sm text-white/60">{review.date}</span>
-                          </div>
-                        </div>
-                        <p className="text-sm md:text-base text-white/80">{review.comment}</p>
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-              </Carousel>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="text-center mb-12" ref={pricingRef}>
-        <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-          Choose Your Plan
-        </h2>
-        <p className="text-white/80 text-lg max-w-2xl mx-auto">
-          Select the perfect plan for your entertainment needs
-        </p>
-        <div className="flex justify-center items-center gap-4 mt-6">
-          <span className="text-white/80">Monthly</span>
-          <button
-            onClick={() => setIsAnnual(!isAnnual)}
-            className={`relative w-16 h-8 rounded-full transition-colors ${
-              isAnnual ? 'bg-primary' : 'bg-white/20'
-            }`}
-          >
-            <div
-              className={`absolute top-1 left-1 w-6 h-6 rounded-full bg-white transition-transform ${
-                isAnnual ? 'translate-x-8' : 'translate-x-0'
-              }`}
+          <div className="w-full max-w-4xl mx-auto mb-20">
+            <img 
+              src="/lovable-uploads/e95d1082-2c64-41a3-9798-c1ebacbc77c8.png"
+              alt="Credit Cards"
+              className="w-full max-w-[250px] sm:max-w-[300px] mx-auto mb-4 sm:mb-6"
             />
-          </button>
-          <span className="text-white/80">Annual</span>
-          <span className="ml-2 inline-block px-2 py-1 bg-primary/20 text-primary text-sm rounded-full">
-            Save 20%
-          </span>
-        </div>
-      </div>
-
-      <div className="grid md:grid-cols-3 gap-8 mb-20">
-        {plans.map((plan, index) => (
-          <div
-            key={index}
-            className={`rounded-xl p-6 border ${
-              plan.popular
-                ? 'bg-primary border-primary'
-                : 'border-white/10 hover:border-primary'
-            } relative overflow-hidden transition-all hover:scale-105`}
-          >
-            {plan.popular && (
-              <div className="absolute top-4 right-4">
-                <span className="inline-block px-2 py-1 bg-black/20 text-white text-sm rounded-full">
-                  Most Popular
-                </span>
-              </div>
-            )}
-            <h3 className={`text-2xl font-bold mb-4 ${plan.textColor || 'text-white'}`}>
-              {plan.name}
-            </h3>
-            <div className="mb-6">
-              <span className={`text-4xl font-bold ${plan.textColor || 'text-white'}`}>
-                ${plan.price}
-              </span>
-              <span className={`text-lg ${plan.textColor || 'text-white'}`}>
-                {isAnnual ? '/year' : '/month'}
-              </span>
-            </div>
-            <ul className="space-y-4 mb-6">
-              {plan.features.map((feature, featureIndex) => (
-                <li key={featureIndex} className="flex items-center gap-2">
-                  <CheckCircle2 className={`w-5 h-5 ${plan.popular ? 'text-white' : 'text-primary'}`} />
-                  <span className={plan.textColor || 'text-white'}>{feature}</span>
-                </li>
-              ))}
-            </ul>
-            <PaymentButton
-              className={`w-full py-3 ${
-                plan.popular
-                  ? 'bg-black text-white hover:bg-black/90'
-                  : 'bg-primary text-white hover:bg-primary/90'
-              } rounded-[20px] transition-all`}
-            />
-          </div>
-        ))}
-      </div>
-
-      <div className="w-full max-w-4xl mx-auto mb-20">
-        <img 
-          src="/lovable-uploads/e95d1082-2c64-41a3-9798-c1ebacbc77c8.png"
-          alt="Credit Cards"
-          className="w-full max-w-[250px] sm:max-w-[300px] mx-auto mb-4 sm:mb-6"
-        />
-        <div className="flex justify-center gap-4">
-          <img
-            src="/lovable-uploads/39e12f88-1320-4aca-9bc1-dfafc46add31.png"
-            alt="Payment Methods"
-            className="w-full max-w-[300px] sm:max-w-[400px]"
-          />
-        </div>
-      </div>
-
-      <footer className="bg-[#1A1F2C] py-16 w-full">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-            <div className="space-y-4">
-              <img 
-                src="/lovable-uploads/73f47615-a95f-43b5-ab17-4035a79eed56.png"
-                alt="Pioneers TV Logo"
-                className="w-40 h-auto"
+            <div className="flex justify-center gap-4">
+              <img
+                src="/lovable-uploads/39e12f88-1320-4aca-9bc1-dfafc46add31.png"
+                alt="Payment Methods"
+                className="w-full max-w-[300px] sm:max-w-[400px]"
               />
-              <p className="text-white/70 text-sm max-w-xs">
-                Experience unlimited entertainment at your fingertips. Stream your favorite shows, movies, and exclusive content anytime, anywhere.
-              </p>
-              <div className="flex space-x-4">
-                <a href="#" className="text-white/70 hover:text-primary transition-colors">
-                  <Mail className="w-5 h-5" />
-                </a>
-                <a href="#" className="text-white/70 hover:text-primary transition-colors">
-                  <Headphones className="w-5 h-5" />
-                </a>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-white font-semibold text-lg">Quick Links</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Home</a>
-                </li>
-                <li>
-                  <a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Features</a>
-                </li>
-                <li>
-                  <a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Pricing</a>
-                </li>
-                <li>
-                  <a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Contact</a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-white font-semibold text-lg">Support</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Help Center</a>
-                </li>
-                <li>
-                  <a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">FAQ</a>
-                </li>
-                <li>
-                  <a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Terms of Service</a>
-                </li>
-                <li>
-                  <a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Privacy Policy</a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-white font-semibold text-lg">Contact Us</h3>
-              <div className="space-y-3">
-                <div className="flex items-center gap-2 text-white/70">
-                  <Mail className="w-4 h-4" />
-                  <a href="mailto:contact@pioneerstv.com" className="text-sm hover:text-primary transition-colors">
-                    contact@pioneerstv.com
-                  </a>
-                </div>
-                <div className="flex items-center gap-2 text-white/70">
-                  <Headphones className="w-4 h-4" />
-                  <span className="text-sm">24/7 Support Available</span>
-                </div>
-              </div>
             </div>
           </div>
-          
-          <div className="mt-12 pt-8 border-t border-white/10">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <p className="text-white/70 text-sm">
-                © 2024 Pioneers TV. All rights reserved.
-              </p>
-              <div className="flex items-center gap-6">
-                <img 
-                  src="/lovable-uploads/6f69184e-d161-4eaa-a3db-b0d0abe59996.png"
-                  alt="Payment Methods"
-                  className="h-6 w-auto object-contain"
-                />
+
+          <footer className="bg-[#1A1F2C] py-16 w-full">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div className="space-y-4">
+                  <img 
+                    src="/lovable-uploads/73f47615-a95f-43b5-ab17-4035a79eed56.png"
+                    alt="Pioneers TV Logo"
+                    className="w-40 h-auto"
+                  />
+                  <p className="text-white/70 text-sm max-w-xs">
+                    Experience unlimited entertainment at your fingertips. Stream your favorite shows, movies, and exclusive content anytime, anywhere.
+                  </p>
+                  <div className="flex space-x-4">
+                    <a href="#" className="text-white/70 hover:text-primary transition-colors">
+                      <Mail className="w-5 h-5" />
+                    </a>
+                    <a href="#" className="text-white/70 hover:text-primary transition-colors">
+                      <Headphones className="w-5 h-5" />
+                    </a>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <h3 className="text-white font-semibold text-lg">Quick Links</h3>
+                  <ul className="space-y-2">
+                    <li>
+                      <a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Home</a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Features</a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Pricing</a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="space-y-4">
+                  <h3 className="text-white font-semibold text-lg">Support</h3>
+                  <ul className="space-y-2">
+                    <li>
+                      <a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Help Center</a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">FAQ</a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Terms of Service</a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Privacy Policy</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="space-y-4">
+                  <h3 className="text-white font-semibold text-lg">Contact Us</h3>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-2 text-white/70">
+                      <Mail className="w-4 h-4" />
+                      <a href="mailto:contact@pioneerstv.com" className="text-sm hover:text-primary transition-colors">
+                        contact@pioneerstv.com
+                      </a>
+                    </div>
+                    <div className="flex items-center gap-2 text-white/70">
+                      <Headphones className="w-4 h-4" />
+                      <span className="text-sm">24/7 Support Available</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-12 pt-8 border-t border-white/10">
+                <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+                  <p className="text-white/70 text-sm">
+                    © 2024 Pioneers TV. All rights reserved.
+                  </p>
+                  <div className="flex items-center gap-6">
+                    <img 
+                      src="/lovable-uploads/6f69184e-d161-4eaa-a3db-b0d0abe59996.png"
+                      alt="Payment Methods"
+                      className="h-6 w-auto object-contain"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </footer>
         </div>
-      </footer>
+      </div>
     </div>
   );
 };
