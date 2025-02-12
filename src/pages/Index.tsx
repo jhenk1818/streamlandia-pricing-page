@@ -587,9 +587,10 @@ const Index = () => {
                               />
                             ))}
                           </div>
-                          <span className="text-xs px-2 py-0.5 rounded-full bg-[#1A1F2C] text-primary whitespace-nowrap">
-                            Verified {review.plan} User
-                          </span>
+                          <div className="flex items-center gap-1.5 text-xs px-2 py-0.5 rounded-full bg-[#1A1F2C] text-primary whitespace-nowrap">
+                            <CheckCircle2 className="w-3 h-3" />
+                            <span>Verified Client</span>
+                          </div>
                         </div>
                         <div className="flex items-center gap-2 mb-4">
                           <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
