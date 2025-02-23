@@ -490,6 +490,41 @@ const Index = () => {
                 />
               </div>
             </div>
+            
+            <div className="flex justify-center mt-8">
+              <button 
+                className="relative overflow-hidden text-white px-12 py-4 rounded-full font-medium transition-all hover:scale-105 w-64 group"
+                onClick={scrollToPricing}
+              >
+                <div 
+                  className="absolute inset-0 bg-gradient-to-r from-black via-[#1EAEDB] to-black opacity-70"
+                ></div>
+                <div 
+                  className="absolute inset-0"
+                  style={{
+                    padding: '2px',
+                    background: 'linear-gradient(90deg, #000, #1EAEDB, #000)',
+                    backgroundSize: '200% 100%',
+                    animation: 'gradient 3s ease infinite',
+                    WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                    WebkitMaskComposite: 'xor',
+                    maskComposite: 'exclude',
+                    borderRadius: '9999px',
+                  }}
+                >
+                  <div 
+                    className="absolute inset-0"
+                    style={{
+                      background: 'linear-gradient(90deg, #000, #1EAEDB, #000)',
+                      backgroundSize: '200% 100%',
+                      animation: 'snake 4s linear infinite',
+                      borderRadius: '9999px',
+                    }}
+                  ></div>
+                </div>
+                <span className="relative z-10">Continue to Plans</span>
+              </button>
+            </div>
           </div>
 
           <div ref={carouselEndRef} className="h-1 w-full" />
@@ -503,32 +538,6 @@ const Index = () => {
               />
             </div>
           )}
-
-          <div className="text-center animate-fade-up" ref={pricingRef} style={{ animationDelay: "0.4s" }}>
-            <span className="inline-block px-4 py-1 mb-2 text-sm font-medium rounded-full bg-primary/10 text-primary">
-              Simple Pricing
-            </span>
-            <h2 className="text-3xl md:text-5xl font-bold mb-2 text-white">Choose Your Plan</h2>
-            <p className="text-muted text-lg max-w-2xl mx-auto mb-8">
-              Select the perfect plan for your entertainment needs
-            </p>
-          </div>
-
-          <div className="max-w-3xl mx-auto space-y-8">
-            <img 
-              src="/lovable-uploads/bc0a21d6-2323-45eb-859c-a49658aff7bb.png"
-              alt="Pricing Plans"
-              className="w-full h-auto object-contain rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
-            />
-            
-            <div className="flex justify-center items-center gap-8 px-4">
-              <img 
-                src="/lovable-uploads/6f69184e-d161-4eaa-a3db-b0d0abe59996.png"
-                alt="Payment Methods"
-                className="w-full max-w-md h-auto object-contain"
-              />
-            </div>
-          </div>
 
           <div className="mt-32">
             <div className="text-center mb-12">
@@ -670,4 +679,3 @@ const Index = () => {
 };
 
 export default Index;
-
