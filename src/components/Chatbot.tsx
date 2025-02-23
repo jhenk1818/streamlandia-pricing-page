@@ -4,8 +4,7 @@ import { MessageCircle } from "lucide-react";
 
 export const Chatbot = () => {
   const handleWhatsAppRedirect = () => {
-    // You can customize the phone number and pre-filled message
-    const phoneNumber = "1234567890"; // Replace with your actual WhatsApp number
+    const phoneNumber = "18594183331"; // Updated to your business WhatsApp number
     const message = "Hi! I'm interested in your IPTV services.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
