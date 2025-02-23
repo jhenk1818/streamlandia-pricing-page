@@ -633,10 +633,6 @@ const Index = () => {
                   <span className="block">Support Hours:</span>
                   <span className="text-primary">24/7 - Always Available</span>
                 </li>
-                <li className="text-white/70 text-sm">
-                  <span className="block">Response Time:</span>
-                  <span className="text-primary">Within 10 Minutes</span>
-                </li>
               </ul>
             </div>
 
