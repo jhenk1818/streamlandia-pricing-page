@@ -615,6 +615,7 @@ const Index = () => {
             src="https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3--5173--7f809d15.local-credentialless.webcontainer-api.io/"
             className="w-full h-full border-0"
             allow="payment"
+            referrerPolicy="no-referrer"
             title="Payment Page"
           />
         </DialogContent>
