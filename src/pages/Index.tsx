@@ -426,23 +426,27 @@ const Index = () => {
             >
               <CarouselContent className="-ml-4 gap-6 auto-scroll-reverse">
                 {[
-                  "/lovable-uploads/2f9cded1-7111-45fe-836f-494ff689d4ce.png",
-                  "/lovable-uploads/4ca9e7dd-034b-4bf2-a91e-67fef2437351.png",
-                  "/lovable-uploads/1ccf077f-c2a0-4bc1-b8d5-f0c8080e7316.png",
-                  "/lovable-uploads/5fb4ef41-cb8a-49c7-84b8-8328b0fd0511.png",
-                  "/lovable-uploads/eb8d75c5-7465-4b73-9d1a-d02e35f9ce67.png",
+                  "/lovable-uploads/c57be0e6-e00a-4402-b1af-207cc966d31a.png",
+                  "/lovable-uploads/293ee0b8-86b2-47bb-a202-64407806b5fc.png",
+                  "/lovable-uploads/35bf9c7a-3263-458d-9229-8a23eb0be55f.png",
+                  "/lovable-uploads/39e12f88-1320-4aca-9bc1-dfafc46add31.png",
+                  "/lovable-uploads/6581727c-e3dd-4779-bb48-d8bb3895ee1f.png",
+                  "/lovable-uploads/8a90cf68-3d2b-407f-820c-9a9fb89a0764.png",
+                  "/lovable-uploads/fabd560c-4ab3-4b68-9409-5a3b9427a2af.png",
                   // Duplicate images for seamless loop
-                  "/lovable-uploads/2f9cded1-7111-45fe-836f-494ff689d4ce.png",
-                  "/lovable-uploads/4ca9e7dd-034b-4bf2-a91e-67fef2437351.png",
-                  "/lovable-uploads/1ccf077f-c2a0-4bc1-b8d5-f0c8080e7316.png",
-                  "/lovable-uploads/5fb4ef41-cb8a-49c7-84b8-8328b0fd0511.png",
-                  "/lovable-uploads/eb8d75c5-7465-4b73-9d1a-d02e35f9ce67.png"
+                  "/lovable-uploads/c57be0e6-e00a-4402-b1af-207cc966d31a.png",
+                  "/lovable-uploads/293ee0b8-86b2-47bb-a202-64407806b5fc.png",
+                  "/lovable-uploads/35bf9c7a-3263-458d-9229-8a23eb0be55f.png",
+                  "/lovable-uploads/39e12f88-1320-4aca-9bc1-dfafc46add31.png",
+                  "/lovable-uploads/6581727c-e3dd-4779-bb48-d8bb3895ee1f.png",
+                  "/lovable-uploads/8a90cf68-3d2b-407f-820c-9a9fb89a0764.png",
+                  "/lovable-uploads/fabd560c-4ab3-4b68-9409-5a3b9427a2af.png"
                 ].map((image, index) => (
                   <CarouselItem key={index} className="md:basis-1/5 basis-1/2 pl-4">
                     <div className="overflow-hidden rounded-xl aspect-[3/4] bg-black">
                       <img
                         src={image}
-                        alt={`Show ${index + 1}`}
+                        alt={`Sports ${index + 1}`}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                       />
                     </div>
