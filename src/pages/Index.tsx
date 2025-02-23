@@ -629,14 +629,13 @@ const Index = () => {
                     </button>
                   </RefundPolicyDialog>
                 </li>
-                <li>
-                  <Link to="/" className="text-white/70 hover:text-primary transition-colors text-sm">FAQ</Link>
+                <li className="text-white/70 text-sm">
+                  <span className="block">Support Hours:</span>
+                  <span className="text-primary">24/7 - Always Available</span>
                 </li>
-                <li>
-                  <Link to="/" className="text-white/70 hover:text-primary transition-colors text-sm">Terms of Service</Link>
-                </li>
-                <li>
-                  <Link to="/" className="text-white/70 hover:text-primary transition-colors text-sm">Privacy Policy</Link>
+                <li className="text-white/70 text-sm">
+                  <span className="block">Response Time:</span>
+                  <span className="text-primary">Within 10 Minutes</span>
                 </li>
               </ul>
             </div>
