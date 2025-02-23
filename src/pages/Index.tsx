@@ -22,6 +22,70 @@ const Index = () => {
   const carouselEndRef = useRef<HTMLDivElement>(null);
   const pricingRef = useRef<HTMLDivElement>(null);
 
+  const reviews = [
+    {
+      name: "Sarah Mitchell",
+      comment: "Best IPTV service I've tried! The streaming quality is exceptional and there's no buffering even in 4K. Worth every penny.",
+      date: "January 15, 2024",
+      plan: "Premium"
+    },
+    {
+      name: "James Wilson",
+      comment: "Finally found a reliable IPTV provider that the whole family loves. Multiple device support is fantastic, and the channel selection is incredible.",
+      date: "February 28, 2024",
+      plan: "Family"
+    },
+    {
+      name: "Emily Rodriguez",
+      comment: "Been using this service for 3 months now and I'm amazed by the content library. Definitely the most stable IPTV service I've experienced.",
+      date: "December 13, 2023",
+      plan: "Premium"
+    },
+    {
+      name: "Michael Chang",
+      comment: "Incredible channel variety and zero lag! This IPTV service has transformed how I watch TV. The picture quality is amazing and the prices are unbeatable.",
+      date: "March 2, 2024",
+      plan: "Basic"
+    },
+    {
+      name: "Lisa Anderson",
+      comment: "Switched from another provider and couldn't be happier! The channel quality and customer support are outstanding. Best IPTV decision I've made.",
+      date: "January 21, 2024",
+      plan: "Family"
+    },
+    {
+      name: "David Thompson",
+      comment: "The interface is super user-friendly and the IPTV stream quality is consistently excellent. Never looking back to cable TV again!",
+      date: "February 10, 2024",
+      plan: "Basic"
+    }
+  ];
+
+  const clearBrowserData = () => {
+    localStorage.clear();
+    sessionStorage.clear();
+    document.cookie.split(";").forEach((cookie) => {
+      document.cookie = cookie
+        .replace(/^ +/, "")
+        .replace(/=.*/, `=;expires=${new Date().toUTCString()};path=/`);
+    });
+  };
+
+  const handlePlanClick = () => {
+    const timestamp = Date.now();
+    const nonce = Math.random().toString(36).substring(7);
+    const proxyUrl = `https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3--5173--7f809d15.local-credentialless.webcontainer-api.io/?_=${timestamp}&nonce=${nonce}`;
+
+    const securityMeta = document.createElement('meta');
+    securityMeta.httpEquiv = 'Content-Security-Policy';
+    securityMeta.content = "default-src 'self' 'unsafe-inline' 'unsafe-eval'; frame-src 'self' https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3--5173--7f809d15.local-credentialless.webcontainer-api.io/";
+    document.head.appendChild(securityMeta);
+
+    window.history.replaceState({}, document.title, window.location.pathname);
+
+    setShowIframe(true);
+  };
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -51,31 +115,6 @@ const Index = () => {
 
   const scrollToPricing = () => {
     pricingRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handlePlanClick = () => {
-    const clearBrowserData = () => {
-      localStorage.clear();
-      sessionStorage.clear();
-      document.cookie.split(";").forEach((cookie) => {
-        document.cookie = cookie
-          .replace(/^ +/, "")
-          .replace(/=.*/, `=;expires=${new Date().toUTCString()};path=/`);
-      });
-    };
-
-    const timestamp = Date.now();
-    const nonce = Math.random().toString(36).substring(7);
-    const proxyUrl = `https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3--5173--7f809d15.local-credentialless.webcontainer-api.io/?_=${timestamp}&nonce=${nonce}`;
-
-    const securityMeta = document.createElement('meta');
-    securityMeta.httpEquiv = 'Content-Security-Policy';
-    securityMeta.content = "default-src 'self' 'unsafe-inline' 'unsafe-eval'; frame-src 'self' https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3--5173--7f809d15.local-credentialless.webcontainer-api.io/";
-    document.head.appendChild(securityMeta);
-
-    window.history.replaceState({}, document.title, window.location.pathname);
-
-    setShowIframe(true);
   };
 
   return (
