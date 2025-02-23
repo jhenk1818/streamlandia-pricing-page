@@ -1,4 +1,3 @@
-
 import { CreditCard, PlayCircle, Tv, CheckCircle2, Star, UserRound, Headphones } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import {
@@ -620,7 +619,6 @@ const Index = () => {
             sandbox="allow-scripts allow-forms allow-same-origin allow-popups allow-modals"
             loading="lazy"
             title="Payment Page"
-            credentialless="true"
           />
         </DialogContent>
       </Dialog>
