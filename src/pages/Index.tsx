@@ -630,4 +630,52 @@ const Index = () => {
                   </RefundPolicyDialog>
                 </li>
                 <li>
-                  <Link to="/" className="text-white/70 hover:text-primary transition-colors text-sm">FAQ</Link
+                  <Link to="/" className="text-white/70 hover:text-primary transition-colors text-sm">FAQ</Link>
+                </li>
+                <li>
+                  <Link to="/" className="text-white/70 hover:text-primary transition-colors text-sm">Terms of Service</Link>
+                </li>
+                <li>
+                  <Link to="/" className="text-white/70 hover:text-primary transition-colors text-sm">Privacy Policy</Link>
+                </li>
+              </ul>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-white font-semibold text-lg">Contact Us</h3>
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-white/70">
+                  <Mail className="w-4 h-4" />
+                  <a href="mailto:contact@pioneerstv.com" className="text-sm hover:text-primary transition-colors">
+                    contact@pioneerstv.com
+                  </a>
+                </div>
+                <div className="flex items-center gap-2 text-white/70">
+                  <Headphones className="w-4 h-4" />
+                  <span className="text-sm">24/7 Support Available</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-12 pt-8 border-t border-white/10">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+              <p className="text-white/70 text-sm">
+                © 2024 Pioneers TV. All rights reserved.
+              </p>
+              <div className="flex items-center gap-6">
+                <img 
+                  src="/lovable-uploads/6f69184e-d161-4eaa-a3db-b0d0abe59996.png"
+                  alt="Payment Methods"
+                  className="h-6 w-auto object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default Index;
