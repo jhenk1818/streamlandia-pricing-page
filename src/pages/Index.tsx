@@ -135,7 +135,7 @@ const Index = () => {
               <div 
                 className="absolute inset-0"
                 style={{
-                  padding: '2px',
+                  padding: '2px',\
                   background: 'linear-gradient(90deg, #000, #1EAEDB, #000)',
                   backgroundSize: '200% 100%',
                   animation: 'gradient 3s ease infinite',
