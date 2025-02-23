@@ -465,35 +465,35 @@ const Index = () => {
                 <ul className="space-y-4">
                   <li className="flex items-center gap-2 text-white text-sm">
                     <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>4K Ultra HD Streaming Quality</span>
+                    <span>SD / HD / FULL HD / 4K</span>
                   </li>
                   <li className="flex items-center gap-2 text-white text-sm">
                     <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>Watch on Multiple Devices</span>
+                    <span>+32 000 CHANNEL</span>
                   </li>
                   <li className="flex items-center gap-2 text-white text-sm">
                     <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>Offline Downloads</span>
+                    <span>UPDATED SERIES</span>
                   </li>
                   <li className="flex items-center gap-2 text-white text-sm">
                     <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>Ad-Free Entertainment</span>
+                    <span>UPDATED MOVIES</span>
                   </li>
                   <li className="flex items-center gap-2 text-white text-sm">
                     <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>Cancel Anytime</span>
+                    <span>Prime Video / Disney+</span>
                   </li>
                   <li className="flex items-center gap-2 text-white text-sm">
                     <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>24/7 Customer Support</span>
+                    <span>Support 24/7/365</span>
                   </li>
                   <li className="flex items-center gap-2 text-white text-sm">
                     <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>Regular Content Updates</span>
+                    <span>Adults 18+</span>
                   </li>
                   <li className="flex items-center gap-2 text-white text-sm">
                     <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>Family Sharing Available</span>
+                    <span>100% Anonymous</span>
                   </li>
                 </ul>
               </div>
