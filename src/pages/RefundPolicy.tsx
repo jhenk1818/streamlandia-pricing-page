@@ -51,16 +51,18 @@ const RefundPolicy = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="space-y-4">
-              <img 
-                src="/lovable-uploads/73f47615-a95f-43b5-ab17-4035a79eed56.png"
-                alt="Pioneers TV Logo"
-                className="w-40 h-auto"
-              />
+              <Link to="/">
+                <img 
+                  src="/lovable-uploads/73f47615-a95f-43b5-ab17-4035a79eed56.png"
+                  alt="Pioneers TV Logo"
+                  className="w-40 h-auto"
+                />
+              </Link>
               <p className="text-white/70 text-sm max-w-xs">
                 Experience unlimited entertainment at your fingertips. Stream your favorite shows, movies, and exclusive content anytime, anywhere.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="text-white/70 hover:text-primary transition-colors">
+                <a href="mailto:contact@pioneerstv.com" className="text-white/70 hover:text-primary transition-colors">
                   <Mail className="w-5 h-5" />
                 </a>
                 <a href="#" className="text-white/70 hover:text-primary transition-colors">
