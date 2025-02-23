@@ -1,3 +1,4 @@
+<lov-code>
 import { CreditCard, PlayCircle, Tv, CheckCircle2, Star, UserRound, Headphones } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import {
@@ -595,7 +596,7 @@ const Index = () => {
 
       <footer className="bg-[#1A1F2C] py-16 w-full">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="space-y-4">
               <img 
                 src="/lovable-uploads/73f47615-a95f-43b5-ab17-4035a79eed56.png"
@@ -616,24 +617,6 @@ const Index = () => {
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-white font-semibold text-lg">Quick Links</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Home</a>
-                </li>
-                <li>
-                  <a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Features</a>
-                </li>
-                <li>
-                  <a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Pricing</a>
-                </li>
-                <li>
-                  <a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Contact</a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="space-y-4">
               <h3 className="text-white font-semibold text-lg">Support</h3>
               <ul className="space-y-2">
                 <li>
@@ -646,46 +629,4 @@ const Index = () => {
                   <a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Terms of Service</a>
                 </li>
                 <li>
-                  <a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Privacy Policy</a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-white font-semibold text-lg">Contact Us</h3>
-              <div className="space-y-3">
-                <div className="flex items-center gap-2 text-white/70">
-                  <Mail className="w-4 h-4" />
-                  <a href="mailto:contact@pioneerstv.com" className="text-sm hover:text-primary transition-colors">
-                    contact@pioneerstv.com
-                  </a>
-                </div>
-                <div className="flex items-center gap-2 text-white/70">
-                  <Headphones className="w-4 h-4" />
-                  <span className="text-sm">24/7 Support Available</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="mt-12 pt-8 border-t border-white/10">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <p className="text-white/70 text-sm">
-                © 2024 Pioneers TV. All rights reserved.
-              </p>
-              <div className="flex items-center gap-6">
-                <img 
-                  src="/lovable-uploads/6f69184e-d161-4eaa-a3db-b0d0abe59996.png"
-                  alt="Payment Methods"
-                  className="h-6 w-auto object-contain"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-};
-
-export default Index;
+                  <a href="#" className="text-white/70 hover:text-primary transition-colors text-sm
