@@ -495,7 +495,7 @@ const Index = () => {
           <div ref={carouselEndRef} className="h-1 w-full" />
 
           {showLogo && (
-            <div className="flex justify-center items-center mb-20 animate-fade-in">
+            <div className="flex justify-center items-center mb-8 animate-fade-in">
               <img 
                 src="/lovable-uploads/73f47615-a95f-43b5-ab17-4035a79eed56.png"
                 alt="Pioneers TV Logo"
