@@ -402,29 +402,32 @@ const Index = () => {
             </Carousel>
           </div>
 
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-              Watch Sports With No Limits
-            </h2>
-            <p className="text-white/80 text-lg max-w-2xl mx-auto">
-              Discover what everyone's watching right now
-            </p>
-          </div>
-
           <div className="relative mb-20">
-            <div className="max-w-5xl mx-auto">
-              <div className="relative">
-                <img
-                  src="/lovable-uploads/d11578d8-b9cc-48fa-96af-961d0b3962b8.png"
-                  alt="Various Sports Athletes"
-                  className="w-full h-auto object-contain mx-auto"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-20"></div>
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div className="text-left">
+                  <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white leading-tight">
+                    Watch Sports
+                    <br />
+                    With No Limits
+                  </h2>
+                  <p className="text-white/80 text-lg max-w-xl">
+                    Discover what everyone's watching right now. Get access to all major sports events, leagues, and tournaments in one place.
+                  </p>
+                </div>
+                <div className="relative">
+                  <img
+                    src="/lovable-uploads/d11578d8-b9cc-48fa-96af-961d0b3962b8.png"
+                    alt="Various Sports Athletes"
+                    className="w-full h-auto object-contain mx-auto rounded-xl"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-20 rounded-xl"></div>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="text-center mb-12 mt-20">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               All Features Include
             </h2>
