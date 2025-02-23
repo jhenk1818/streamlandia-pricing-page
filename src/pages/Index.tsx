@@ -495,7 +495,7 @@ const Index = () => {
           <div ref={carouselEndRef} className="h-1 w-full" />
 
           {showLogo && (
-            <div className="flex justify-center items-center mb-8 animate-fade-in">
+            <div className="flex justify-center items-center mb-4 animate-fade-in">
               <img 
                 src="/lovable-uploads/73f47615-a95f-43b5-ab17-4035a79eed56.png"
                 alt="Pioneers TV Logo"
@@ -503,11 +503,7 @@ const Index = () => {
               />
             </div>
           )}
-        </div>
-      </div>
 
-      <div className="bg-black w-full">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center mb-12 animate-fade-up" ref={pricingRef} style={{ animationDelay: "0.4s" }}>
             <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-primary/10 text-primary">
               Simple Pricing
