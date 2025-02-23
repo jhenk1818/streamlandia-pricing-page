@@ -411,49 +411,17 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="relative overflow-hidden mb-20">
-            <div className="absolute left-0 top-0 bottom-0 w-40 fade-overlay-left z-10"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-40 fade-overlay-right z-10"></div>
-            
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-                dragFree: true,
-                containScroll: false,
-              }}
-              className="w-full"
-            >
-              <CarouselContent className="-ml-4 gap-6 auto-scroll-reverse">
-                {[
-                  "/lovable-uploads/c57be0e6-e00a-4402-b1af-207cc966d31a.png",
-                  "/lovable-uploads/293ee0b8-86b2-47bb-a202-64407806b5fc.png",
-                  "/lovable-uploads/35bf9c7a-3263-458d-9229-8a23eb0be55f.png",
-                  "/lovable-uploads/39e12f88-1320-4aca-9bc1-dfafc46add31.png",
-                  "/lovable-uploads/6581727c-e3dd-4779-bb48-d8bb3895ee1f.png",
-                  "/lovable-uploads/8a90cf68-3d2b-407f-820c-9a9fb89a0764.png",
-                  "/lovable-uploads/fabd560c-4ab3-4b68-9409-5a3b9427a2af.png",
-                  // Duplicate images for seamless loop
-                  "/lovable-uploads/c57be0e6-e00a-4402-b1af-207cc966d31a.png",
-                  "/lovable-uploads/293ee0b8-86b2-47bb-a202-64407806b5fc.png",
-                  "/lovable-uploads/35bf9c7a-3263-458d-9229-8a23eb0be55f.png",
-                  "/lovable-uploads/39e12f88-1320-4aca-9bc1-dfafc46add31.png",
-                  "/lovable-uploads/6581727c-e3dd-4779-bb48-d8bb3895ee1f.png",
-                  "/lovable-uploads/8a90cf68-3d2b-407f-820c-9a9fb89a0764.png",
-                  "/lovable-uploads/fabd560c-4ab3-4b68-9409-5a3b9427a2af.png"
-                ].map((image, index) => (
-                  <CarouselItem key={index} className="md:basis-1/5 basis-1/2 pl-4">
-                    <div className="overflow-hidden rounded-xl aspect-[3/4] bg-black">
-                      <img
-                        src={image}
-                        alt={`Sports ${index + 1}`}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-            </Carousel>
+          <div className="relative mb-20">
+            <div className="max-w-5xl mx-auto">
+              <div className="relative">
+                <img
+                  src="/lovable-uploads/d11578d8-b9cc-48fa-96af-961d0b3962b8.png"
+                  alt="Various Sports Athletes"
+                  className="w-full h-auto object-contain mx-auto"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-20"></div>
+              </div>
+            </div>
           </div>
 
           <div className="text-center mb-12 mt-20">
