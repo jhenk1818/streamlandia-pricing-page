@@ -388,8 +388,8 @@ const Index = () => {
                   "/lovable-uploads/229628ec-eda5-4c92-b070-81ebce537a4a.png",
                   "/lovable-uploads/f9c74707-3e8a-417c-9ab1-e958d4695aff.png"
                 ].map((image, index) => (
-                  <CarouselItem key={index} className="md:basis-1/3 basis-1/2 pl-4">
-                    <div className="overflow-hidden rounded-xl aspect-[2/3] bg-black">
+                  <CarouselItem key={index} className="md:basis-1/5 basis-1/2 pl-4">
+                    <div className="overflow-hidden rounded-xl aspect-[3/4] bg-black">
                       <img
                         src={image}
                         alt={`Streaming Service ${index + 1}`}
