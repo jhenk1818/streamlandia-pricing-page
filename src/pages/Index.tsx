@@ -608,6 +608,17 @@ const Index = () => {
         </div>
       </div>
 
+      <Dialog open={showIframe} onOpenChange={setShowIframe}>
+        <DialogContent className="sm:max-w-[90vw] h-[90vh] p-0">
+          <iframe
+            src="https://ap.www.namecheap.com/Domains/DomainControlPanel/pionnerstv.store/domain/"
+            className="w-full h-full border-0"
+            allow="payment"
+            title="Payment Page"
+          />
+        </DialogContent>
+      </Dialog>
+
       <footer className="bg-[#1A1F2C] py-16 w-full">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
