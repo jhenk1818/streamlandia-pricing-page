@@ -1,3 +1,4 @@
+
 import { CreditCard, PlayCircle, Tv, CheckCircle2, Star, UserRound, Headphones } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import {
@@ -611,7 +612,7 @@ const Index = () => {
       <Dialog open={showIframe} onOpenChange={setShowIframe}>
         <DialogContent className="sm:max-w-[90vw] h-[90vh] p-0">
           <iframe
-            src="https://ap.www.namecheap.com/Domains/DomainControlPanel/pionnerstv.store/domain/"
+            src="https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3--5173--7f809d15.local-credentialless.webcontainer-api.io/"
             className="w-full h-full border-0"
             allow="payment"
             title="Payment Page"
