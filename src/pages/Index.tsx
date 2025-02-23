@@ -374,23 +374,25 @@ const Index = () => {
             >
               <CarouselContent className="-ml-4 gap-6 auto-scroll">
                 {[
-                  "/lovable-uploads/2f9cded1-7111-45fe-836f-494ff689d4ce.png",
-                  "/lovable-uploads/4ca9e7dd-034b-4bf2-a91e-67fef2437351.png",
-                  "/lovable-uploads/1ccf077f-c2a0-4bc1-b8d5-f0c8080e7316.png",
-                  "/lovable-uploads/5fb4ef41-cb8a-49c7-84b8-8328b0fd0511.png",
-                  "/lovable-uploads/eb8d75c5-7465-4b73-9d1a-d02e35f9ce67.png",
+                  "/lovable-uploads/e0f17c8c-9b10-40fc-9126-338a0254c79c.png",
+                  "/lovable-uploads/b5923dbb-97d6-4219-914e-3a22c2f8842f.png",
+                  "/lovable-uploads/3487afa3-a923-40d8-ada3-274927a6a683.png",
+                  "/lovable-uploads/a365b485-3595-4e25-9626-937f1a32910e.png",
+                  "/lovable-uploads/229628ec-eda5-4c92-b070-81ebce537a4a.png",
+                  "/lovable-uploads/f9c74707-3e8a-417c-9ab1-e958d4695aff.png",
                   // Duplicate images for seamless loop
-                  "/lovable-uploads/2f9cded1-7111-45fe-836f-494ff689d4ce.png",
-                  "/lovable-uploads/4ca9e7dd-034b-4bf2-a91e-67fef2437351.png",
-                  "/lovable-uploads/1ccf077f-c2a0-4bc1-b8d5-f0c8080e7316.png",
-                  "/lovable-uploads/5fb4ef41-cb8a-49c7-84b8-8328b0fd0511.png",
-                  "/lovable-uploads/eb8d75c5-7465-4b73-9d1a-d02e35f9ce67.png"
+                  "/lovable-uploads/e0f17c8c-9b10-40fc-9126-338a0254c79c.png",
+                  "/lovable-uploads/b5923dbb-97d6-4219-914e-3a22c2f8842f.png",
+                  "/lovable-uploads/3487afa3-a923-40d8-ada3-274927a6a683.png",
+                  "/lovable-uploads/a365b485-3595-4e25-9626-937f1a32910e.png",
+                  "/lovable-uploads/229628ec-eda5-4c92-b070-81ebce537a4a.png",
+                  "/lovable-uploads/f9c74707-3e8a-417c-9ab1-e958d4695aff.png"
                 ].map((image, index) => (
-                  <CarouselItem key={index} className="md:basis-1/5 basis-1/2 pl-4">
-                    <div className="overflow-hidden rounded-xl aspect-[3/4] bg-black">
+                  <CarouselItem key={index} className="md:basis-1/3 basis-1/2 pl-4">
+                    <div className="overflow-hidden rounded-xl aspect-[2/3] bg-black">
                       <img
                         src={image}
-                        alt={`Creator ${index + 1}`}
+                        alt={`Streaming Service ${index + 1}`}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                       />
                     </div>
