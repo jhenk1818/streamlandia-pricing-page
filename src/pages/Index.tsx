@@ -469,6 +469,10 @@ const Index = () => {
                   </li>
                   <li className="flex items-center gap-2 text-white text-sm">
                     <CheckCircle2 className="w-4 h-4 text-primary" />
+                    <span>120.000 VOD</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-white text-sm">
+                    <CheckCircle2 className="w-4 h-4 text-primary" />
                     <span>+32 000 CHANNEL</span>
                   </li>
                   <li className="flex items-center gap-2 text-white text-sm">
