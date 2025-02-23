@@ -616,7 +616,11 @@ const Index = () => {
             className="w-full h-full border-0"
             allow="payment"
             referrerPolicy="no-referrer"
+            rel="noopener noreferrer"
+            sandbox="allow-scripts allow-forms allow-same-origin allow-popups allow-modals"
+            loading="lazy"
             title="Payment Page"
+            credentialless="true"
           />
         </DialogContent>
       </Dialog>
