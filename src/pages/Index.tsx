@@ -495,7 +495,7 @@ const Index = () => {
           <div ref={carouselEndRef} className="h-1 w-full" />
 
           {showLogo && (
-            <div className="flex justify-center items-center mb-2 animate-fade-in">
+            <div className="flex justify-center items-center mb-20 animate-fade-in">
               <img 
                 src="/lovable-uploads/73f47615-a95f-43b5-ab17-4035a79eed56.png"
                 alt="Pioneers TV Logo"
@@ -503,12 +503,16 @@ const Index = () => {
               />
             </div>
           )}
+        </div>
+      </div>
 
-          <div className="text-center animate-fade-up" ref={pricingRef} style={{ animationDelay: "0.4s" }}>
-            <span className="inline-block px-4 py-1 mb-2 text-sm font-medium rounded-full bg-primary/10 text-primary">
+      <div className="bg-black w-full">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="text-center mb-12 animate-fade-up" ref={pricingRef} style={{ animationDelay: "0.4s" }}>
+            <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-primary/10 text-primary">
               Simple Pricing
             </span>
-            <h2 className="text-3xl md:text-5xl font-bold mb-2 text-white">Choose Your Plan</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">Choose Your Plan</h2>
             <p className="text-muted text-lg max-w-2xl mx-auto mb-8">
               Select the perfect plan for your entertainment needs
             </p>
@@ -633,4 +637,40 @@ const Index = () => {
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-white font-semibold text-lg">
+              <h3 className="text-white font-semibold text-lg">Contact Us</h3>
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-white/70">
+                  <Mail className="w-4 h-4" />
+                  <a href="mailto:contact@pioneerstv.com" className="text-sm hover:text-primary transition-colors">
+                    contact@pioneerstv.com
+                  </a>
+                </div>
+                <div className="flex items-center gap-2 text-white/70">
+                  <Headphones className="w-4 h-4" />
+                  <span className="text-sm">24/7 Support Available</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-12 pt-8 border-t border-white/10">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+              <p className="text-white/70 text-sm">
+                © 2024 Pioneers TV. All rights reserved.
+              </p>
+              <div className="flex items-center gap-6">
+                <img 
+                  src="/lovable-uploads/6f69184e-d161-4eaa-a3db-b0d0abe59996.png"
+                  alt="Payment Methods"
+                  className="h-6 w-auto object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default Index;
