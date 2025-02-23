@@ -1,5 +1,6 @@
 
 import { Mail, Headphones } from "lucide-react";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 
 const RefundPolicy = () => {
@@ -72,16 +73,16 @@ const RefundPolicy = () => {
               <h3 className="text-white font-semibold text-lg">Support</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="#/refund-policy" className="text-white/70 hover:text-primary transition-colors text-sm">Refund Policy</a>
+                  <Link to="/refund-policy" className="text-white/70 hover:text-primary transition-colors text-sm">Refund Policy</Link>
                 </li>
                 <li>
-                  <a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">FAQ</a>
+                  <Link to="/" className="text-white/70 hover:text-primary transition-colors text-sm">FAQ</Link>
                 </li>
                 <li>
-                  <a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Terms of Service</a>
+                  <Link to="/" className="text-white/70 hover:text-primary transition-colors text-sm">Terms of Service</Link>
                 </li>
                 <li>
-                  <a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Privacy Policy</a>
+                  <Link to="/" className="text-white/70 hover:text-primary transition-colors text-sm">Privacy Policy</Link>
                 </li>
               </ul>
             </div>
