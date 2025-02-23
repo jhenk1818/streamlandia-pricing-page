@@ -1,132 +1,29 @@
 
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Input } from "@/components/ui/input";
-import { MessageCircle, Send, X } from "lucide-react";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-
-interface Message {
-  type: 'user' | 'bot';
-  content: string;
-}
-
-const initialMessages: Message[] = [
-  {
-    type: 'bot',
-    content: "Hi! I'm here to help you with any questions you might have. How can I assist you today?"
-  }
-];
+import { MessageCircle } from "lucide-react";
 
 export const Chatbot = () => {
-  const [messages, setMessages] = useState<Message[]>(initialMessages);
-  const [inputMessage, setInputMessage] = useState('');
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleSendMessage = async () => {
-    if (!inputMessage.trim()) return;
-
-    // Add user message
-    const userMessage: Message = {
-      type: 'user',
-      content: inputMessage
-    };
-    setMessages(prev => [...prev, userMessage]);
-    setInputMessage('');
-
-    // Simple bot response logic - this can be enhanced with AI integration later
-    const botResponses: { [key: string]: string } = {
-      'pricing': "Our pricing plans start at $9/month. You can find more details on our pricing page.",
-      'contact': "You can reach our support team at support@example.com or through this chat.",
-      'features': "We offer a wide range of features including AI-powered analytics, real-time collaboration, and more.",
-      'default': "Thank you for your message. Let me help you with that. For specific inquiries, please include keywords like 'pricing', 'features', or 'contact'."
-    };
-
-    // Simulate typing delay
-    setTimeout(() => {
-      const lowercaseInput = inputMessage.toLowerCase();
-      let botResponse = botResponses.default;
-      
-      Object.keys(botResponses).forEach(key => {
-        if (lowercaseInput.includes(key)) {
-          botResponse = botResponses[key];
-        }
-      });
-
-      setMessages(prev => [...prev, {
-        type: 'bot',
-        content: botResponse
-      }]);
-    }, 1000);
+  const handleWhatsAppRedirect = () => {
+    // You can customize the phone number and pre-filled message
+    const phoneNumber = "1234567890"; // Replace with your actual WhatsApp number
+    const message = "Hi! I'm interested in your IPTV services.";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
-    <Sheet open={isOpen} onOpenChange={setIsOpen}>
-      <SheetTrigger asChild>
-        <Button
-          className="fixed bottom-4 right-4 rounded-full h-12 w-12 p-0"
-          size="icon"
-        >
-          <MessageCircle className="h-6 w-6" />
-        </Button>
-      </SheetTrigger>
-      <SheetContent className="w-[400px] sm:w-[540px] p-0">
-        <SheetHeader className="p-4 border-b">
-          <div className="flex justify-between items-center">
-            <SheetTitle>Support Chat</SheetTitle>
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsOpen(false)}
-            >
-              <X className="h-4 w-4" />
-            </Button>
-          </div>
-        </SheetHeader>
-        
-        <ScrollArea className="h-[calc(100vh-180px)] p-4">
-          <div className="space-y-4">
-            {messages.map((message, index) => (
-              <div
-                key={index}
-                className={`flex ${
-                  message.type === 'user' ? 'justify-end' : 'justify-start'
-                }`}
-              >
-                <div
-                  className={`rounded-lg px-4 py-2 max-w-[80%] ${
-                    message.type === 'user'
-                      ? 'bg-primary text-primary-foreground'
-                      : 'bg-muted'
-                  }`}
-                >
-                  {message.content}
-                </div>
-              </div>
-            ))}
-          </div>
-        </ScrollArea>
-
-        <div className="p-4 border-t">
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              handleSendMessage();
-            }}
-            className="flex gap-2"
-          >
-            <Input
-              value={inputMessage}
-              onChange={(e) => setInputMessage(e.target.value)}
-              placeholder="Type your message..."
-              className="flex-1"
-            />
-            <Button type="submit" size="icon">
-              <Send className="h-4 w-4" />
-            </Button>
-          </form>
-        </div>
-      </SheetContent>
-    </Sheet>
+    <Button
+      onClick={handleWhatsAppRedirect}
+      className="fixed bottom-4 right-4 rounded-full h-12 w-12 p-0 bg-[#25D366] hover:bg-[#128C7E]"
+      size="icon"
+    >
+      <svg 
+        viewBox="0 0 24 24" 
+        className="h-6 w-6"
+        fill="currentColor"
+      >
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </Button>
   );
 };
