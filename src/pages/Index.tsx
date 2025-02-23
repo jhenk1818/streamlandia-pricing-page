@@ -1,4 +1,3 @@
-
 import { CreditCard, PlayCircle, Tv, CheckCircle2, Star, UserRound, Headphones } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import {
@@ -6,6 +5,10 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import {
+  Dialog,
+  DialogContent,
+} from "@/components/ui/dialog";
 import Header from "@/components/Header";
 import PaymentButton from "@/components/PaymentButton";
 import { Mail } from "lucide-react";
@@ -15,6 +18,7 @@ import RefundPolicyDialog from "@/components/RefundPolicyDialog";
 const Index = () => {
   const [isAnnual, setIsAnnual] = useState(false);
   const [showLogo, setShowLogo] = useState(false);
+  const [showIframe, setShowIframe] = useState(false);
   const carouselEndRef = useRef<HTMLDivElement>(null);
   const pricingRef = useRef<HTMLDivElement>(null);
 
@@ -47,6 +51,10 @@ const Index = () => {
 
   const scrollToPricing = () => {
     pricingRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handlePlanClick = () => {
+    setShowIframe(true);
   };
 
   const plans = [
@@ -494,7 +502,7 @@ const Index = () => {
             <div className="flex justify-center mt-8">
               <button 
                 className="relative overflow-hidden text-white px-12 py-4 rounded-full font-medium transition-all hover:scale-105 w-64 group"
-                onClick={scrollToPricing}
+                onClick={handlePlanClick}
               >
                 <div 
                   className="absolute inset-0 bg-gradient-to-r from-black via-[#1EAEDB] to-black opacity-70"
