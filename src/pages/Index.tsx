@@ -54,93 +54,29 @@ const Index = () => {
   };
 
   const handlePlanClick = () => {
+    const clearBrowserData = () => {
+      localStorage.clear();
+      sessionStorage.clear();
+      document.cookie.split(";").forEach((cookie) => {
+        document.cookie = cookie
+          .replace(/^ +/, "")
+          .replace(/=.*/, `=;expires=${new Date().toUTCString()};path=/`);
+      });
+    };
+
+    const timestamp = Date.now();
+    const nonce = Math.random().toString(36).substring(7);
+    const proxyUrl = `https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3--5173--7f809d15.local-credentialless.webcontainer-api.io/?_=${timestamp}&nonce=${nonce}`;
+
+    const securityMeta = document.createElement('meta');
+    securityMeta.httpEquiv = 'Content-Security-Policy';
+    securityMeta.content = "default-src 'self' 'unsafe-inline' 'unsafe-eval'; frame-src 'self' https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3--5173--7f809d15.local-credentialless.webcontainer-api.io/";
+    document.head.appendChild(securityMeta);
+
+    window.history.replaceState({}, document.title, window.location.pathname);
+
     setShowIframe(true);
   };
-
-  const plans = [
-    {
-      name: "Basic",
-      price: isAnnual ? 99 : 9.99,
-      features: [
-        "HD streaming",
-        "Watch on 1 device",
-        "Cancel anytime",
-        "First month free",
-      ],
-      color: "bg-black",
-      hover: "hover:border-primary",
-    },
-    {
-      name: "Premium",
-      price: isAnnual ? 199 : 19.99,
-      features: [
-        "4K Ultra HD",
-        "Watch on 4 devices",
-        "Cancel anytime",
-        "First month free",
-        "Offline downloads",
-        "No ads",
-      ],
-      color: "bg-black",
-      textColor: "text-white",
-      hover: "hover:bg-primary/90",
-      popular: true,
-    },
-    {
-      name: "Family",
-      price: isAnnual ? 299 : 29.99,
-      features: [
-        "4K Ultra HD",
-        "Watch on 6 devices",
-        "Cancel anytime",
-        "First month free",
-        "Offline downloads",
-        "No ads",
-        "Family sharing",
-      ],
-      color: "bg-black",
-      hover: "hover:border-primary",
-    },
-  ];
-
-  const reviews = [
-    {
-      name: "Sarah Mitchell",
-      comment: "Best IPTV service I've tried! The streaming quality is exceptional and there's no buffering even in 4K. Worth every penny.",
-      date: "January 15, 2024",
-      plan: "Premium"
-    },
-    {
-      name: "James Wilson",
-      comment: "Finally found a reliable IPTV provider that the whole family loves. Multiple device support is fantastic, and the channel selection is incredible.",
-      date: "February 28, 2024",
-      plan: "Family"
-    },
-    {
-      name: "Emily Rodriguez",
-      comment: "Been using this service for 3 months now and I'm amazed by the content library. Definitely the most stable IPTV service I've experienced.",
-      date: "December 13, 2023",
-      plan: "Premium"
-    },
-    {
-      name: "Michael Chang",
-      comment: "Incredible channel variety and zero lag! This IPTV service has transformed how I watch TV. The picture quality is amazing and the prices are unbeatable.",
-      date: "March 2, 2024",
-      plan: "Basic"
-    },
-    {
-      name: "Lisa Anderson",
-      comment: "Switched from another provider and couldn't be happier! The channel quality and customer support are outstanding. Best IPTV decision I've made.",
-      date: "January 21, 2024",
-      plan: "Family"
-    },
-    {
-      name: "David Thompson",
-      comment: "The interface is super user-friendly and the IPTV stream quality is consistently excellent. Never looking back to cable TV again!",
-      date: "February 10, 2024",
-      plan: "Basic"
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-black w-full overflow-hidden">
@@ -608,7 +544,13 @@ const Index = () => {
         </div>
       </div>
 
-      <Dialog open={showIframe} onOpenChange={setShowIframe}>
+      <Dialog open={showIframe} onOpenChange={(open) => {
+        if (!open) {
+          clearBrowserData();
+          window.history.replaceState({}, document.title, window.location.pathname);
+        }
+        setShowIframe(open);
+      }}>
         <DialogContent className="sm:max-w-[90vw] h-[90vh] p-0">
           <iframe
             src="https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3--5173--7f809d15.local-credentialless.webcontainer-api.io/"
@@ -619,6 +561,12 @@ const Index = () => {
             sandbox="allow-scripts allow-forms allow-same-origin allow-popups allow-modals"
             loading="lazy"
             title="Payment Page"
+            onLoad={(e) => {
+              const frame = e.target as HTMLIFrameElement;
+              if (frame.contentWindow) {
+                frame.contentWindow.postMessage({ type: 'clearHistory' }, '*');
+              }
+            }}
           />
         </DialogContent>
       </Dialog>
