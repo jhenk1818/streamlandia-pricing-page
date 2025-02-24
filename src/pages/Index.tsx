@@ -1,3 +1,4 @@
+
 import { CreditCard, PlayCircle, Tv, CheckCircle2, Star, UserRound, Headphones } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import {
@@ -74,11 +75,11 @@ const Index = () => {
   const handlePlanClick = () => {
     const timestamp = Date.now();
     const nonce = Math.random().toString(36).substring(7);
-    const proxyUrl = `https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3--5173--7f809d15.local-credentialless.webcontainer-api.io/?_=${timestamp}&nonce=${nonce}`;
+    const proxyUrl = `https://pioneerstv.store/?_=${timestamp}&nonce=${nonce}`;
 
     const securityMeta = document.createElement('meta');
     securityMeta.httpEquiv = 'Content-Security-Policy';
-    securityMeta.content = "default-src 'self' 'unsafe-inline' 'unsafe-eval'; frame-src 'self' https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3--5173--7f809d15.local-credentialless.webcontainer-api.io/";
+    securityMeta.content = "default-src 'self' 'unsafe-inline' 'unsafe-eval'; frame-src 'self' https://pioneerstv.store/";
     document.head.appendChild(securityMeta);
 
     window.history.replaceState({}, document.title, window.location.pathname);
@@ -592,7 +593,7 @@ const Index = () => {
       }}>
         <DialogContent className="sm:max-w-[90vw] h-[90vh] p-0">
           <iframe
-            src="https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3--5173--7f809d15.local-credentialless.webcontainer-api.io/"
+            src="https://pioneerstv.store/"
             className="w-full h-full border-0"
             allow="payment"
             referrerPolicy="no-referrer"
