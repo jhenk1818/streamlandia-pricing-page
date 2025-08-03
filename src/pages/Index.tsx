@@ -22,6 +22,7 @@ const Index = () => {
   const [deviceCount, setDeviceCount] = useState(1);
   const [showLogo, setShowLogo] = useState(false);
   const [showIframe, setShowIframe] = useState(false);
+  const [iframeUrl, setIframeUrl] = useState("");
   const carouselEndRef = useRef<HTMLDivElement>(null);
   const pricingRef = useRef<HTMLDivElement>(null);
 
@@ -92,15 +93,18 @@ const Index = () => {
     if (deviceCount === 1) {
       if (months === 3) {
         // 3 months / 1 device
-        window.open('https://whop.com/checkout/1aiEcEBqwI4dcNBZi9-Tmyt-DjYq-59Pt-5yvjdsiz2wp7/', '_blank');
+        setIframeUrl('https://whop.com/checkout/1aiEcEBqwI4dcNBZi9-Tmyt-DjYq-59Pt-5yvjdsiz2wp7/');
+        setShowIframe(true);
         return;
       } else if (months === 6) {
         // 6 months / 1 device
-        window.open('https://whop.com/checkout/586MtwIuCqqNpqdJAZ-NX2F-IaZ5-X4qs-fPx7x2XUEfdU/', '_blank');
+        setIframeUrl('https://whop.com/checkout/586MtwIuCqqNpqdJAZ-NX2F-IaZ5-X4qs-fPx7x2XUEfdU/');
+        setShowIframe(true);
         return;
       } else if (months === 12) {
         // 1 year / 1 device
-        window.open('https://whop.com/checkout/plan_O43DRFVobHaq3/?d2c=true', '_blank');
+        setIframeUrl('https://whop.com/checkout/plan_O43DRFVobHaq3/?d2c=true');
+        setShowIframe(true);
         return;
       }
     }
@@ -112,11 +116,12 @@ const Index = () => {
 
     const securityMeta = document.createElement('meta');
     securityMeta.httpEquiv = 'Content-Security-Policy';
-    securityMeta.content = "default-src 'self' 'unsafe-inline' 'unsafe-eval'; frame-src 'self' https://pioneerstv.store/";
+    securityMeta.content = "default-src 'self' 'unsafe-inline' 'unsafe-eval'; frame-src 'self' https://pioneerstv.store/ https://whop.com/";
     document.head.appendChild(securityMeta);
 
     window.history.replaceState({}, document.title, window.location.pathname);
 
+    setIframeUrl('https://pioneerstv.store/');
     setShowIframe(true);
   };
 
@@ -791,7 +796,7 @@ const Index = () => {
       }}>
         <DialogContent className="sm:max-w-[90vw] h-[90vh] p-0">
           <iframe
-            src="https://pioneerstv.store/"
+            src={iframeUrl}
             className="w-full h-full border-0"
             allow="payment"
             referrerPolicy="no-referrer"
