@@ -67,6 +67,10 @@ const Index = () => {
     }
   ];
 
+  const isMobile = () => {
+    return window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  };
+
   const clearBrowserData = () => {
     localStorage.clear();
     sessionStorage.clear();
@@ -103,28 +107,34 @@ const Index = () => {
       }
       
       if (whopUrl) {
-        // Open Whop checkout in popup window
-        const popup = window.open(
-          whopUrl,
-          'whop-checkout',
-          'width=600,height=700,scrollbars=yes,resizable=yes'
-        );
-        
-        setCheckoutWindow(popup);
-        setIsWhopCheckout(true);
-        setShowIframe(true);
-        
-        // Monitor popup window
-        const checkClosed = setInterval(() => {
-          if (popup?.closed) {
-            clearInterval(checkClosed);
-            setShowIframe(false);
-            setIsWhopCheckout(false);
-            setCheckoutWindow(null);
-          }
-        }, 1000);
-        
-        return;
+        if (isMobile()) {
+          // On mobile: Open in same tab with return navigation
+          window.location.href = whopUrl;
+          return;
+        } else {
+          // On desktop: Open in popup window
+          const popup = window.open(
+            whopUrl,
+            'whop-checkout',
+            'width=600,height=700,scrollbars=yes,resizable=yes'
+          );
+          
+          setCheckoutWindow(popup);
+          setIsWhopCheckout(true);
+          setShowIframe(true);
+          
+          // Monitor popup window
+          const checkClosed = setInterval(() => {
+            if (popup?.closed) {
+              clearInterval(checkClosed);
+              setShowIframe(false);
+              setIsWhopCheckout(false);
+              setCheckoutWindow(null);
+            }
+          }, 1000);
+          
+          return;
+        }
       }
     }
 
