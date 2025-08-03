@@ -423,6 +423,29 @@ const Index = () => {
             </div>
           )}
 
+          {/* All Devices Section */}
+          <div className="max-w-6xl mx-auto px-4 mb-20">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
+                WATCH ANYWHERE ANYTIME
+              </h2>
+              <p className="text-white/80 text-lg max-w-3xl mx-auto mb-12">
+                Our IPTV service is designed for seamless compatibility across all your devices. 
+                Whether you're at home on your smart TV, commuting with your tablet, or relaxing 
+                with your smartphone, enjoy your favorite content anytime, anywhere with crystal-clear 
+                quality and instant access.
+              </p>
+            </div>
+            
+            <div className="flex justify-center">
+              <img 
+                src="/lovable-uploads/bc9a3e71-328d-4d49-b294-a49c62566aa0.png"
+                alt="Watch on all devices - laptop, tablet, and smartphone"
+                className="w-full max-w-4xl h-auto rounded-2xl shadow-2xl"
+              />
+            </div>
+          </div>
+
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               Choose Your Plan
