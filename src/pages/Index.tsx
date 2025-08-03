@@ -161,7 +161,7 @@ const Index = () => {
                 <div 
                   className="absolute inset-0"
                   style={{
-                    background: 'linear-gradient(90deg, #000, #1EAEDB, #000)',
+                    background: 'linear-gradient(90deg, #000, #7ED321, #000)',
                     backgroundSize: '200% 100%',
                     animation: 'snake 4s linear infinite',
                     borderRadius: '9999px',
@@ -211,7 +211,7 @@ const Index = () => {
                 <div 
                   className="absolute inset-0"
                   style={{
-                    background: 'linear-gradient(90deg, #000, #1EAEDB, #000)',
+                    background: 'linear-gradient(90deg, #000, #7ED321, #000)',
                     backgroundSize: '200% 100%',
                     animation: 'snake 4s linear infinite',
                     borderRadius: '9999px',
@@ -499,7 +499,7 @@ const Index = () => {
                   <div 
                     className="absolute inset-0"
                     style={{
-                      background: 'linear-gradient(90deg, #000, #1EAEDB, #000)',
+                      background: 'linear-gradient(90deg, #000, #7ED321, #000)',
                       backgroundSize: '200% 100%',
                       animation: 'snake 4s linear infinite',
                       borderRadius: '9999px',
