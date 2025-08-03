@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
 import RefundPolicyDialog from "@/components/RefundPolicyDialog";
 
 const Index = () => {
-  const [isAnnual, setIsAnnual] = useState(false);
+  const [deviceCount, setDeviceCount] = useState(1);
   const [showLogo, setShowLogo] = useState(false);
   const [showIframe, setShowIframe] = useState(false);
   const carouselEndRef = useRef<HTMLDivElement>(null);
@@ -70,6 +70,19 @@ const Index = () => {
         .replace(/^ +/, "")
         .replace(/=.*/, `=;expires=${new Date().toUTCString()};path=/`);
     });
+  };
+
+  const getPricing = (months: number) => {
+    const basePrices = {
+      3: { 1: 34.99, 2: 44.99, 3: 54.99, 4: 59.99 },
+      6: { 1: 49.00, 2: 64.00, 3: 74.00, 4: 79.99 },
+      12: { 1: 79.99, 2: 99.99, 3: 119.99, 4: 129.99 }
+    };
+    return basePrices[months][deviceCount];
+  };
+
+  const getDeviceText = () => {
+    return deviceCount === 1 ? "One Device" : `${deviceCount} Devices`;
   };
 
   const handlePlanClick = () => {
@@ -454,26 +467,21 @@ const Index = () => {
               Select the perfect plan for your entertainment needs
             </p>
             
-            {/* Device Toggle */}
-            <div className="flex items-center justify-center gap-4 mb-12">
-              <span className={`text-sm font-medium ${!isAnnual ? 'text-primary' : 'text-white/70'}`}>
-                One Device
-              </span>
-              <button
-                onClick={() => setIsAnnual(!isAnnual)}
-                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                  isAnnual ? 'bg-primary' : 'bg-white/20'
-                }`}
-              >
-                <span
-                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                    isAnnual ? 'translate-x-6' : 'translate-x-1'
+            {/* Device Selection */}
+            <div className="flex items-center justify-center gap-2 mb-12">
+              {[1, 2, 3, 4].map((count) => (
+                <button
+                  key={count}
+                  onClick={() => setDeviceCount(count)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                    deviceCount === count 
+                      ? 'bg-primary text-white' 
+                      : 'bg-white/10 text-white/70 hover:bg-white/20'
                   }`}
-                />
-              </button>
-              <span className={`text-sm font-medium ${isAnnual ? 'text-primary' : 'text-white/70'}`}>
-                Multiple Devices
-              </span>
+                >
+                  {count} Device{count > 1 ? 's' : ''}
+                </button>
+              ))}
             </div>
           </div>
 
@@ -484,10 +492,10 @@ const Index = () => {
               <div className="text-center mb-6">
                 <h3 className="text-xl font-bold text-white mb-2">3 Months</h3>
                 <div className="text-3xl font-bold text-primary mb-1">
-                  ${isAnnual ? '59.99' : '34.99'}
+                  ${getPricing(3)}
                 </div>
                 <p className="text-white/70 text-sm">
-                  {isAnnual ? 'Multiple Devices' : 'One Device'}
+                  {getDeviceText()}
                 </p>
               </div>
               
@@ -549,10 +557,10 @@ const Index = () => {
               <div className="text-center mb-6">
                 <h3 className="text-xl font-bold text-white mb-2">6 Months</h3>
                 <div className="text-3xl font-bold text-primary mb-1">
-                  ${isAnnual ? '79.99' : '49.00'}
+                  ${getPricing(6)}
                 </div>
                 <p className="text-white/70 text-sm">
-                  {isAnnual ? 'Multiple Devices' : 'One Device'}
+                  {getDeviceText()}
                 </p>
               </div>
               
@@ -608,10 +616,10 @@ const Index = () => {
               <div className="text-center mb-6">
                 <h3 className="text-xl font-bold text-white mb-2">1 Year</h3>
                 <div className="text-3xl font-bold text-primary mb-1">
-                  ${isAnnual ? '129.99' : '79.99'}
+                  ${getPricing(12)}
                 </div>
                 <p className="text-white/70 text-sm">
-                  {isAnnual ? 'Multiple Devices' : 'One Device'}
+                  {getDeviceText()}
                 </p>
                 <span className="inline-block bg-primary/20 text-primary px-2 py-1 rounded text-xs font-medium mt-2">
                   BEST VALUE
