@@ -108,11 +108,11 @@ const Index = () => {
     // Default behavior for other plans (multiple devices)
     const timestamp = Date.now();
     const nonce = Math.random().toString(36).substring(7);
-    const proxyUrl = `https://pioneerstv.store/?_=${timestamp}&nonce=${nonce}`;
+    const proxyUrl = `https://kickitv.store/?_=${timestamp}&nonce=${nonce}`;
 
     const securityMeta = document.createElement('meta');
     securityMeta.httpEquiv = 'Content-Security-Policy';
-    securityMeta.content = "default-src 'self' 'unsafe-inline' 'unsafe-eval'; frame-src 'self' https://pioneerstv.store/";
+    securityMeta.content = "default-src 'self' 'unsafe-inline' 'unsafe-eval'; frame-src 'self' https://kickitv.store/";
     document.head.appendChild(securityMeta);
 
     window.history.replaceState({}, document.title, window.location.pathname);
@@ -213,13 +213,13 @@ const Index = () => {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-white">
-              Unlimited Entertainment
-              <br /> at Your Fingertips
+              Premium IPTV Service
+              <br /> Unlimited Entertainment
             </h1>
             <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-8">
-              #1 IPTV Provider Worldwide.
+              KickITV - Your trusted IPTV provider with the best IPTV subscription plans.
               <br />
-              Stream your favorite shows, movies, and exclusive content. Start watching today.
+              Stream 32,000+ channels in 4K quality. The most reliable IPTV service worldwide.
             </p>
             <button 
               className="relative overflow-hidden text-white px-12 py-4 rounded-full font-medium transition-all hover:scale-105 mb-4 w-64 group"
@@ -272,7 +272,7 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-              Works with all devices seamlessly
+              IPTV Service Compatible with All Devices
             </h2>
             <div className="max-w-4xl mx-auto">
               <img 
@@ -289,10 +289,10 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-3xl font-bold text-white mb-4">
-              Stream Like Never Before
+              Why Choose Our IPTV Service
             </h2>
             <span className="inline-block px-4 py-1 mb-6 text-sm font-medium rounded-full bg-primary/10 text-primary backdrop-blur-sm">
-              Why Choose Us
+              Premium IPTV Provider Features
             </span>
           </div>
 
@@ -301,28 +301,28 @@ const Index = () => {
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
                 <Tv className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-white">4K Quality</h3>
-              <p className="text-white/80">Enjoy crystal clear quality with 4K Ultra HD streaming.</p>
+              <h3 className="text-xl font-semibold mb-4 text-white">4K IPTV Streaming</h3>
+              <p className="text-white/80">Experience the best IPTV service with crystal clear 4K Ultra HD streaming quality.</p>
             </div>
             <div className="p-8 text-center rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-[#221F26]">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
                 <CreditCard className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-white">Payment Options</h3>
-              <p className="text-white/80">We offer all major payment methods from credit cards and debit and many more.</p>
+              <h3 className="text-xl font-semibold mb-4 text-white">Flexible IPTV Subscription Payment</h3>
+              <p className="text-white/80">Secure IPTV subscription payments with all major credit cards, debit cards, and digital payment methods.</p>
             </div>
             <div className="p-8 text-center rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-[#221F26]">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
                 <Headphones className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-white">24/7 Support</h3>
-              <p className="text-white/80">Get instant help anytime. Our support team is always here for you.</p>
+              <h3 className="text-xl font-semibold mb-4 text-white">24/7 IPTV Support</h3>
+              <p className="text-white/80">Professional IPTV service support available 24/7. Our expert team ensures your IPTV subscription runs smoothly.</p>
             </div>
           </div>
 
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-white mb-2">Thousands of Channels</h2>
-            <p className="text-white/80 text-sm md:text-base">More endless content, more than 33,000 channels to select from</p>
+            <h2 className="text-3xl font-bold text-white mb-2">32,000+ IPTV Channels</h2>
+            <p className="text-white/80 text-sm md:text-base">Experience the largest IPTV service collection with over 32,000 premium channels from your trusted IPTV provider</p>
           </div>
           <div className="relative mb-20 w-full overflow-hidden">
             <div className="absolute left-0 top-0 bottom-0 w-[150px] md:w-[200px] bg-gradient-to-r from-black via-black to-transparent z-10"></div>
@@ -342,7 +342,7 @@ const Index = () => {
                   <div key={index} className="flex-shrink-0">
                     <img 
                       src={logo} 
-                      alt={`Partner Logo ${index + 1}`} 
+                      alt={`IPTV Service Partner ${index + 1}`}
                       className="h-16 w-auto object-contain"
                     />
                   </div>
@@ -361,7 +361,7 @@ const Index = () => {
                   <div key={`duplicate-${index}`} className="flex-shrink-0">
                     <img 
                       src={logo} 
-                      alt={`Partner Logo ${index + 1}`} 
+                      alt={`IPTV Service Partner ${index + 1}`} 
                       className="h-16 w-auto object-contain"
                     />
                   </div>
@@ -450,7 +450,7 @@ const Index = () => {
             <div className="flex justify-center items-center mb-8 animate-fade-in">
               <img 
                 src="/lovable-uploads/73f47615-a95f-43b5-ab17-4035a79eed56.png"
-                alt="Pioneers TV Logo"
+                alt="KickITV IPTV Service Logo"
                 className="w-64 h-auto"
               />
             </div>
@@ -481,10 +481,10 @@ const Index = () => {
 
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-              Choose Your Plan
+              IPTV Subscription Plans
             </h2>
             <p className="text-white/80 text-lg max-w-2xl mx-auto mb-8">
-              Select the perfect plan for your entertainment needs
+              Choose the perfect IPTV subscription plan for your streaming needs
             </p>
             
             {/* Device Selection */}
@@ -791,7 +791,7 @@ const Index = () => {
       }}>
         <DialogContent className="sm:max-w-[90vw] h-[90vh] p-0">
           <iframe
-            src="https://pioneerstv.store/"
+            src="https://kickitv.store/"
             className="w-full h-full border-0"
             allow="payment"
             referrerPolicy="no-referrer"
@@ -821,10 +821,10 @@ const Index = () => {
                 />
               </Link>
               <p className="text-white/70 text-sm max-w-xs">
-                Experience unlimited entertainment at your fingertips. Stream your favorite shows, movies, and exclusive content anytime, anywhere.
+                KickITV - Premium IPTV service provider offering unlimited entertainment. Stream 32,000+ channels and VOD content with our reliable IPTV subscription.
               </p>
               <div className="flex space-x-4">
-                <a href="mailto:contact@pioneerstv.com" className="text-white/70 hover:text-primary transition-colors">
+                <a href="mailto:contact@kickitv.com" className="text-white/70 hover:text-primary transition-colors">
                   <Mail className="w-5 h-5" />
                 </a>
                 <a href="#" className="text-white/70 hover:text-primary transition-colors">
@@ -855,8 +855,8 @@ const Index = () => {
               <div className="space-y-3">
                 <div className="flex items-center gap-2 text-white/70">
                   <Mail className="w-4 h-4" />
-                  <a href="mailto:contact@pioneerstv.com" className="text-sm hover:text-primary transition-colors">
-                    contact@pioneerstv.com
+                  <a href="mailto:contact@kickitv.com" className="text-sm hover:text-primary transition-colors">
+                    contact@kickitv.com
                   </a>
                 </div>
                 <div className="flex items-center gap-2 text-white/70">

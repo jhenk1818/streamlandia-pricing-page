@@ -10,7 +10,7 @@ const Header = () => {
           <div className="flex items-center ml-4">
             <img 
               src="/lovable-uploads/4f38d6c5-c0e1-496d-9aaf-9c4b5fcc7ef1.png" 
-              alt="KickItv Logo" 
+              alt="KickITV - Premium IPTV Service Provider" 
               className="h-8"
             />
           </div>
