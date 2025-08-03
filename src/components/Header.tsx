@@ -9,8 +9,8 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center ml-4">
             <img 
-              src="/lovable-uploads/293ee0b8-86b2-47bb-a202-64407806b5fc.png" 
-              alt="Pioneers TV Logo" 
+              src="/lovable-uploads/4f38d6c5-c0e1-496d-9aaf-9c4b5fcc7ef1.png" 
+              alt="KickItv Logo" 
               className="h-8"
             />
           </div>
