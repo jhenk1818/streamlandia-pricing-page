@@ -10,7 +10,7 @@ const Header = () => {
           <div className="flex items-center ml-4">
             <img 
               src="/lovable-uploads/293ee0b8-86b2-47bb-a202-64407806b5fc.png" 
-              alt="Pioneers TV - Bästa IPTV Sverige" 
+              alt="Pioneers TV Logo" 
               className="h-8"
             />
           </div>
@@ -21,21 +21,21 @@ const Header = () => {
               className="flex items-center gap-2 text-white hover:text-primary transition-colors"
             >
               <Home className="w-4 h-4" />
-              <span>Hem</span>
+              <span>Home</span>
             </Link>
             <Link 
               to="/#devices" 
               className="flex items-center gap-2 text-white hover:text-primary transition-colors"
             >
               <Monitor className="w-4 h-4" />
-              <span>Enheter</span>
+              <span>Devices</span>
             </Link>
             <Link 
               to="/#pricing" 
               className="flex items-center gap-2 text-white hover:text-primary transition-colors"
             >
               <CreditCard className="w-4 h-4" />
-              <span>Priser</span>
+              <span>Pricing</span>
             </Link>
           </nav>
 

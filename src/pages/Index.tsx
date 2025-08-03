@@ -25,40 +25,40 @@ const Index = () => {
 
   const reviews = [
     {
-      name: "Sara Andersson",
-      comment: "Bästa IPTV-leverantören i Sverige! Streamingkvaliteten är exceptionell och det finns ingen buffering ens i 4K. Värt varje krona.",
-      date: "15 januari, 2024",
+      name: "Sarah Mitchell",
+      comment: "Best IPTV service I've tried! The streaming quality is exceptional and there's no buffering even in 4K. Worth every penny.",
+      date: "January 15, 2024",
       plan: "Premium"
     },
     {
-      name: "Johan Eriksson",
-      comment: "Äntligen hittat en pålitlig IPTV-leverantör som hela familjen älskar. Stöd för flera enheter är fantastiskt, och kanalutbudet är otroligt.",
-      date: "28 februari, 2024",
-      plan: "Familj"
+      name: "James Wilson",
+      comment: "Finally found a reliable IPTV provider that the whole family loves. Multiple device support is fantastic, and the channel selection is incredible.",
+      date: "February 28, 2024",
+      plan: "Family"
     },
     {
-      name: "Emma Lindqvist",
-      comment: "Har använt denna tjänst i 3 månader nu och jag är imponerad av innehållsbiblioteket. Definitivt den mest stabila IPTV-tjänsten jag upplevt.",
-      date: "13 december, 2023",
+      name: "Emily Rodriguez",
+      comment: "Been using this service for 3 months now and I'm amazed by the content library. Definitely the most stable IPTV service I've experienced.",
+      date: "December 13, 2023",
       plan: "Premium"
     },
     {
-      name: "Mikael Johansson",
-      comment: "Otrolig kanalvariation och noll fördröjning! Denna IPTV-tjänst har förvandlat hur jag tittar på TV. Bildkvaliteten är fantastisk och priserna oslagbara.",
-      date: "2 mars, 2024",
-      plan: "Bas"
+      name: "Michael Chang",
+      comment: "Incredible channel variety and zero lag! This IPTV service has transformed how I watch TV. The picture quality is amazing and the prices are unbeatable.",
+      date: "March 2, 2024",
+      plan: "Basic"
     },
     {
-      name: "Lisa Pettersson",
-      comment: "Bytte från en annan leverantör och kunde inte vara gladare! Kanalkvaliteten och kundsupporten är enastående. Bästa IPTV-beslutet jag fattat.",
-      date: "21 januari, 2024",
-      plan: "Familj"
+      name: "Lisa Anderson",
+      comment: "Switched from another provider and couldn't be happier! The channel quality and customer support are outstanding. Best IPTV decision I've made.",
+      date: "January 21, 2024",
+      plan: "Family"
     },
     {
-      name: "David Nilsson",
-      comment: "Gränssnittet är super användarvänligt och IPTV-streamkvaliteten är genomgående excellent. Tittar aldrig tillbaka på kabel-TV igen!",
-      date: "10 februari, 2024",
-      plan: "Bas"
+      name: "David Thompson",
+      comment: "The interface is super user-friendly and the IPTV stream quality is consistently excellent. Never looking back to cable TV again!",
+      date: "February 10, 2024",
+      plan: "Basic"
     }
   ];
 
@@ -168,25 +168,25 @@ const Index = () => {
                   }}
                 ></div>
               </div>
-              <span className="relative z-10 text-white">Fungerar med alla enheter</span>
+              <span className="relative z-10 text-white">Works with all devices</span>
             </span>
 
             <div className="flex justify-center items-center mb-4">
               <img 
                 src="/lovable-uploads/9a4b3b59-98c2-4039-9ef2-f1a80f8b9c93.png" 
-                alt="IPTV Sverige Plattformar" 
+                alt="Platform Logos" 
                 className="h-8 object-contain"
               />
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-white">
-              Bästa IPTV Sverige
-              <br /> IPTV Nordic Streaming
+              Unlimited Entertainment
+              <br /> at Your Fingertips
             </h1>
             <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-8">
-              #1 IPTV-leverantören i Sverige och Nordic regionen.
+              #1 IPTV Provider Worldwide.
               <br />
-              Streama dina favoritprogram, filmer och exklusivt innehåll. IPTV bäst i test - börja titta idag.
+              Stream your favorite shows, movies, and exclusive content. Start watching today.
             </p>
             <button 
               className="relative overflow-hidden text-white px-12 py-4 rounded-full font-medium transition-all hover:scale-105 mb-4 w-64 group"
@@ -218,7 +218,7 @@ const Index = () => {
                   }}
                 ></div>
               </div>
-              <span className="relative z-10">Upptäck Abonnemang</span>
+              <span className="relative z-10">Discover Plans</span>
             </button>
 
             <div className="flex justify-center items-center gap-2 md:gap-4">
@@ -229,7 +229,7 @@ const Index = () => {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span className="text-white font-medium text-base md:text-lg">10,000+ Nöjda Användare i Sverige</span>
+              <span className="text-white font-medium text-base md:text-lg">10,000+ Happy Users</span>
             </div>
           </div>
         </div>
@@ -239,12 +239,12 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-              Fungerar sömlöst med alla enheter
+              Works with all devices seamlessly
             </h2>
             <div className="max-w-4xl mx-auto">
               <img 
                 src="/lovable-uploads/986d0b73-f833-425b-a4a8-3b263461d169.png"
-                alt="IPTV Sverige Enhetskompatibilitet"
+                alt="Device Compatibility"
                 className="w-full h-auto rounded-xl shadow-2xl animate-fade-up"
               />
             </div>
@@ -256,10 +256,10 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-3xl font-bold text-white mb-4">
-              Streama som aldrig förr med IPTV Sverige
+              Stream Like Never Before
             </h2>
             <span className="inline-block px-4 py-1 mb-6 text-sm font-medium rounded-full bg-primary/10 text-primary backdrop-blur-sm">
-              Varför välja bästa IPTV-leverantören
+              Why Choose Us
             </span>
           </div>
 
@@ -268,28 +268,28 @@ const Index = () => {
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
                 <Tv className="w-8 h-8 text-primary" />
               </div>
-               <h3 className="text-xl font-semibold mb-4 text-white">4K Kvalitet</h3>
-               <p className="text-white/80">Njut av kristallklar kvalitet med 4K Ultra HD streaming från bästa IPTV Sverige.</p>
+              <h3 className="text-xl font-semibold mb-4 text-white">4K Quality</h3>
+              <p className="text-white/80">Enjoy crystal clear quality with 4K Ultra HD streaming.</p>
             </div>
             <div className="p-8 text-center rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-[#221F26]">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
                 <CreditCard className="w-8 h-8 text-primary" />
               </div>
-               <h3 className="text-xl font-semibold mb-4 text-white">Betalningsalternativ</h3>
-               <p className="text-white/80">Vi erbjuder alla större betalningsmetoder från kreditkort, Swish, banköverföring och många fler för ditt IPTV abonnemang Sverige.</p>
+              <h3 className="text-xl font-semibold mb-4 text-white">Payment Options</h3>
+              <p className="text-white/80">We offer all major payment methods from credit cards and debit and many more.</p>
             </div>
             <div className="p-8 text-center rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-[#221F26]">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
                 <Headphones className="w-8 h-8 text-primary" />
               </div>
-               <h3 className="text-xl font-semibold mb-4 text-white">24/7 Support på Svenska</h3>
-               <p className="text-white/80">Få omedelbar hjälp när som helst. Vårt supportteam finns alltid här för dig med svensktalande support.</p>
+              <h3 className="text-xl font-semibold mb-4 text-white">24/7 Support</h3>
+              <p className="text-white/80">Get instant help anytime. Our support team is always here for you.</p>
             </div>
           </div>
 
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-white mb-2">Tusentals Svenska och Internationella Kanaler</h2>
-            <p className="text-white/80 text-sm md:text-base">Oändligt innehåll med över 33,000 kanaler att välja mellan - Sveriges största IPTV-utbud</p>
+            <h2 className="text-3xl font-bold text-white mb-2">Thousands of Channels</h2>
+            <p className="text-white/80 text-sm md:text-base">More endless content, more than 33,000 channels to select from</p>
           </div>
           <div className="relative mb-20 w-full overflow-hidden">
             <div className="absolute left-0 top-0 bottom-0 w-[150px] md:w-[200px] bg-gradient-to-r from-black via-black to-transparent z-10"></div>
@@ -309,7 +309,7 @@ const Index = () => {
                   <div key={index} className="flex-shrink-0">
                     <img 
                       src={logo} 
-                      alt={`IPTV Sverige Partner Logo ${index + 1}`}
+                      alt={`Partner Logo ${index + 1}`} 
                       className="h-16 w-auto object-contain"
                     />
                   </div>
@@ -328,7 +328,7 @@ const Index = () => {
                   <div key={`duplicate-${index}`} className="flex-shrink-0">
                     <img 
                       src={logo} 
-                      alt={`IPTV Sverige Partner Logo ${index + 1}`} 
+                      alt={`Partner Logo ${index + 1}`} 
                       className="h-16 w-auto object-contain"
                     />
                   </div>
@@ -339,10 +339,10 @@ const Index = () => {
 
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-              Tillgång till dina favoritfilmer, serier och program
+              Access Your Favorite Movies, Series, Shows
             </h2>
             <p className="text-white/80 text-lg max-w-2xl mx-auto">
-              Gå med i vår community med Sveriges bästa IPTV-utbud och upplev innehåll i världsklass
+              Join our community of content creators sharing their amazing stories
             </p>
           </div>
 
@@ -378,7 +378,7 @@ const Index = () => {
                     <div className="overflow-hidden rounded-xl aspect-[3/4] bg-black">
                       <img
                         src={image}
-                        alt={`IPTV Sverige Streaming Tjänst ${index + 1}`}
+                        alt={`Streaming Service ${index + 1}`}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                       />
                     </div>
@@ -393,18 +393,18 @@ const Index = () => {
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="text-left">
                   <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white leading-tight">
-                    Se Sport
+                    Watch Sports
                     <br />
-                    Utan Begränsningar
+                    With No Limits
                   </h2>
                   <p className="text-white/80 text-lg max-w-xl">
-                    Upptäck vad alla tittar på just nu. Få tillgång till alla stora sportevenemang, ligor och turneringar på ett ställe. Allsvenskan, SHL, Champions League och mycket mer med Sveriges bästa IPTV.
+                    Discover what everyone's watching right now. Get access to all major sports events, leagues, and tournaments in one place.
                   </p>
                 </div>
                 <div className="relative">
                   <img
                     src="/lovable-uploads/d11578d8-b9cc-48fa-96af-961d0b3962b8.png"
-                    alt="IPTV Sverige Sport - Allsvenskan, SHL, Champions League"
+                    alt="Various Sports Athletes"
                     className="w-full h-auto object-contain mx-auto rounded-xl"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-20 rounded-xl"></div>
@@ -415,10 +415,10 @@ const Index = () => {
 
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-              Alla funktioner ingår i IPTV Sverige
+              All Features Include
             </h2>
             <p className="text-white/80 text-lg max-w-2xl mx-auto">
-              Allt du behöver för den ultimata underhållningsupplevelsen med bästa IPTV-leverantören i Sverige
+              Everything you need for the ultimate entertainment experience
             </p>
           </div>
 
@@ -432,35 +432,35 @@ const Index = () => {
                   </li>
                   <li className="flex items-center gap-2 text-white text-sm">
                     <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>120.000 VOD (Video på Begäran)</span>
+                    <span>120.000 VOD</span>
                   </li>
                   <li className="flex items-center gap-2 text-white text-sm">
                     <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>+32 000 KANALER från hela världen</span>
+                    <span>+32 000 CHANNEL</span>
                   </li>
                   <li className="flex items-center gap-2 text-white text-sm">
                     <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>UPPDATERADE SERIER dagligen</span>
+                    <span>UPDATED SERIES</span>
                   </li>
                   <li className="flex items-center gap-2 text-white text-sm">
                     <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>UPPDATERADE FILMER konstant</span>
+                    <span>UPDATED MOVIES</span>
                   </li>
                   <li className="flex items-center gap-2 text-white text-sm">
                     <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>Prime Video / Disney+ / Netflix innehåll</span>
+                    <span>Prime Video / Disney+</span>
                   </li>
                   <li className="flex items-center gap-2 text-white text-sm">
                     <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>Support 24/7/365 på svenska</span>
+                    <span>Support 24/7/365</span>
                   </li>
                   <li className="flex items-center gap-2 text-white text-sm">
                     <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>Vuxeninnehåll 18+</span>
+                    <span>Adults 18+</span>
                   </li>
                   <li className="flex items-center gap-2 text-white text-sm">
                     <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>100% Anonymt</span>
+                    <span>100% Anonymous</span>
                   </li>
                 </ul>
               </div>
@@ -468,7 +468,7 @@ const Index = () => {
               <div className="md:w-3/5">
                 <img
                   src="/lovable-uploads/f1625f1b-215d-403f-b3fa-c8a432c5fc77.png"
-                  alt="IPTV Sverige - Streama på flera enheter"
+                  alt="Stream on multiple devices"
                   className="w-full h-auto rounded-xl shadow-2xl animate-fade-up"
                   style={{ animationDelay: "0.2s" }}
                 />
@@ -506,7 +506,7 @@ const Index = () => {
                     }}
                   ></div>
                 </div>
-                <span className="relative z-10">Fortsätt till IPTV Abonnemang</span>
+                <span className="relative z-10">Continue to Plans</span>
               </button>
             </div>
           </div>
@@ -517,7 +517,7 @@ const Index = () => {
             <div className="flex justify-center items-center mb-2 animate-fade-in">
               <img 
                 src="/lovable-uploads/73f47615-a95f-43b5-ab17-4035a79eed56.png"
-                alt="Pioneers TV - Bästa IPTV Sverige Logo"
+                alt="Pioneers TV Logo"
                 className="w-64 h-auto"
               />
             </div>
@@ -526,10 +526,10 @@ const Index = () => {
           <div className="mt-32">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-                Vad våra svenska användare säger
+                What Our Users Say
               </h2>
               <p className="text-white/80 text-lg max-w-2xl mx-auto">
-                Gå med tusentals nöjda prenumeranter som njuter av vårt premium IPTV Sverige-innehåll
+                Join thousands of satisfied subscribers enjoying our premium content
               </p>
             </div>
 
@@ -561,7 +561,7 @@ const Index = () => {
                           </div>
                           <div className="flex items-center gap-1.5 text-xs px-2 py-0.5 rounded-full bg-[#1A1F2C] text-primary whitespace-nowrap">
                             <CheckCircle2 className="w-3 h-3" />
-                            <span>Verifierad Kund</span>
+                            <span>Verified Client</span>
                           </div>
                         </div>
                         <div className="flex items-center gap-2 mb-4">
@@ -618,12 +618,12 @@ const Index = () => {
               <Link to="/">
                 <img 
                   src="/lovable-uploads/73f47615-a95f-43b5-ab17-4035a79eed56.png"
-                  alt="Pioneers TV - Bästa IPTV Sverige Logo"
+                  alt="Pioneers TV Logo"
                   className="w-40 h-auto"
                 />
               </Link>
               <p className="text-white/70 text-sm max-w-xs">
-                Upplev obegränsad underhållning till hands. Streama dina favoritprogram, filmer och exklusivt innehåll när och var som helst med bästa IPTV Sverige.
+                Experience unlimited entertainment at your fingertips. Stream your favorite shows, movies, and exclusive content anytime, anywhere.
               </p>
               <div className="flex space-x-4">
                 <a href="mailto:contact@pioneerstv.com" className="text-white/70 hover:text-primary transition-colors">
@@ -641,19 +641,19 @@ const Index = () => {
                 <li>
                   <RefundPolicyDialog>
                     <button className="text-white/70 hover:text-primary transition-colors text-sm text-left">
-                      Återbetalningspolicy
+                      Refund Policy
                     </button>
                   </RefundPolicyDialog>
                 </li>
                 <li className="text-white/70 text-sm">
-                  <span className="block">Supporttider:</span>
-                  <span className="text-primary">24/7 - Alltid Tillgänglig på Svenska</span>
+                  <span className="block">Support Hours:</span>
+                  <span className="text-primary">24/7 - Always Available</span>
                 </li>
               </ul>
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-white font-semibold text-lg">Kontakta Oss</h3>
+              <h3 className="text-white font-semibold text-lg">Contact Us</h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-2 text-white/70">
                   <Mail className="w-4 h-4" />
@@ -663,7 +663,7 @@ const Index = () => {
                 </div>
                 <div className="flex items-center gap-2 text-white/70">
                   <Headphones className="w-4 h-4" />
-                  <span className="text-sm">24/7 Support Tillgänglig på Svenska</span>
+                  <span className="text-sm">24/7 Support Available</span>
                 </div>
               </div>
             </div>
@@ -672,12 +672,12 @@ const Index = () => {
           <div className="mt-12 pt-8 border-t border-white/10">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-white/70 text-sm">
-                © 2024 Pioneers TV - Bästa IPTV Sverige. Alla rättigheter förbehållna.
+                © 2024 Pioneers TV. All rights reserved.
               </p>
               <div className="flex items-center gap-6">
                 <img 
                   src="/lovable-uploads/6f69184e-d161-4eaa-a3db-b0d0abe59996.png"
-                  alt="Betalningsmetoder för IPTV Sverige"
+                  alt="Payment Methods"
                   className="h-6 w-auto object-contain"
                 />
               </div>
