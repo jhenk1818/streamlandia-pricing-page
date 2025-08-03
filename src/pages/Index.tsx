@@ -541,11 +541,19 @@ const Index = () => {
               </ul>
               
               <button 
-                className="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors"
+                className="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors mb-4"
                 onClick={handlePlanClick}
               >
                 Choose Plan
               </button>
+              
+              <div className="flex justify-center">
+                <img 
+                  src="/lovable-uploads/2ed83f5d-0d57-4ad6-b149-d698a8b3594c.png"
+                  alt="Payment Methods"
+                  className="h-6 w-auto object-contain opacity-70"
+                />
+              </div>
             </div>
 
             {/* 6 Months Plan */}
@@ -606,11 +614,19 @@ const Index = () => {
               </ul>
               
               <button 
-                className="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors"
+                className="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors mb-4"
                 onClick={handlePlanClick}
               >
                 Choose Plan
               </button>
+              
+              <div className="flex justify-center">
+                <img 
+                  src="/lovable-uploads/2ed83f5d-0d57-4ad6-b149-d698a8b3594c.png"
+                  alt="Payment Methods"
+                  className="h-6 w-auto object-contain opacity-70"
+                />
+              </div>
             </div>
 
             {/* 1 Year Plan */}
@@ -668,11 +684,19 @@ const Index = () => {
               </ul>
               
               <button 
-                className="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors"
+                className="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors mb-4"
                 onClick={handlePlanClick}
               >
                 Choose Plan
               </button>
+              
+              <div className="flex justify-center">
+                <img 
+                  src="/lovable-uploads/2ed83f5d-0d57-4ad6-b149-d698a8b3594c.png"
+                  alt="Payment Methods"
+                  className="h-6 w-auto object-contain opacity-70"
+                />
+              </div>
             </div>
           </div>
 
