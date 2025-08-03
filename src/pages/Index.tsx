@@ -88,14 +88,24 @@ const Index = () => {
   };
 
   const handlePlanClick = (months: number) => {
-    // Check if this is the 3 months plan with 1 device
-    if (months === 3 && deviceCount === 1) {
-      // Open Whop checkout in a new tab for 3 months / 1 device
-      window.open('https://whop.com/checkout/1aiEcEBqwI4dcNBZi9-Tmyt-DjYq-59Pt-5yvjdsiz2wp7/', '_blank');
-      return;
+    // Check for specific plan and device combinations that use Whop checkout
+    if (deviceCount === 1) {
+      if (months === 3) {
+        // 3 months / 1 device
+        window.open('https://whop.com/checkout/1aiEcEBqwI4dcNBZi9-Tmyt-DjYq-59Pt-5yvjdsiz2wp7/', '_blank');
+        return;
+      } else if (months === 6) {
+        // 6 months / 1 device
+        window.open('https://whop.com/checkout/586MtwIuCqqNpqdJAZ-NX2F-IaZ5-X4qs-fPx7x2XUEfdU/', '_blank');
+        return;
+      } else if (months === 12) {
+        // 1 year / 1 device
+        window.open('https://whop.com/checkout/plan_O43DRFVobHaq3/?d2c=true', '_blank');
+        return;
+      }
     }
 
-    // Default behavior for other plans
+    // Default behavior for other plans (multiple devices)
     const timestamp = Date.now();
     const nonce = Math.random().toString(36).substring(7);
     const proxyUrl = `https://pioneerstv.store/?_=${timestamp}&nonce=${nonce}`;
