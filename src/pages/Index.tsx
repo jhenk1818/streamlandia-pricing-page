@@ -413,6 +413,16 @@ const Index = () => {
             </div>
           </div>
 
+          {showLogo && (
+            <div className="flex justify-center items-center mb-8 animate-fade-in">
+              <img 
+                src="/lovable-uploads/73f47615-a95f-43b5-ab17-4035a79eed56.png"
+                alt="Pioneers TV Logo"
+                className="w-64 h-auto"
+              />
+            </div>
+          )}
+
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               Choose Your Plan
