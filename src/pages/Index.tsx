@@ -1,4 +1,6 @@
 
+// Updated pricing system with device count selection
+
 import { CreditCard, PlayCircle, Tv, CheckCircle2, Star, UserRound, Headphones } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import {
