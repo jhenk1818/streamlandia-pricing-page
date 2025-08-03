@@ -87,7 +87,15 @@ const Index = () => {
     return deviceCount === 1 ? "One Device" : `${deviceCount} Devices`;
   };
 
-  const handlePlanClick = () => {
+  const handlePlanClick = (months: number) => {
+    // Check if this is the 3 months plan with 1 device
+    if (months === 3 && deviceCount === 1) {
+      // Open Whop checkout in a new tab for 3 months / 1 device
+      window.open('https://whop.com/checkout/1aiEcEBqwI4dcNBZi9-Tmyt-DjYq-59Pt-5yvjdsiz2wp7/', '_blank');
+      return;
+    }
+
+    // Default behavior for other plans
     const timestamp = Date.now();
     const nonce = Math.random().toString(36).substring(7);
     const proxyUrl = `https://pioneerstv.store/?_=${timestamp}&nonce=${nonce}`;
@@ -542,7 +550,7 @@ const Index = () => {
               
               <button 
                 className="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors mb-4"
-                onClick={handlePlanClick}
+                onClick={() => handlePlanClick(3)}
               >
                 Choose Plan
               </button>
@@ -615,7 +623,7 @@ const Index = () => {
               
               <button 
                 className="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors mb-4"
-                onClick={handlePlanClick}
+                onClick={() => handlePlanClick(6)}
               >
                 Choose Plan
               </button>
@@ -685,7 +693,7 @@ const Index = () => {
               
               <button 
                 className="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors mb-4"
-                onClick={handlePlanClick}
+                onClick={() => handlePlanClick(12)}
               >
                 Choose Plan
               </button>
