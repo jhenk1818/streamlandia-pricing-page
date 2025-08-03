@@ -415,98 +415,220 @@ const Index = () => {
 
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-              All Features Include
+              Choose Your Plan
             </h2>
-            <p className="text-white/80 text-lg max-w-2xl mx-auto">
-              Everything you need for the ultimate entertainment experience
+            <p className="text-white/80 text-lg max-w-2xl mx-auto mb-8">
+              Select the perfect plan for your entertainment needs
             </p>
+            
+            {/* Device Toggle */}
+            <div className="flex items-center justify-center gap-4 mb-12">
+              <span className={`text-sm font-medium ${!isAnnual ? 'text-primary' : 'text-white/70'}`}>
+                One Device
+              </span>
+              <button
+                onClick={() => setIsAnnual(!isAnnual)}
+                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                  isAnnual ? 'bg-primary' : 'bg-white/20'
+                }`}
+              >
+                <span
+                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                    isAnnual ? 'translate-x-6' : 'translate-x-1'
+                  }`}
+                />
+              </button>
+              <span className={`text-sm font-medium ${isAnnual ? 'text-primary' : 'text-white/70'}`}>
+                Multiple Devices
+              </span>
+            </div>
           </div>
 
-          <div className="w-full max-w-5xl mx-auto mb-20">
-            <div className="flex flex-col md:flex-row gap-8 p-6 rounded-2xl border border-white/10 backdrop-blur-md bg-white/5">
-              <div className="md:w-2/5 space-y-6">
-                <ul className="space-y-4">
-                  <li className="flex items-center gap-2 text-white text-sm">
-                    <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>SD / HD / FULL HD / 4K</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-white text-sm">
-                    <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>120.000 VOD</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-white text-sm">
-                    <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>+32 000 CHANNEL</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-white text-sm">
-                    <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>UPDATED SERIES</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-white text-sm">
-                    <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>UPDATED MOVIES</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-white text-sm">
-                    <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>Prime Video / Disney+</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-white text-sm">
-                    <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>Support 24/7/365</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-white text-sm">
-                    <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>Adults 18+</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-white text-sm">
-                    <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>100% Anonymous</span>
-                  </li>
-                </ul>
+          {/* Plans Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-20">
+            {/* 3 Months Plan */}
+            <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-primary/50 transition-all">
+              <div className="text-center mb-6">
+                <h3 className="text-xl font-bold text-white mb-2">3 Months</h3>
+                <div className="text-3xl font-bold text-primary mb-1">
+                  ${isAnnual ? '59.99' : '34.99'}
+                </div>
+                <p className="text-white/70 text-sm">
+                  {isAnnual ? 'Multiple Devices' : 'One Device'}
+                </p>
               </div>
-
-              <div className="md:w-3/5">
-                <img
-                  src="/lovable-uploads/f1625f1b-215d-403f-b3fa-c8a432c5fc77.png"
-                  alt="Stream on multiple devices"
-                  className="w-full h-auto rounded-xl shadow-2xl animate-fade-up"
-                  style={{ animationDelay: "0.2s" }}
-                />
-              </div>
-            </div>
-            
-            <div className="flex justify-center mt-8">
+              
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>SD / HD / FULL HD / 4K</span>
+                </li>
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>120,000 VOD</span>
+                </li>
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>+32,000 CHANNELS</span>
+                </li>
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>UPDATED SERIES</span>
+                </li>
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>UPDATED MOVIES</span>
+                </li>
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Prime Video / Disney+</span>
+                </li>
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Support 24/7/365</span>
+                </li>
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Adults 18+</span>
+                </li>
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>100% Anonymous</span>
+                </li>
+              </ul>
+              
               <button 
-                className="relative overflow-hidden text-white px-12 py-4 rounded-full font-medium transition-all hover:scale-105 w-64 group"
+                className="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors"
                 onClick={handlePlanClick}
               >
-                <div 
-                  className="absolute inset-0 bg-gradient-to-r from-black via-[#7ED321] to-black opacity-70"
-                ></div>
-                <div 
-                  className="absolute inset-0"
-                  style={{
-                    padding: '2px',
-                    background: 'linear-gradient(90deg, #000, #7ED321, #000)',
-                    backgroundSize: '200% 100%',
-                    animation: 'gradient 3s ease infinite',
-                    WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-                    WebkitMaskComposite: 'xor',
-                    maskComposite: 'exclude',
-                    borderRadius: '9999px',
-                  }}
-                >
-                  <div 
-                    className="absolute inset-0"
-                    style={{
-                      background: 'linear-gradient(90deg, #000, #7ED321, #000)',
-                      backgroundSize: '200% 100%',
-                      animation: 'snake 4s linear infinite',
-                      borderRadius: '9999px',
-                    }}
-                  ></div>
+                Choose Plan
+              </button>
+            </div>
+
+            {/* 6 Months Plan */}
+            <div className="relative bg-white/5 backdrop-blur-md border-2 border-primary rounded-2xl p-6 scale-105">
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                <span className="bg-primary text-black px-4 py-1 rounded-full text-xs font-medium">
+                  MOST POPULAR
+                </span>
+              </div>
+              
+              <div className="text-center mb-6">
+                <h3 className="text-xl font-bold text-white mb-2">6 Months</h3>
+                <div className="text-3xl font-bold text-primary mb-1">
+                  ${isAnnual ? '79.99' : '49.00'}
                 </div>
-                <span className="relative z-10">Continue to Plans</span>
+                <p className="text-white/70 text-sm">
+                  {isAnnual ? 'Multiple Devices' : 'One Device'}
+                </p>
+              </div>
+              
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>SD / HD / FULL HD / 4K</span>
+                </li>
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>120,000 VOD</span>
+                </li>
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>+32,000 CHANNELS</span>
+                </li>
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>UPDATED SERIES</span>
+                </li>
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>UPDATED MOVIES</span>
+                </li>
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Prime Video / Disney+</span>
+                </li>
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Support 24/7/365</span>
+                </li>
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Adults 18+</span>
+                </li>
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>100% Anonymous</span>
+                </li>
+              </ul>
+              
+              <button 
+                className="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors"
+                onClick={handlePlanClick}
+              >
+                Choose Plan
+              </button>
+            </div>
+
+            {/* 1 Year Plan */}
+            <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-primary/50 transition-all">
+              <div className="text-center mb-6">
+                <h3 className="text-xl font-bold text-white mb-2">1 Year</h3>
+                <div className="text-3xl font-bold text-primary mb-1">
+                  ${isAnnual ? '129.99' : '79.99'}
+                </div>
+                <p className="text-white/70 text-sm">
+                  {isAnnual ? 'Multiple Devices' : 'One Device'}
+                </p>
+                <span className="inline-block bg-primary/20 text-primary px-2 py-1 rounded text-xs font-medium mt-2">
+                  BEST VALUE
+                </span>
+              </div>
+              
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>SD / HD / FULL HD / 4K</span>
+                </li>
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>120,000 VOD</span>
+                </li>
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>+32,000 CHANNELS</span>
+                </li>
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>UPDATED SERIES</span>
+                </li>
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>UPDATED MOVIES</span>
+                </li>
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Prime Video / Disney+</span>
+                </li>
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Support 24/7/365</span>
+                </li>
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Adults 18+</span>
+                </li>
+                <li className="flex items-center gap-2 text-white text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>100% Anonymous</span>
+                </li>
+              </ul>
+              
+              <button 
+                className="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors"
+                onClick={handlePlanClick}
+              >
+                Choose Plan
               </button>
             </div>
           </div>
