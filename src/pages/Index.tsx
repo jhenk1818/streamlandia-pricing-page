@@ -143,13 +143,13 @@ const Index = () => {
           <div className="text-center animate-fade-up">
             <span className="relative inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full">
               <div 
-                className="absolute inset-0 bg-gradient-to-r from-black via-[#1EAEDB] to-black opacity-70"
+                className="absolute inset-0 bg-gradient-to-r from-black via-[#7ED321] to-black opacity-70"
               ></div>
               <div 
                 className="absolute inset-0"
                 style={{
                   padding: '2px',
-                  background: 'linear-gradient(90deg, #000, #1EAEDB, #000)',
+                  background: 'linear-gradient(90deg, #000, #7ED321, #000)',
                   backgroundSize: '200% 100%',
                   animation: 'gradient 3s ease infinite',
                   WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
@@ -193,13 +193,13 @@ const Index = () => {
               onClick={scrollToPricing}
             >
               <div 
-                className="absolute inset-0 bg-gradient-to-r from-black via-[#1EAEDB] to-black opacity-70"
+                className="absolute inset-0 bg-gradient-to-r from-black via-[#7ED321] to-black opacity-70"
               ></div>
               <div 
                 className="absolute inset-0"
                 style={{
                   padding: '2px',
-                  background: 'linear-gradient(90deg, #000, #1EAEDB, #000)',
+                  background: 'linear-gradient(90deg, #000, #7ED321, #000)',
                   backgroundSize: '200% 100%',
                   animation: 'gradient 3s ease infinite',
                   WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
@@ -481,13 +481,13 @@ const Index = () => {
                 onClick={handlePlanClick}
               >
                 <div 
-                  className="absolute inset-0 bg-gradient-to-r from-black via-[#1EAEDB] to-black opacity-70"
+                  className="absolute inset-0 bg-gradient-to-r from-black via-[#7ED321] to-black opacity-70"
                 ></div>
                 <div 
                   className="absolute inset-0"
                   style={{
                     padding: '2px',
-                    background: 'linear-gradient(90deg, #000, #1EAEDB, #000)',
+                    background: 'linear-gradient(90deg, #000, #7ED321, #000)',
                     backgroundSize: '200% 100%',
                     animation: 'gradient 3s ease infinite',
                     WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
