@@ -441,7 +441,7 @@ const Index = () => {
               <img 
                 src="/lovable-uploads/bc9a3e71-328d-4d49-b294-a49c62566aa0.png"
                 alt="Watch on all devices - laptop, tablet, and smartphone"
-                className="w-full max-w-4xl h-auto rounded-2xl shadow-2xl"
+                className="w-full max-w-3xl h-auto rounded-2xl shadow-2xl"
               />
             </div>
           </div>
