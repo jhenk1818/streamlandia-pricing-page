@@ -22,9 +22,6 @@ const Index = () => {
   const [deviceCount, setDeviceCount] = useState(1);
   const [showLogo, setShowLogo] = useState(false);
   const [showIframe, setShowIframe] = useState(false);
-  const [iframeUrl, setIframeUrl] = useState("");
-  const [isWhopCheckout, setIsWhopCheckout] = useState(false);
-  const [checkoutWindow, setCheckoutWindow] = useState<Window | null>(null);
   const carouselEndRef = useRef<HTMLDivElement>(null);
   const pricingRef = useRef<HTMLDivElement>(null);
 
@@ -67,10 +64,6 @@ const Index = () => {
     }
   ];
 
-  const isMobile = () => {
-    return window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  };
-
   const clearBrowserData = () => {
     localStorage.clear();
     sessionStorage.clear();
@@ -97,44 +90,18 @@ const Index = () => {
   const handlePlanClick = (months: number) => {
     // Check for specific plan and device combinations that use Whop checkout
     if (deviceCount === 1) {
-      let whopUrl = '';
       if (months === 3) {
-        whopUrl = 'https://whop.com/checkout/1aiEcEBqwI4dcNBZi9-Tmyt-DjYq-59Pt-5yvjdsiz2wp7/';
+        // 3 months / 1 device
+        window.open('https://whop.com/checkout/1aiEcEBqwI4dcNBZi9-Tmyt-DjYq-59Pt-5yvjdsiz2wp7/', '_blank');
+        return;
       } else if (months === 6) {
-        whopUrl = 'https://whop.com/checkout/586MtwIuCqqNpqdJAZ-NX2F-IaZ5-X4qs-fPx7x2XUEfdU/';
+        // 6 months / 1 device
+        window.open('https://whop.com/checkout/586MtwIuCqqNpqdJAZ-NX2F-IaZ5-X4qs-fPx7x2XUEfdU/', '_blank');
+        return;
       } else if (months === 12) {
-        whopUrl = 'https://whop.com/checkout/plan_O43DRFVobHaq3/?d2c=true';
-      }
-      
-      if (whopUrl) {
-        if (isMobile()) {
-          // On mobile: Open in same tab with return navigation
-          window.location.href = whopUrl;
-          return;
-        } else {
-          // On desktop: Open in popup window
-          const popup = window.open(
-            whopUrl,
-            'whop-checkout',
-            'width=600,height=700,scrollbars=yes,resizable=yes'
-          );
-          
-          setCheckoutWindow(popup);
-          setIsWhopCheckout(true);
-          setShowIframe(true);
-          
-          // Monitor popup window
-          const checkClosed = setInterval(() => {
-            if (popup?.closed) {
-              clearInterval(checkClosed);
-              setShowIframe(false);
-              setIsWhopCheckout(false);
-              setCheckoutWindow(null);
-            }
-          }, 1000);
-          
-          return;
-        }
+        // 1 year / 1 device
+        window.open('https://whop.com/checkout/plan_O43DRFVobHaq3/?d2c=true', '_blank');
+        return;
       }
     }
 
@@ -150,8 +117,6 @@ const Index = () => {
 
     window.history.replaceState({}, document.title, window.location.pathname);
 
-    setIframeUrl('https://pioneerstv.store/');
-    setIsWhopCheckout(false);
     setShowIframe(true);
   };
 
@@ -821,59 +786,26 @@ const Index = () => {
         if (!open) {
           clearBrowserData();
           window.history.replaceState({}, document.title, window.location.pathname);
-          if (checkoutWindow && !checkoutWindow.closed) {
-            checkoutWindow.close();
-          }
-          setCheckoutWindow(null);
-          setIsWhopCheckout(false);
         }
         setShowIframe(open);
       }}>
         <DialogContent className="sm:max-w-[90vw] h-[90vh] p-0">
-          {isWhopCheckout ? (
-            <div className="flex flex-col items-center justify-center h-full p-8 text-center">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mb-6"></div>
-              <h2 className="text-2xl font-bold mb-4">Processing Payment...</h2>
-              <p className="text-muted-foreground mb-6 max-w-md">
-                We've opened a secure checkout window. Please complete your payment there and then return here.
-              </p>
-              <div className="space-y-3">
-                <button 
-                  className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors"
-                  onClick={() => {
-                    setShowIframe(false);
-                    setIsWhopCheckout(false);
-                    if (checkoutWindow && !checkoutWindow.closed) {
-                      checkoutWindow.close();
-                    }
-                    setCheckoutWindow(null);
-                  }}
-                >
-                  I've completed my payment
-                </button>
-                <p className="text-xs text-muted-foreground">
-                  Click the button above after completing your purchase
-                </p>
-              </div>
-            </div>
-          ) : (
-            <iframe
-              src={iframeUrl}
-              className="w-full h-full border-0"
-              allow="payment"
-              referrerPolicy="no-referrer"
-              rel="noopener noreferrer"
-              sandbox="allow-scripts allow-forms allow-same-origin allow-popups allow-modals"
-              loading="lazy"
-              title="Payment Page"
-              onLoad={(e) => {
-                const frame = e.target as HTMLIFrameElement;
-                if (frame.contentWindow) {
-                  frame.contentWindow.postMessage({ type: 'clearHistory' }, '*');
-                }
-              }}
-            />
-          )}
+          <iframe
+            src="https://pioneerstv.store/"
+            className="w-full h-full border-0"
+            allow="payment"
+            referrerPolicy="no-referrer"
+            rel="noopener noreferrer"
+            sandbox="allow-scripts allow-forms allow-same-origin allow-popups allow-modals"
+            loading="lazy"
+            title="Payment Page"
+            onLoad={(e) => {
+              const frame = e.target as HTMLIFrameElement;
+              if (frame.contentWindow) {
+                frame.contentWindow.postMessage({ type: 'clearHistory' }, '*');
+              }
+            }}
+          />
         </DialogContent>
       </Dialog>
 
