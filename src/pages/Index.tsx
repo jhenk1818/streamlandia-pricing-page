@@ -30,7 +30,7 @@ const Index = () => {
       name: "Sarah Mitchell",
       comment: "Best IPTV service I've tried! The streaming quality is exceptional and there's no buffering even in 4K. Worth every penny.",
       date: "January 15, 2024",
-      plan: "Premium"
+      plan: "Best IPTV"
     },
     {
       name: "James Wilson",
@@ -42,7 +42,7 @@ const Index = () => {
       name: "Emily Rodriguez",
       comment: "Been using this service for 3 months now and I'm amazed by the content library. Definitely the most stable IPTV service I've experienced.",
       date: "December 13, 2023",
-      plan: "Premium"
+      plan: "Best IPTV"
     },
     {
       name: "Michael Chang",
@@ -213,7 +213,7 @@ const Index = () => {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-white">
-              Premium IPTV Service
+              Best IPTV Service
               <br /> Unlimited Entertainment
             </h1>
             <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-8">
@@ -292,7 +292,7 @@ const Index = () => {
               Why Choose Our IPTV Service
             </h2>
             <span className="inline-block px-4 py-1 mb-6 text-sm font-medium rounded-full bg-primary/10 text-primary backdrop-blur-sm">
-              Premium IPTV Provider Features
+              Best IPTV Provider Features
             </span>
           </div>
 
@@ -322,7 +322,7 @@ const Index = () => {
 
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-2">32,000+ IPTV Channels</h2>
-            <p className="text-white/80 text-sm md:text-base">Experience the largest IPTV service collection with over 32,000 premium channels from your trusted IPTV provider</p>
+            <p className="text-white/80 text-sm md:text-base">Experience the largest IPTV service collection with over 32,000 best IPTV channels from your trusted IPTV provider</p>
           </div>
           <div className="relative mb-20 w-full overflow-hidden">
             <div className="absolute left-0 top-0 bottom-0 w-[150px] md:w-[200px] bg-gradient-to-r from-black via-black to-transparent z-10"></div>
@@ -727,7 +727,7 @@ const Index = () => {
                 What Our Users Say
               </h2>
               <p className="text-white/80 text-lg max-w-2xl mx-auto">
-                Join thousands of satisfied subscribers enjoying our premium content
+                Join thousands of satisfied subscribers enjoying our best IPTV content
               </p>
             </div>
 
@@ -821,7 +821,7 @@ const Index = () => {
                 />
               </Link>
               <p className="text-white/70 text-sm max-w-xs">
-                KickITV - Premium IPTV service provider offering unlimited entertainment. Stream 32,000+ channels and VOD content with our reliable IPTV subscription.
+                KickITV - Best IPTV service provider offering unlimited entertainment. Stream 32,000+ channels and VOD content with our reliable IPTV subscription.
               </p>
               <div className="flex space-x-4">
                 <a href="mailto:contact@kickitv.com" className="text-white/70 hover:text-primary transition-colors">
