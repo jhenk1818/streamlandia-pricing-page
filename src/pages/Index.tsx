@@ -815,7 +815,7 @@ const Index = () => {
             <div className="space-y-4">
               <Link to="/">
                 <img 
-                  src="/lovable-uploads/4f38d6c5-c0e1-496d-9aaf-9c4b5fcc7ef1.png"
+                  src="/lovable-uploads/6c30340b-8121-4f91-85ed-03d1903b5356.png"
                   alt="KickItv Logo"
                   className="w-40 h-auto"
                 />

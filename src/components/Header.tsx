@@ -9,8 +9,8 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center ml-4">
             <img 
-              src="/lovable-uploads/4f38d6c5-c0e1-496d-9aaf-9c4b5fcc7ef1.png" 
-              alt="KickITV - Premium IPTV Service Provider" 
+              src="/lovable-uploads/6c30340b-8121-4f91-85ed-03d1903b5356.png" 
+              alt="KickITV - Best IPTV Service Provider" 
               className="h-8"
             />
           </div>
