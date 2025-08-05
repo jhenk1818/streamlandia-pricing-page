@@ -272,8 +272,11 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-              IPTV Service Compatible with All Devices
+              Premium IPTV Streaming Service Compatible with All Devices
             </h2>
+            <p className="text-white/80 text-lg max-w-3xl mx-auto mb-8">
+              Experience the best IPTV service with our top-rated IPTV provider. Our reliable IPTV subscription works seamlessly across all platforms - from smart TVs and streaming devices to mobile phones and computers. Enjoy unlimited IPTV streaming with our professional IPTV service.
+            </p>
             <div className="max-w-4xl mx-auto">
               <img 
                 src="/lovable-uploads/986d0b73-f833-425b-a4a8-3b263461d169.png"
@@ -289,11 +292,14 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-3xl font-bold text-white mb-4">
-              Why Choose Our IPTV Service
+              Why Choose KickITV - The Best IPTV Service Provider
             </h2>
             <span className="inline-block px-4 py-1 mb-6 text-sm font-medium rounded-full bg-primary/10 text-primary backdrop-blur-sm">
-              Best IPTV Provider Features
+              Top IPTV Provider Features & Benefits
             </span>
+            <p className="text-white/70 text-lg max-w-4xl mx-auto mb-8">
+              KickITV stands out as the leading IPTV service provider, offering the most comprehensive IPTV subscription plans with unmatched reliability. Our IPTV streaming service delivers premium entertainment with professional-grade infrastructure.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 animate-fade-up mb-20">
