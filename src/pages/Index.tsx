@@ -28,38 +28,38 @@ const Index = () => {
   const reviews = [
     {
       name: "Sarah Mitchell",
-      comment: "Best IPTV service I've tried! The streaming quality is exceptional and there's no buffering even in 4K. Worth every penny.",
-      date: "January 15, 2024",
-      plan: "Best IPTV"
+      comment: "Bästa IPTV-tjänsten jag provat! Streamingkvaliteten är exceptionell och det finns ingen buffring ens i 4K. Värt varje krona.",
+      date: "15 januari 2024",
+      plan: "Bästa IPTV"
     },
     {
       name: "James Wilson",
-      comment: "Finally found a reliable IPTV provider that the whole family loves. Multiple device support is fantastic, and the channel selection is incredible.",
-      date: "February 28, 2024",
-      plan: "Family"
+      comment: "Äntligen hittat en pålitlig IPTV-leverantör som hela familjen älskar. Stöd för flera enheter är fantastiskt och kanalurvalet är otroligt.",
+      date: "28 februari 2024",
+      plan: "Familj"
     },
     {
       name: "Emily Rodriguez",
-      comment: "Been using this service for 3 months now and I'm amazed by the content library. Definitely the most stable IPTV service I've experienced.",
-      date: "December 13, 2023",
-      plan: "Best IPTV"
+      comment: "Har använt denna tjänst i 3 månader nu och jag är förvånad över innehållsbiblioteket. Definitivt den mest stabila IPTV-tjänsten jag upplevt.",
+      date: "13 december 2023",
+      plan: "Bästa IPTV"
     },
     {
       name: "Michael Chang",
-      comment: "Incredible channel variety and zero lag! This IPTV service has transformed how I watch TV. The picture quality is amazing and the prices are unbeatable.",
-      date: "March 2, 2024",
+      comment: "Otroligt kanalutbud och noll fördröjning! Denna IPTV-tjänst har förvandlat hur jag tittar på TV. Bildkvaliteten är fantastisk och priserna är oslagbara.",
+      date: "2 mars 2024",
       plan: "Basic"
     },
     {
       name: "Lisa Anderson",
-      comment: "Switched from another provider and couldn't be happier! The channel quality and customer support are outstanding. Best IPTV decision I've made.",
-      date: "January 21, 2024",
-      plan: "Family"
+      comment: "Bytte från en annan leverantör och kunde inte vara gladare! Kanalkvaliteten och kundsupporten är enastående. Bästa IPTV-beslutet jag gjort.",
+      date: "21 januari 2024",
+      plan: "Familj"
     },
     {
       name: "David Thompson",
-      comment: "The interface is super user-friendly and the IPTV stream quality is consistently excellent. Never looking back to cable TV again!",
-      date: "February 10, 2024",
+      comment: "Gränssnittet är supervänligt och IPTV-streamkvaliteten är konsekvent utmärkt. Kommer aldrig att gå tillbaka till kabel-TV igen!",
+      date: "10 februari 2024",
       plan: "Basic"
     }
   ];
@@ -84,7 +84,7 @@ const Index = () => {
   };
 
   const getDeviceText = () => {
-    return deviceCount === 1 ? "One Device" : `${deviceCount} Devices`;
+    return deviceCount === 1 ? "En Enhet" : `${deviceCount} Enheter`;
   };
 
   const handlePlanClick = (months: number) => {
@@ -201,7 +201,7 @@ const Index = () => {
                   }}
                 ></div>
               </div>
-              <span className="relative z-10 text-white">Works with all devices</span>
+              <span className="relative z-10 text-white">Fungerar med alla enheter</span>
             </span>
 
             <div className="flex justify-center items-center mb-4">
@@ -213,13 +213,13 @@ const Index = () => {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-white">
-              Best IPTV Service
-              <br /> Unlimited Entertainment
+              Bästa IPTV-tjänsten
+              <br /> Obegränsad Underhållning
             </h1>
             <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-8">
-              KickITV - Your trusted IPTV provider with the best IPTV subscription plans.
+              KickITV - Din pålitliga IPTV-leverantör med bästa IPTV-abonnemangsplaner.
               <br />
-              Stream 32,000+ channels in 4K quality. The most reliable IPTV service worldwide.
+              Streama 32,000+ kanaler i 4K-kvalitet. Den mest pålitliga IPTV-tjänsten världen över.
             </p>
             <button 
               className="relative overflow-hidden text-white px-12 py-4 rounded-full font-medium transition-all hover:scale-105 mb-4 w-64 group"
@@ -251,7 +251,7 @@ const Index = () => {
                   }}
                 ></div>
               </div>
-              <span className="relative z-10">Discover Plans</span>
+              <span className="relative z-10">Upptäck Planer</span>
             </button>
 
             <div className="flex justify-center items-center gap-2 md:gap-4">
@@ -262,7 +262,7 @@ const Index = () => {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span className="text-white font-medium text-base md:text-lg">10,000+ Happy Users</span>
+              <span className="text-white font-medium text-base md:text-lg">10,000+ Nöjda Användare</span>
             </div>
           </div>
         </div>
@@ -272,10 +272,10 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-              Premium IPTV Streaming Service Compatible with All Devices
+              Premium IPTV-streamingtjänst Kompatibel med Alla Enheter
             </h2>
             <p className="text-white/80 text-lg max-w-3xl mx-auto mb-8">
-              Experience the best IPTV service with our top-rated IPTV provider. Our reliable IPTV subscription works seamlessly across all platforms - from smart TVs and streaming devices to mobile phones and computers. Enjoy unlimited IPTV streaming with our professional IPTV service.
+              Upplev den bästa IPTV-tjänsten med vår toppbetygsatta IPTV-leverantör. Vårt pålitliga IPTV-abonnemang fungerar sömlöst på alla plattformar - från smart-TV:ar och streamingenheter till mobiltelefoner och datorer. Njut av obegränsad IPTV-streaming med vår professionella IPTV-tjänst.
             </p>
             <div className="max-w-4xl mx-auto">
               <img 
@@ -292,13 +292,13 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-3xl font-bold text-white mb-4">
-              Why Choose KickITV - The Best IPTV Service Provider
+              Varför Välja KickITV - Den Bästa IPTV-tjänsteleverantören
             </h2>
             <span className="inline-block px-4 py-1 mb-6 text-sm font-medium rounded-full bg-primary/10 text-primary backdrop-blur-sm">
-              Top IPTV Provider Features & Benefits
+              Ledande IPTV-leverantör Funktioner & Fördelar
             </span>
             <p className="text-white/70 text-lg max-w-4xl mx-auto mb-8">
-              KickITV stands out as the leading IPTV service provider, offering the most comprehensive IPTV subscription plans with unmatched reliability. Our IPTV streaming service delivers premium entertainment with professional-grade infrastructure.
+              KickITV utmärker sig som den ledande IPTV-tjänsteleverantören och erbjuder de mest omfattande IPTV-abonnemangsplanerna med oöverträffad tillförlitlighet. Vår IPTV-streamingtjänst levererar premiumunderhållning med professionell infrastruktur.
             </p>
           </div>
 
@@ -307,28 +307,28 @@ const Index = () => {
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
                 <Tv className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-white">4K IPTV Streaming</h3>
-              <p className="text-white/80">Experience the best IPTV service with crystal clear 4K Ultra HD streaming quality.</p>
+              <h3 className="text-xl font-semibold mb-4 text-white">4K IPTV-streaming</h3>
+              <p className="text-white/80">Upplev den bästa IPTV-tjänsten med kristallklar 4K Ultra HD-streamingkvalitet.</p>
             </div>
             <div className="p-8 text-center rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-[#221F26]">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
                 <CreditCard className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-white">Flexible IPTV Subscription Payment</h3>
-              <p className="text-white/80">Secure IPTV subscription payments with all major credit cards, debit cards, and digital payment methods.</p>
+              <h3 className="text-xl font-semibold mb-4 text-white">Flexibla IPTV-abonnemangsbetalningar</h3>
+              <p className="text-white/80">Säkra IPTV-abonnemangsbetalningar med alla större kreditkort, betalkort och digitala betalningsmetoder.</p>
             </div>
             <div className="p-8 text-center rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all backdrop-blur-md bg-[#221F26]">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center backdrop-blur-sm">
                 <Headphones className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-white">24/7 IPTV Support</h3>
-              <p className="text-white/80">Professional IPTV service support available 24/7. Our expert team ensures your IPTV subscription runs smoothly.</p>
+              <h3 className="text-xl font-semibold mb-4 text-white">24/7 IPTV-support</h3>
+              <p className="text-white/80">Professionell IPTV-tjänstsupport tillgänglig 24/7. Vårt expertteam säkerställer att ditt IPTV-abonnemang fungerar smidigt.</p>
             </div>
           </div>
 
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-white mb-2">32,000+ IPTV Channels</h2>
-            <p className="text-white/80 text-sm md:text-base">Experience the largest IPTV service collection with over 32,000 best IPTV channels from your trusted IPTV provider</p>
+            <h2 className="text-3xl font-bold text-white mb-2">32,000+ IPTV-kanaler</h2>
+            <p className="text-white/80 text-sm md:text-base">Upplev den största IPTV-tjänstsamlingen med över 32,000 bästa IPTV-kanaler från din pålitliga IPTV-leverantör</p>
           </div>
           <div className="relative mb-20 w-full overflow-hidden">
             <div className="absolute left-0 top-0 bottom-0 w-[150px] md:w-[200px] bg-gradient-to-r from-black via-black to-transparent z-10"></div>
@@ -378,10 +378,10 @@ const Index = () => {
 
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-              Access Your Favorite Movies, Series, Shows
+              Få Tillgång till Dina Favoritfilmer, Serier, Program
             </h2>
             <p className="text-white/80 text-lg max-w-2xl mx-auto">
-              Join our community of content creators sharing their amazing stories
+              Gå med i vår gemenskap av innehållsskapare som delar sina fantastiska berättelser
             </p>
           </div>
 
@@ -432,12 +432,12 @@ const Index = () => {
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="text-left">
                   <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white leading-tight">
-                    Watch Sports
+                    Titta på Sport
                     <br />
-                    With No Limits
+                    Utan Begränsningar
                   </h2>
                   <p className="text-white/80 text-lg max-w-xl">
-                    Discover what everyone's watching right now. Get access to all major sports events, leagues, and tournaments in one place.
+                    Upptäck vad alla tittar på just nu. Få tillgång till alla stora sportevenemang, ligor och turneringar på ett ställe.
                   </p>
                 </div>
                 <div className="relative">
@@ -466,13 +466,13 @@ const Index = () => {
           <div className="max-w-6xl mx-auto px-4 mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-                WATCH ANYWHERE ANYTIME
+                TITTA ÖVERALLT NÄR SOM HELST
               </h2>
               <p className="text-white/80 text-lg max-w-3xl mx-auto mb-12">
-                Our IPTV service is designed for seamless compatibility across all your devices. 
-                Whether you're at home on your smart TV, commuting with your tablet, or relaxing 
-                with your smartphone, enjoy your favorite content anytime, anywhere with crystal-clear 
-                quality and instant access.
+                Vår IPTV-tjänst är designad för sömlös kompatibilitet över alla dina enheter. 
+                Oavsett om du är hemma vid din smart-TV, pendlar med din surfplatta eller kopplar av 
+                med din smartphone, njut av ditt favoritinnehåll när som helst, var som helst med kristallklar 
+                kvalitet och omedelbar åtkomst.
               </p>
             </div>
             
@@ -487,10 +487,10 @@ const Index = () => {
 
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-              IPTV Subscription Plans
+              IPTV-abonnemangsplaner
             </h2>
             <p className="text-white/80 text-lg max-w-2xl mx-auto mb-8">
-              Choose the perfect IPTV subscription plan for your streaming needs
+              Välj den perfekta IPTV-abonnemangsplanen för dina streamingbehov
             </p>
             
             {/* Device Selection */}
@@ -505,7 +505,7 @@ const Index = () => {
                       : 'bg-white/10 text-white/70 hover:bg-white/20'
                   }`}
                 >
-                  {count} Device{count > 1 ? 's' : ''}
+                  {count} Enhet{count > 1 ? 'er' : ''}
                 </button>
               ))}
             </div>
@@ -516,7 +516,7 @@ const Index = () => {
             {/* 3 Months Plan */}
             <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-primary/50 transition-all">
               <div className="text-center mb-6">
-                <h3 className="text-xl font-bold text-white mb-2">3 Months</h3>
+                <h3 className="text-xl font-bold text-white mb-2">3 Månader</h3>
                 <div className="text-3xl font-bold text-primary mb-1">
                   ${getPricing(3)}
                 </div>
@@ -568,7 +568,7 @@ const Index = () => {
                 className="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors mb-4"
                 onClick={() => handlePlanClick(3)}
               >
-                Choose Plan
+                Välj Plan
               </button>
               
               <div className="flex justify-center">
@@ -584,12 +584,12 @@ const Index = () => {
             <div className="relative bg-white/5 backdrop-blur-md border-2 border-primary rounded-2xl p-6 scale-105">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                 <span className="bg-primary text-black px-4 py-1 rounded-full text-xs font-medium">
-                  MOST POPULAR
+                  MEST POPULÄR
                 </span>
               </div>
               
               <div className="text-center mb-6">
-                <h3 className="text-xl font-bold text-white mb-2">6 Months</h3>
+                <h3 className="text-xl font-bold text-white mb-2">6 Månader</h3>
                 <div className="text-3xl font-bold text-primary mb-1">
                   ${getPricing(6)}
                 </div>
@@ -641,7 +641,7 @@ const Index = () => {
                 className="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors mb-4"
                 onClick={() => handlePlanClick(6)}
               >
-                Choose Plan
+                Välj Plan
               </button>
               
               <div className="flex justify-center">
@@ -656,7 +656,7 @@ const Index = () => {
             {/* 1 Year Plan */}
             <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-primary/50 transition-all">
               <div className="text-center mb-6">
-                <h3 className="text-xl font-bold text-white mb-2">1 Year</h3>
+                <h3 className="text-xl font-bold text-white mb-2">1 År</h3>
                 <div className="text-3xl font-bold text-primary mb-1">
                   ${getPricing(12)}
                 </div>
@@ -664,7 +664,7 @@ const Index = () => {
                   {getDeviceText()}
                 </p>
                 <span className="inline-block bg-primary/20 text-primary px-2 py-1 rounded text-xs font-medium mt-2">
-                  BEST VALUE
+                  BÄSTA VÄRDET
                 </span>
               </div>
               
@@ -711,7 +711,7 @@ const Index = () => {
                 className="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors mb-4"
                 onClick={() => handlePlanClick(12)}
               >
-                Choose Plan
+                Välj Plan
               </button>
               
               <div className="flex justify-center">
@@ -730,10 +730,10 @@ const Index = () => {
           <div className="mt-32">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-                What Our Users Say
+                Vad Våra Användare Säger
               </h2>
               <p className="text-white/80 text-lg max-w-2xl mx-auto">
-                Join thousands of satisfied subscribers enjoying our best IPTV content
+                Gå med tusentals nöjda prenumeranter som njuter av vårt bästa IPTV-innehåll
               </p>
             </div>
 
@@ -765,7 +765,7 @@ const Index = () => {
                           </div>
                           <div className="flex items-center gap-1.5 text-xs px-2 py-0.5 rounded-full bg-[#1A1F2C] text-primary whitespace-nowrap">
                             <CheckCircle2 className="w-3 h-3" />
-                            <span>Verified Client</span>
+                            <span>Verifierad Kund</span>
                           </div>
                         </div>
                         <div className="flex items-center gap-2 mb-4">
@@ -827,7 +827,7 @@ const Index = () => {
                 />
               </Link>
               <p className="text-white/70 text-sm max-w-xs">
-                KickITV - Best IPTV service provider offering unlimited entertainment. Stream 32,000+ channels and VOD content with our reliable IPTV subscription.
+                KickITV - Bästa IPTV-tjänsteleverantör som erbjuder obegränsad underhållning. Streama 32,000+ kanaler och VOD-innehåll med vårt pålitliga IPTV-abonnemang.
               </p>
               <div className="flex space-x-4">
                 <a href="mailto:contact@kickitv.com" className="text-white/70 hover:text-primary transition-colors">
@@ -845,19 +845,19 @@ const Index = () => {
                 <li>
                   <RefundPolicyDialog>
                     <button className="text-white/70 hover:text-primary transition-colors text-sm text-left">
-                      Refund Policy
+                      Återbetalningspolicy
                     </button>
                   </RefundPolicyDialog>
                 </li>
                 <li className="text-white/70 text-sm">
-                  <span className="block">Support Hours:</span>
-                  <span className="text-primary">24/7 - Always Available</span>
+                  <span className="block">Supporttider:</span>
+                  <span className="text-primary">24/7 - Alltid Tillgänglig</span>
                 </li>
               </ul>
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-white font-semibold text-lg">Contact Us</h3>
+              <h3 className="text-white font-semibold text-lg">Kontakta Oss</h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-2 text-white/70">
                   <Mail className="w-4 h-4" />
@@ -867,7 +867,7 @@ const Index = () => {
                 </div>
                 <div className="flex items-center gap-2 text-white/70">
                   <Headphones className="w-4 h-4" />
-                  <span className="text-sm">24/7 Support Available</span>
+                  <span className="text-sm">24/7 Support Tillgänglig</span>
                 </div>
               </div>
             </div>
