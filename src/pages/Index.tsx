@@ -76,9 +76,9 @@ const Index = () => {
 
   const getPricing = (months: number) => {
     const basePrices = {
-      3: { 1: 34.99, 2: 44.99, 3: 54.99, 4: 59.99 },
-      6: { 1: 49.00, 2: 64.00, 3: 74.00, 4: 79.99 },
-      12: { 1: 79.99, 2: 99.99, 3: 119.99, 4: 129.99 }
+      3: { 1: 399, 2: 499, 3: 599, 4: 699 },
+      6: { 1: 599, 2: 699, 3: 799, 4: 899 },
+      12: { 1: 899, 2: 1399, 3: 1599, 4: 1799 }
     };
     return basePrices[months][deviceCount];
   };
@@ -518,7 +518,7 @@ const Index = () => {
               <div className="text-center mb-6">
                 <h3 className="text-xl font-bold text-white mb-2">3 Månader</h3>
                 <div className="text-3xl font-bold text-primary mb-1">
-                  ${getPricing(3)}
+                  {getPricing(3)}KR
                 </div>
                 <p className="text-white/70 text-sm">
                   {getDeviceText()}
@@ -591,7 +591,7 @@ const Index = () => {
               <div className="text-center mb-6">
                 <h3 className="text-xl font-bold text-white mb-2">6 Månader</h3>
                 <div className="text-3xl font-bold text-primary mb-1">
-                  ${getPricing(6)}
+                  {getPricing(6)}KR
                 </div>
                 <p className="text-white/70 text-sm">
                   {getDeviceText()}
@@ -658,7 +658,7 @@ const Index = () => {
               <div className="text-center mb-6">
                 <h3 className="text-xl font-bold text-white mb-2">1 År</h3>
                 <div className="text-3xl font-bold text-primary mb-1">
-                  ${getPricing(12)}
+                  {getPricing(12)}KR
                 </div>
                 <p className="text-white/70 text-sm">
                   {getDeviceText()}
